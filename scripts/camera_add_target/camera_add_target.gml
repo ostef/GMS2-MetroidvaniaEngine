@@ -7,3 +7,7 @@ if (!ds_list_find_index(o_camera.targets, target))
 {
 	ds_list_add(o_camera.targets, target);
 }
+else
+{
+	show_debug_message("CAMERA: Camera target already registered");
+}

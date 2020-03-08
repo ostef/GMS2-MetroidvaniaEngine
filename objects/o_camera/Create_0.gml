@@ -6,15 +6,12 @@ camera = camera_create_view(x, y, width, height, 0, self, -1, -1, width / 2, hei
 
 targets = ds_list_create();
 followSmoothing = 5.0;
-movementState = camera_follow_targets;
 
-// Camera limits
-limitX1 = 0;
-limitY1 = 0;
-limitX2 = 0;
-limitY2 = 0;
-
-camera_set_limits_to_room();
+camera_set_limits(-infinity, -infinity, infinity, infinity);
+// Camera state machine init
+state_machine_init();
+state_machine_add_state("FollowTargets", noone, camera_follow_targets_state, noone);
+state_transition_to("FollowTargets");
 
 // Set up views in all rooms
 for (var i = 0; i < room_last + 1; i++)

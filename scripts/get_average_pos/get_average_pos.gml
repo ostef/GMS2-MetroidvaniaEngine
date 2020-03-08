@@ -25,4 +25,4 @@ if (instCount == 0)
 	return [ 0, 0 ];
 }
 
-return [ sumX / instCount, sumY / instCount ];
+return [sumX / instCount, sumY / instCount];

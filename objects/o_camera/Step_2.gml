@@ -1,5 +1,5 @@
 /// @desc Execute movement state
-script_execute(movementState);
+state_machine_execute();
 
 // Clamp camera position
 x = clamp(x, limitX1 + width / 2, limitX2 - width / 2);

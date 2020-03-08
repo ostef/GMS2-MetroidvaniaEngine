@@ -3,6 +3,7 @@
 var target = argument0;
 var pos = ds_list_find_index(o_camera.target, target);
 
+// Remove the target if it was found
 if (pos)
 {
 	ds_list_delete(o_camera.targets, pos);
