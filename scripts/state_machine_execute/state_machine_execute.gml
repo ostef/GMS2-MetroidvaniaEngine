@@ -39,5 +39,7 @@ if (bTransitioning)
 	nextStateEntry = undefined;
 	// Reset the transition flag
 	bTransitioning = false;
+	// Reset the current state step count
+	currentStateSteps = 0;
 }
 #endregion
