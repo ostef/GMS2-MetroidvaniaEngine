@@ -10,7 +10,7 @@ var onUpdate = argument2;
 var onExit = argument3;
 
 // We only need the on update script to be valid
-if (onUpdate)
+if (onUpdate != noone)
 {
 	ds_map_add(stateMap, stateName, [onEnter, onUpdate, onExit]);
 	

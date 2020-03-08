@@ -13,7 +13,7 @@ if (is_array(currentStateEntry))
 if (bTransitioning)
 {
 	// Execute on current state exit
-	if (is_array(currentStateEntry) && currentStateEntry[ON_STATE_EXIT])
+	if (is_array(currentStateEntry) && currentStateEntry[ON_STATE_EXIT] != noone)
 	{
 		script_execute(currentStateEntry[ON_STATE_EXIT]);
 	}
@@ -29,7 +29,7 @@ if (bTransitioning)
 	currentStateEntry = nextStateEntry;
 	
 	// Execute on current state enter
-	if (is_array(currentStateEntry) && currentStateEntry[ON_STATE_ENTER])
+	if (is_array(currentStateEntry) && currentStateEntry[ON_STATE_ENTER] != noone)
 	{
 		script_execute(currentStateEntry[ON_STATE_ENTER]);
 	}
