@@ -1,11 +1,19 @@
 /// @func state_machine_execute()
 /// @desc Execute the current state
+// Execute on state update
+if (is_array(currentStateEntry))
+{
+	script_execute(currentStateEntry[ON_STATE_UPDATE]);
+	
+	// Increment the current state step count
+	currentStateSteps++;
+}
 
 #region Transition to next state
 if (bTransitioning)
 {
 	// Execute on current state exit
-	if (!is_undefined(currentStateEntry) && currentStateEntry[ON_STATE_EXIT])
+	if (is_array(currentStateEntry) && currentStateEntry[ON_STATE_EXIT])
 	{
 		script_execute(currentStateEntry[ON_STATE_EXIT]);
 	}
@@ -21,7 +29,7 @@ if (bTransitioning)
 	currentStateEntry = nextStateEntry;
 	
 	// Execute on current state enter
-	if (!is_undefined(currentStateEntry) && currentStateEntry[ON_STATE_ENTER])
+	if (is_array(currentStateEntry) && currentStateEntry[ON_STATE_ENTER])
 	{
 		script_execute(currentStateEntry[ON_STATE_ENTER]);
 	}
@@ -33,12 +41,3 @@ if (bTransitioning)
 	bTransitioning = false;
 }
 #endregion
-
-// Execute on state update
-if (!is_undefined(currentStateEntry))
-{
-	script_execute(currentStateEntry[ON_STATE_UPDATE]);
-	
-	// Increment the current state step count
-	currentStateSteps++;
-}

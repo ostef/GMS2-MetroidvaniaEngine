@@ -1,8 +1,8 @@
 {
-    "id": "374f8bce-8b51-4721-b5b0-ff83a7c0e339",
+    "id": "8033a66e-cce1-481c-94c6-58e0a63fd053",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "state_machine_cancel_transition",
+    "name": "state_transition_to_previous",
     "IsCompatibility": false,
     "IsDnD": false
 }

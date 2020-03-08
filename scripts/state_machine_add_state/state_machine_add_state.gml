@@ -13,4 +13,10 @@ var onExit = argument3;
 if (onUpdate)
 {
 	ds_map_add(stateMap, stateName, [onEnter, onUpdate, onExit]);
+	
+	return true;
 }
+
+show_debug_message("STATE_MACHINE: State " + stateName + " creation failed: onUpdate script is 'noone'");
+
+return false;
