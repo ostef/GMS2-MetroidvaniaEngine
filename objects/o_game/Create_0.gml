@@ -13,3 +13,6 @@ enum LogLevel
 	Error = 3,
 	Fatal = 4
 }
+
+global.bDebugDrawing = true;
+global.debugRects = ds_list_create();

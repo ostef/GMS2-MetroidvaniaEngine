@@ -1,4 +1,4 @@
-/// @func tile_is_left_slope(tileId)
+/// @func collision_tile_is_left_slope(tileId)
 /// @arg {int} tileId
 var tileId = argument0;
 

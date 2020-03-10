@@ -1,7 +1,7 @@
 /// @func player_move_state()
 var xAxis = keyboard_check(ord("D")) - keyboard_check(ord("A"));
 
-xVel = xAxis;
+xVel = xAxis * 2;
 
 if (xVel != 0)
 {

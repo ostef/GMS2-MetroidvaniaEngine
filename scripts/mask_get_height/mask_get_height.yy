@@ -1,8 +1,8 @@
 {
-    "id": "c3214adc-dacd-4d16-8f39-d149e9bd3b6b",
+    "id": "43498fdd-af47-4567-9cbe-6501e5fcfca4",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "tile_is_slope",
+    "name": "mask_get_height",
     "IsCompatibility": false,
     "IsDnD": false
 }

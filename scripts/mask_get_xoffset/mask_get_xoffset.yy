@@ -1,8 +1,8 @@
 {
-    "id": "43498fdd-af47-4567-9cbe-6501e5fcfca4",
+    "id": "153eade2-992a-4f0b-9f73-50bc7a181670",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "hitbox_get_height",
+    "name": "mask_get_xoffset",
     "IsCompatibility": false,
     "IsDnD": false
 }

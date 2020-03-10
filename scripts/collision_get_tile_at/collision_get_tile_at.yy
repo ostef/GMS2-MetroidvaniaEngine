@@ -1,8 +1,8 @@
 {
-    "id": "af83044c-095f-4af2-bdca-9d79182c0727",
+    "id": "8ec3fee8-387c-4c4d-b3e7-1c872a1354cc",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "hitbox_get_yoffset",
+    "name": "collision_get_tile_at",
     "IsCompatibility": false,
     "IsDnD": false
 }

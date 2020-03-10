@@ -1,8 +1,8 @@
 {
-    "id": "2d284df7-0f96-419c-a1e5-e60facbfb113",
+    "id": "c3214adc-dacd-4d16-8f39-d149e9bd3b6b",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "tile_is_left_slope",
+    "name": "collision_tile_is_slope",
     "IsCompatibility": false,
     "IsDnD": false
 }

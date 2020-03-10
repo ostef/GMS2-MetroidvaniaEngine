@@ -28,7 +28,7 @@
 			bCollided = false;
 			
 			var tileId = o_collisions.tiles[i, j];
-			var bSlopeTile = tile_is_slope(tileId);
+			var bSlopeTile = collision_tile_is_slope(tileId);
 			// Ignore slopes if not on bottom most tile
 			if (bSlopeTile && j != cellMaxY) { continue; }
 			// Only collide with solid tiles
@@ -45,7 +45,7 @@
 			// If the tile is a slope
 			if (bSlopeTile)
 			{
-				var bOnVerticalSide = tile_is_left_slope(tileId) ? x2 < tileX1 : x1 > tileX2;
+				var bOnVerticalSide = collision_tile_is_left_slope(tileId) ? x2 < tileX1 : x1 > tileX2;
 				
 				// If not on vertical side, climb the slope
 				if (!bOnVerticalSide)
@@ -67,7 +67,7 @@
 
 // Apply x movement
 x += xVel;
-x = clamp(x, hitbox_get_xoffset(), room_width - hitbox_get_width() + hitbox_get_xoffset());
+x = clamp(x, mask_get_xoffset(), room_width - mask_get_width() + mask_get_xoffset());
 
 // Vertical
 {
@@ -103,7 +103,7 @@ x = clamp(x, hitbox_get_xoffset(), room_width - hitbox_get_width() + hitbox_get_
 			var tileX2 = tileX1 + tileWidth;
 			var tileY2 = tileY1 + tileHeight;
 			// Collide with the bottom of the slope
-			if (tile_is_slope(tileId) && (yDir == 1 || bbox_top < tileY2)) { continue; }
+			if (collision_tile_is_slope(tileId) && (yDir == 1 || bbox_top < tileY2)) { continue; }
 			
 			bCollided = rectangle_in_rectangle(x1, y1, x2, y2, tileX1, tileY1, tileX2, tileY2);
 			if (!bCollided) { continue; }
@@ -128,4 +128,4 @@ x = clamp(x, hitbox_get_xoffset(), room_width - hitbox_get_width() + hitbox_get_
 
 // Apply y movement
 y += yVel;
-y = clamp(y, hitbox_get_yoffset(), room_height - hitbox_get_height() + hitbox_get_yoffset());
+y = clamp(y, mask_get_yoffset(), room_height - mask_get_height() + mask_get_yoffset());
