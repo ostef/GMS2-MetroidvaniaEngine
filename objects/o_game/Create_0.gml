@@ -4,6 +4,7 @@ global.deltaMillis = 0.0;
 global.deltaSeconds = 0.0;
 global.deltaTimeMult = 0.0;
 
+// Debug logging
 enum LogLevel
 {
 	Trace = 0,

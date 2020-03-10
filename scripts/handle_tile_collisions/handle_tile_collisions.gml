@@ -28,8 +28,11 @@
 			bCollided = false;
 			
 			var tileId = o_collisions.tiles[i, j];
+			var bSlopeTile = tile_is_slope(tileId);
+			// Ignore slopes if not on bottom most tile
+			if (bSlopeTile && j != cellMaxY) { continue; }
 			// Only collide with solid tiles
-			if (tileId != TILE_SOLID) { continue; }
+			if (tileId == TILE_VOID || tileId == TILE_PLATFORM) { continue; }
 			// Get the tile rectangle coordinates
 			var tileX1 = i * tileWidth;
 			var tileY1 = j * tileHeight;
@@ -38,6 +41,19 @@
 			
 			bCollided = rectangle_in_rectangle(x1, y1, x2, y2, tileX1, tileY1, tileX2, tileY2);
 			if (!bCollided) { continue; }
+			
+			// If the tile is a slope
+			if (bSlopeTile)
+			{
+				var bOnVerticalSide = tile_is_left_slope(tileId) ? x2 < tileX1 : x1 > tileX2;
+				
+				// If not on vertical side, climb the slope
+				if (!bOnVerticalSide)
+				{
+					yVel = -abs(xVel);
+					continue;
+				}
+			}
 		
 			// Update y velocity
 			xVel = xDir == 1 ? tileX1 - x1 - 1 : tileX2 - x2;

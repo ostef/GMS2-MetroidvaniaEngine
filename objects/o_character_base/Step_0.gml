@@ -12,6 +12,7 @@ yVelRemainder -= yVel;
 
 // Collide
 handle_tile_collisions();
+check_for_ground();
 
 // Update previous velocity
 xVelPrevious = xVel;
