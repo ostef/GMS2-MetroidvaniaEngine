@@ -11,4 +11,4 @@ var x2 = argument2;
 var y2 = argument3;
 var color = argument4;
 
-ds_list_add(global.debugRects, [x1, y1, x2, y2, color]);
+ds_list_add(o_debug.debugRects, [x1, y1, x2, y2, color]);

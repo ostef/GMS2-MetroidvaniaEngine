@@ -87,6 +87,14 @@
             }
         },
         {
+            "Key": "0ebe14c9-180d-43e6-a945-1444ce639435",
+            "Value": {
+                "id": "156b9a1d-cdf8-4b4a-920e-b5687f62bb9b",
+                "resourcePath": "scripts\\init_game\\init_game.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "1176e9c7-9151-45d7-983d-7b79eebe548a",
             "Value": {
                 "id": "811a4854-a632-40b9-9699-846513129e53",
@@ -167,10 +175,10 @@
             }
         },
         {
-            "Key": "2beec994-ecdc-4a3c-909d-0eca9cd4ab0c",
+            "Key": "2d0b25fe-49c8-48d1-b6ee-faf210259491",
             "Value": {
-                "id": "a9505a1c-b8a8-4f5b-aa0e-cf6a7633c0a4",
-                "resourcePath": "objects\\o_game\\o_game.yy",
+                "id": "c0934815-0c3f-4a41-a8e2-3d6bec019da5",
+                "resourcePath": "objects\\o_debug\\o_debug.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -276,6 +284,14 @@
                 "id": "e63e11b9-ba76-48fd-8c3d-d7e6fc2fac70",
                 "resourcePath": "datafiles_yy\\input.json.yy",
                 "resourceType": "GMIncludedFile"
+            }
+        },
+        {
+            "Key": "4973faa2-3135-4608-9a3a-5ed7fc865e39",
+            "Value": {
+                "id": "29363944-9ea1-46ed-a26f-b98da0009678",
+                "resourcePath": "scripts\\time_get_delta\\time_get_delta.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -615,6 +631,14 @@
             }
         },
         {
+            "Key": "e013a0b9-0b01-43d1-8301-d923899f7114",
+            "Value": {
+                "id": "fcf66a8a-457d-4e03-8b65-18d542ec8aa3",
+                "resourcePath": "views\\e013a0b9-0b01-43d1-8301-d923899f7114.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "e2945572-9c54-40ef-8a2b-4af3f9c41edd",
             "Value": {
                 "id": "582e9ab4-6d07-49b1-9c3e-54d633302a33",
@@ -709,6 +733,14 @@
                 "resourcePath": "scripts\\state_machine_cleanup\\state_machine_cleanup.yy",
                 "resourceType": "GMScript"
             }
+        },
+        {
+            "Key": "ffd69c30-d8a2-4863-b9af-909eef63c4b4",
+            "Value": {
+                "id": "1f1ff12e-72f6-47a3-989d-b2e3956c3615",
+                "resourcePath": "scripts\\time_get_delta_mult\\time_get_delta_mult.yy",
+                "resourceType": "GMScript"
+            }
         }
     ],
     "script_order": [
@@ -719,6 +751,7 @@
         "f62718d7-87c2-473e-b687-535452700924",
         "ad78e412-03cc-4b47-a961-306582e3ecbf",
         "73ad6de0-119b-428e-bdcf-b30d0f28d788",
+        "0ebe14c9-180d-43e6-a945-1444ce639435",
         "4fa341da-23a4-49db-9021-167f769a3839",
         "a3a8d735-09d3-4ef5-8d31-21ab908c2750",
         "982943d7-1908-4efc-8304-e1fc286e85e3",
@@ -750,7 +783,9 @@
         "cdf7316b-44c8-4cc8-8f5c-a0caccbb7474",
         "3380d040-b02a-473a-bb52-e70820026ba2",
         "0376aef4-b7c3-4553-9be7-899d3504d646",
-        "9cf23ed4-fb4a-44a5-a353-7f18cbda652e"
+        "9cf23ed4-fb4a-44a5-a353-7f18cbda652e",
+        "4973faa2-3135-4608-9a3a-5ed7fc865e39",
+        "ffd69c30-d8a2-4863-b9af-909eef63c4b4"
     ],
     "tutorial": ""
 }
