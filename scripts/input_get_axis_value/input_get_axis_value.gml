@@ -3,14 +3,14 @@
 /// @arg {string} axisName
 var axisName = argument0;
 var axisValue = 0;
-var entry = ds_map_find_value(o_input_system.axesMap, axisName);
+var entry = o_input_system.axesMap[? axisName];
 
 if (!is_undefined(entry))
 {
 	// Calculate the total axis value
 	for (var i = 0; i < ds_list_size(entry); i++)
 	{
-		var current = ds_list_find_value(entry, i);
+		var current = entry[| i];
 		var inputType = current[0];
 		var input = current[1];
 		var bPositive = current[2];

@@ -10,7 +10,7 @@ var instCount = 0;
 // Iterate through the array and calculate the average position
 for (var i = 0; i < count; i++)
 {
-	var current = ds_list_find_value(instances, i);
+	var current = instances[| i];
 	// Check if the instance exists
 	if (current == noone) { continue; }
 	
@@ -22,7 +22,7 @@ for (var i = 0; i < count; i++)
 // Prevent division by zero
 if (instCount == 0)
 {
-	return [ 0, 0 ];
+	return [0, 0];
 }
 
 return [sumX / instCount, sumY / instCount];

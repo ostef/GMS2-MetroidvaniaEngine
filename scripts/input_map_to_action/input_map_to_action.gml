@@ -8,7 +8,7 @@ var actionName = argument0;
 var actionType = argument1;
 var inputType = argument2;
 var input = argument3;
-var entry = ds_map_find_value(o_input_system.actionsMap, actionName);
+var entry = o_input_system.actionsMap[? actionName];
 
 if (!is_undefined(entry))
 {

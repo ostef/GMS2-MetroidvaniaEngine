@@ -8,7 +8,7 @@ var axisName = argument0;
 var inputType = argument1;
 var input = argument2;
 var bPositive = argument3;
-var entry = ds_map_find_value(o_input_system.axesMap, axisName);
+var entry = o_input_system.axesMa[? axisName];
 
 if (!is_undefined(entry))
 {

@@ -1,6 +1,11 @@
 /// @desc Initialize variables
 axesMap = ds_map_create();
+previousAxisValues = ds_map_create();
+axisValues = ds_map_create();
+
 actionsMap = ds_map_create();
+previousActionValues = ds_map_create();
+actionValues = ds_map_create();
 
 // Set gamepad axis deadzone
 if (gamepad_is_connected(0))

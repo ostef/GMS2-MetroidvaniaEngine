@@ -1,5 +1,5 @@
 /// @desc Cleanup
-// Actions map
+// Action map
 var current = ds_map_find_first(actionsMap);
 while (!is_undefined(current))
 {
@@ -10,7 +10,7 @@ while (!is_undefined(current))
 
 ds_map_destroy(actionsMap);
 
-// Axes map
+// Axis map
 var current = ds_map_find_first(axesMap);
 while (!is_undefined(current))
 {
@@ -20,3 +20,11 @@ while (!is_undefined(current))
 }
 
 ds_map_destroy(axesMap);
+
+// Axis values
+ds_map_destroy(axisValues);
+ds_map_destroy(previousAxisValues);
+
+// Action values
+ds_map_destroy(actionValues);
+ds_map_destroy(previousActionValues);

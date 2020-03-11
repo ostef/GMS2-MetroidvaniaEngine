@@ -3,13 +3,13 @@
 /// @arg {string} actionName
 var actionName = argument0;
 var actionValue = false;
-var entry = ds_map_find_value(o_input_system.actionsMap, actionName);
+var entry = o_input_system.actionsMap[? actionName];
 
 if (!is_undefined(entry))
 {
 	for (var i = 0; i < ds_list_size(entry); i++)
 	{
-		var current = ds_list_find_value(entry, i);
+		var current = entry[| i];
 		var actionType = current[0];
 		var inputType = current[1];
 		var input = current[2];
