@@ -175,6 +175,14 @@
             }
         },
         {
+            "Key": "2c786017-92db-47f2-8b46-974c210c9fc5",
+            "Value": {
+                "id": "db357c05-8742-4399-a0d6-956e5e52329c",
+                "resourcePath": "scripts\\input_get_axis_value\\input_get_axis_value.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "2d0b25fe-49c8-48d1-b6ee-faf210259491",
             "Value": {
                 "id": "c0934815-0c3f-4a41-a8e2-3d6bec019da5",
@@ -316,6 +324,14 @@
                 "id": "d2e51497-f4ea-4f17-85e0-59e9ae1cc822",
                 "resourcePath": "views\\4fae7a4b-e0e1-4d5c-aec4-ba31c4ef2a76.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "51c6b59e-d1f7-4deb-8608-77854d92b231",
+            "Value": {
+                "id": "29623d6b-53d7-474e-ba9b-1e537d1b8d07",
+                "resourcePath": "scripts\\input_add_axis\\input_add_axis.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -492,6 +508,14 @@
                 "id": "c410acaf-dccc-4314-b6b8-3dfc0fb18f1e",
                 "resourcePath": "options\\linux\\options_linux.yy",
                 "resourceType": "GMLinuxOptions"
+            }
+        },
+        {
+            "Key": "a9835572-3581-4b44-95f0-0d4ebb39921c",
+            "Value": {
+                "id": "002bc0cc-dd08-4b56-94d6-5569fe879a96",
+                "resourcePath": "views\\a9835572-3581-4b44-95f0-0d4ebb39921c.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -719,6 +743,14 @@
             }
         },
         {
+            "Key": "fb3834e7-4dac-4576-91a4-b166d00cc1f5",
+            "Value": {
+                "id": "f80663b3-cf50-4867-b924-151c8bfe4cdf",
+                "resourcePath": "scripts\\input_map_to_axis\\input_map_to_axis.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "fd1dd5b6-39e9-4025-96b6-d1551abfa5e7",
             "Value": {
                 "id": "9f60d837-8d6f-4da2-8774-92ea5e79e9cd",
@@ -785,7 +817,10 @@
         "0376aef4-b7c3-4553-9be7-899d3504d646",
         "9cf23ed4-fb4a-44a5-a353-7f18cbda652e",
         "4973faa2-3135-4608-9a3a-5ed7fc865e39",
-        "ffd69c30-d8a2-4863-b9af-909eef63c4b4"
+        "ffd69c30-d8a2-4863-b9af-909eef63c4b4",
+        "51c6b59e-d1f7-4deb-8608-77854d92b231",
+        "fb3834e7-4dac-4576-91a4-b166d00cc1f5",
+        "2c786017-92db-47f2-8b46-974c210c9fc5"
     ],
     "tutorial": ""
 }

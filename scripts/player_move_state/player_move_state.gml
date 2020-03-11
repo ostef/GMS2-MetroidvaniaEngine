@@ -1,5 +1,5 @@
 /// @func player_move_state()
-var xAxis = keyboard_check(ord("D")) - keyboard_check(ord("A"));
+var xAxis = input_get_axis_value("Move");
 
 xVel = xAxis * 2;
 
