@@ -10,4 +10,5 @@ if (is_undefined(entry))
 	entry = ds_list_create();
 	// Create the entry in the axes map
 	ds_map_add(o_input_system.axesMap, axisName, entry);
+	log_trace("INPUT: Added axis " + axisName);
 }

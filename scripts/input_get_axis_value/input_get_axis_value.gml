@@ -12,29 +12,29 @@ if (!is_undefined(entry))
 	{
 		var current = ds_list_find_value(o_input_system.axesMap, i);
 		var inputType = current[0];
-		var inputVal = current[1];
+		var input = current[1];
 		var bPositive = current[2];
 		var dir = bPositive ? 1 : -1;
 		
 		// Update input value based on input type
 		switch (inputType)
 		{
-			case INPUT_KEYBOARD:
-				axisValue += dir * keyboard_check(inputVal);
+			case InputType.Keyboard:
+				axisValue += dir * keyboard_check(input);
 				break;
 				
-			case INPUT_GAMEPAD_BUTTON:
+			case InputType.GamepadButton:
 				if (gamepad_is_connected(0))
 				{
-					axisValue += dir * gamepad_button_check(0, inputVal);
+					axisValue += dir * gamepad_button_check(0, input);
 				}
 				
 				break;
 				
-			case INPUT_GAMEPAD_AXIS:
+			case InputType.GamepadAxis:
 				if (gamepad_is_connected(0))
 				{
-					axisValue += dir * gamepad_axis_value(0, inputVal);
+					axisValue += dir * gamepad_axis_value(0, input);
 				}
 				
 				break;

@@ -1,5 +1,6 @@
 /// @func player_move_state()
 var xAxis = input_get_axis_value("Move");
+var bJump = input_get_action_value("Jump");
 
 xVel = xAxis * 2;
 
