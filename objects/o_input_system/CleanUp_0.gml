@@ -1,25 +1,25 @@
 /// @desc Cleanup
 // Action map
-var current = ds_map_find_first(actionsMap);
+var current = ds_map_find_first(actionMap);
 while (!is_undefined(current))
 {
-	var entry = ds_map_find_value(actionsMap, current);
+	var entry = ds_map_find_value(actionMap, current);
 	ds_list_destroy(entry);
-	current = ds_map_find_next(actionsMap, current);
+	current = ds_map_find_next(actionMap, current);
 }
 
-ds_map_destroy(actionsMap);
+ds_map_destroy(actionMap);
 
 // Axis map
-var current = ds_map_find_first(axesMap);
+var current = ds_map_find_first(axisMap);
 while (!is_undefined(current))
 {
-	var entry = ds_map_find_value(axesMap, current);
+	var entry = ds_map_find_value(axisMap, current);
 	ds_list_destroy(entry);
-	current = ds_map_find_next(axesMap, current);
+	current = ds_map_find_next(axisMap, current);
 }
 
-ds_map_destroy(axesMap);
+ds_map_destroy(axisMap);
 
 // Axis values
 ds_map_destroy(axisValues);

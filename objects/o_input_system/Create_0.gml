@@ -1,9 +1,9 @@
 /// @desc Initialize variables
-axesMap = ds_map_create();
+axisMap = ds_map_create();
 previousAxisValues = ds_map_create();
 axisValues = ds_map_create();
 
-actionsMap = ds_map_create();
+actionMap = ds_map_create();
 previousActionValues = ds_map_create();
 actionValues = ds_map_create();
 

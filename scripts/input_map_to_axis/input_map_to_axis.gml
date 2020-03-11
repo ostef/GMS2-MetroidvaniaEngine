@@ -8,7 +8,7 @@ var axisName = argument0;
 var inputType = argument1;
 var input = argument2;
 var bPositive = argument3;
-var entry = o_input_system.axesMa[? axisName];
+var entry = o_input_system.axisMap[? axisName];
 
 if (!is_undefined(entry))
 {

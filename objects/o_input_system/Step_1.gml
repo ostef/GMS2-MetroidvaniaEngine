@@ -10,10 +10,20 @@ if (gamepad_is_connected(0))
 
 // Iterate through the registered axes and update their value
 {
-	var current = ds_map_find_first(axesMap);
+	var current = ds_map_find_first(axisMap);
 	while (!is_undefined(current))
 	{
 		axisValues[? current] = input_get_axis_value(current);
-		current = ds_map_find_next(axesMap, current);
+		current = ds_map_find_next(axisMap, current);
+	}
+}
+
+// Iterate through the registered actions and update their value
+{
+	var current = ds_map_find_first(actionMap);
+	while (!is_undefined(current))
+	{
+		actionValues[? current] = input_get_action_value(current);
+		current = ds_map_find_next(actionMap, current);
 	}
 }
