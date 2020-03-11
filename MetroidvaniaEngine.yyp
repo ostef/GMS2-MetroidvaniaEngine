@@ -95,6 +95,14 @@
             }
         },
         {
+            "Key": "0fd45925-dc28-4d23-9866-8f6d42d23eb3",
+            "Value": {
+                "id": "664e3a8c-ab14-4244-ab83-7cce38f64877",
+                "resourcePath": "scripts\\input_button_check\\input_button_check.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "1176e9c7-9151-45d7-983d-7b79eebe548a",
             "Value": {
                 "id": "811a4854-a632-40b9-9699-846513129e53",
@@ -351,6 +359,14 @@
             }
         },
         {
+            "Key": "5434e328-17f7-4c06-959e-989bd71d5f36",
+            "Value": {
+                "id": "fd5d70f9-d258-4a82-b4a2-9d5642e88e2e",
+                "resourcePath": "scripts\\input_button_check_pressed\\input_button_check_pressed.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "57dc4bc8-7fcf-4ed8-81e5-01a7e96b0b39",
             "Value": {
                 "id": "fc823616-37c7-471e-ac6f-9e45a2cdccfd",
@@ -452,6 +468,14 @@
                 "id": "b2413898-8e31-4729-8927-c69d09f7e295",
                 "resourcePath": "objects\\o_character_base\\o_character_base.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "7d41718e-13e6-4322-8547-03603c66b386",
+            "Value": {
+                "id": "8aaffd1e-9f52-4a29-83af-ce93f189e6e7",
+                "resourcePath": "scripts\\input_button_check_released\\input_button_check_released.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -847,7 +871,10 @@
         "2c786017-92db-47f2-8b46-974c210c9fc5",
         "222067e8-6112-45e1-a9fb-3207ddf1089f",
         "4dd7cef2-1160-4578-bd6c-9f6b030252fd",
-        "5f603a75-408f-46ee-9fa0-81b1b500ff2b"
+        "5f603a75-408f-46ee-9fa0-81b1b500ff2b",
+        "0fd45925-dc28-4d23-9866-8f6d42d23eb3",
+        "5434e328-17f7-4c06-959e-989bd71d5f36",
+        "7d41718e-13e6-4322-8547-03603c66b386"
     ],
     "tutorial": ""
 }

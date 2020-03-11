@@ -10,35 +10,14 @@ if (!is_undefined(entry))
 	// Calculate the total axis value
 	for (var i = 0; i < ds_list_size(entry); i++)
 	{
-		var current = ds_list_find_value(o_input_system.axesMap, i);
+		var current = ds_list_find_value(entry, i);
 		var inputType = current[0];
 		var input = current[1];
 		var bPositive = current[2];
 		var dir = bPositive ? 1 : -1;
 		
 		// Update input value based on input type
-		switch (inputType)
-		{
-			case InputType.Keyboard:
-				axisValue += dir * keyboard_check(input);
-				break;
-				
-			case InputType.GamepadButton:
-				if (gamepad_is_connected(0))
-				{
-					axisValue += dir * gamepad_button_check(0, input);
-				}
-				
-				break;
-				
-			case InputType.GamepadAxis:
-				if (gamepad_is_connected(0))
-				{
-					axisValue += dir * gamepad_axis_value(0, input);
-				}
-				
-				break;
-		}
+		axisValue += dir * input_button_check(inputType, input);
 	}
 }
 else

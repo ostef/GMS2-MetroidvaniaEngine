@@ -4,7 +4,7 @@
 /// @arg {string} message
 var level = argument0;
 var message = argument1;
-var display = "[" + log_level_name(level) + "] " + message + "\n";
+var display = "[" + log_level_name(level) + "] " + message;
 
 show_debug_message(display);
 
