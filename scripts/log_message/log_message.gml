@@ -10,7 +10,7 @@ show_debug_message(display);
 
 // Add the an entry to the messages in o_debug
 ds_list_add(o_debug.logMessages, [level, display]);
-o_debug.alarm[0] = LOG_MESSAGE_TIME_ON_SCREEN;
+o_debug.alarm[0] = LOG_MESSAGE_TIME_ON_SCREEN - LOG_MESSAGE_FADE_TIME;
 
 // Crash the game if level is fatal
 if (level == LogLevel.Fatal)

@@ -12,4 +12,5 @@ enum LogLevel
 
 bDebugDrawing = true;
 debugRects = ds_list_create();
+bShowLogOutput = true;
 logMessages = ds_list_create();

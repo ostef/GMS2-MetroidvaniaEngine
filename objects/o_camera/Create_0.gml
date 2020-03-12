@@ -3,7 +3,7 @@ singleton_check();
 
 width = 320;
 height = 180;
-windowScale = 3;
+windowScale = 4;
 camera = camera_create_view(x, y, width, height, 0, self, -1, -1, width / 2, height / 2);
 
 targets = ds_list_create();
