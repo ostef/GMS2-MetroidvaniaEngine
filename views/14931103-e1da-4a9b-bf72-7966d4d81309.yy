@@ -10,7 +10,9 @@
         "af83044c-095f-4af2-bdca-9d79182c0727",
         "c3214adc-dacd-4d16-8f39-d149e9bd3b6b",
         "2d284df7-0f96-419c-a1e5-e60facbfb113",
-        "8ec3fee8-387c-4c4d-b3e7-1c872a1354cc"
+        "8ec3fee8-387c-4c4d-b3e7-1c872a1354cc",
+        "5b848f35-4bb1-4f4a-ba1b-73cfd061ed19",
+        "1b25737e-9ab5-4a47-9008-43b63bf6b800"
     ],
     "filterType": "GMScript",
     "folderName": "Collisions",

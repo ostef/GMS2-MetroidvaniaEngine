@@ -1,8 +1,8 @@
 {
-    "id": "66638252-ab11-4d41-905c-b415c681b064",
+    "id": "5b848f35-4bb1-4f4a-ba1b-73cfd061ed19",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "collide_with_tiles",
+    "name": "slope_tile_get_min",
     "IsCompatibility": false,
     "IsDnD": false
 }

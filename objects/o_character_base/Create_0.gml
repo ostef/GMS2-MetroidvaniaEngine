@@ -16,7 +16,7 @@ bWasStandingOnPlatform = false;
 bStandingOnPlatform = false;
 bWasOnSlope = false;
 bOnSlope = false;
-bFallOffPlatform = true;
+bFallOffPlatform = false;
 
 bFacingLeft = false;
 xScale = 1

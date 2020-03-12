@@ -33,10 +33,9 @@ yVelRemainder += yVel;
 yVel = floor(yVelRemainder);
 yVelRemainder -= yVel;
 
-// Collide
-//handle_tile_collisions();
-collide_with_tiles();
+handle_tile_collisions();
 check_for_ground();
+handle_slopes();
 
 // Update previous velocity
 xVelPrevious = xVel;
