@@ -1,8 +1,8 @@
 {
-    "id": "1a55fe83-c993-44d3-b550-5a9c05d329ba",
+    "id": "2c786017-92db-47f2-8b46-974c210c9fc5",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "input_get_axis_value",
+    "name": "input_calculate_axis_value",
     "IsCompatibility": false,
     "IsDnD": false
 }

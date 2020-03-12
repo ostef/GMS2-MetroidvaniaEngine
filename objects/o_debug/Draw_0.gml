@@ -1,6 +1,7 @@
 /// @desc Debug drawing
 if (bDebugDrawing)
 {
+	// Draw all the debug rects
 	for (var i = 0; i < ds_list_size(debugRects); i++)
 	{
 		var data = debugRects[| i];

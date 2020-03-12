@@ -1,5 +1,5 @@
 {
-    "id": "5f603a75-408f-46ee-9fa0-81b1b500ff2b",
+    "id": "ca1ec6db-1434-4ca4-8985-f22f62e19faa",
     "modelName": "GMScript",
     "mvc": "1.0",
     "name": "input_get_action_value",

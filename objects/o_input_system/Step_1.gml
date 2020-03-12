@@ -13,7 +13,7 @@ if (gamepad_is_connected(0))
 	var current = ds_map_find_first(axisMap);
 	while (!is_undefined(current))
 	{
-		axisValues[? current] = input_get_axis_value(current);
+		axisValues[? current] = input_calculate_axis_value(current);
 		current = ds_map_find_next(axisMap, current);
 	}
 }
@@ -23,7 +23,7 @@ if (gamepad_is_connected(0))
 	var current = ds_map_find_first(actionMap);
 	while (!is_undefined(current))
 	{
-		actionValues[? current] = input_get_action_value(current);
+		actionValues[? current] = input_calculate_action_value(current);
 		current = ds_map_find_next(actionMap, current);
 	}
 }

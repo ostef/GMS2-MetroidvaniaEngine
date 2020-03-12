@@ -7,7 +7,6 @@ camera = camera_create_view(x, y, width, height, 0, self, -1, -1, width / 2, hei
 targets = ds_list_create();
 followSmoothing = 5.0;
 
-camera_set_limits(-infinity, -infinity, infinity, infinity);
 // Camera state machine init
 state_machine_init();
 state_machine_add_state("FollowTargets", noone, camera_follow_targets_state, noone);
@@ -21,4 +20,4 @@ for (var i = 0; i < room_last + 1; i++)
 }
 
 window_set_rectangle(200, 200, width * windowScale, height * windowScale);
-surface_resize(application_surface, width, height);
+surface_resize(application_surface, width * windowScale, height * windowScale);
