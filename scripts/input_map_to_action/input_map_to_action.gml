@@ -13,7 +13,7 @@ var entry = o_input_system.actionMap[? actionName];
 if (!is_undefined(entry))
 {
 	ds_list_add(entry, [actionType, inputType, input]);
-	log_trace("INPUT: Added mapping to " + actionName + " action");
+	log_info("INPUT: Added mapping to " + actionName + " action");
 }
 else
 {

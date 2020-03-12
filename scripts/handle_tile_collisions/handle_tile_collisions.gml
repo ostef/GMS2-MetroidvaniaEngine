@@ -53,7 +53,7 @@
 				if (!bOnVerticalSide || !bSideTileFree) { continue; }
 			}
 		
-			// Update y velocity
+			// Update x velocity
 			xVel = xDir == 1 ? tileX1 - x1 - 1 : tileX2 - x2;
 		
 			break;

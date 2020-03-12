@@ -17,6 +17,6 @@ if (onUpdate != noone)
 	return true;
 }
 
-log_trace("STATE_MACHINE: State " + stateName + " creation failed: onUpdate script is 'noone'");
+log_info("STATE_MACHINE: State " + stateName + " creation failed: onUpdate script is 'noone'");
 
 return false;

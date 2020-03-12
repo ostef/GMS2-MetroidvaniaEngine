@@ -1,4 +1,6 @@
 /// @desc Initialize variables
+singleton_check();
+
 axisMap = ds_map_create();
 previousAxisValues = ds_map_create();
 axisValues = ds_map_create();

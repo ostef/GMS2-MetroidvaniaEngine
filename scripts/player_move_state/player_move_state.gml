@@ -13,7 +13,7 @@ apply_gravity();
 
 if (bJump && bGrounded)
 {
-	yVel = -5;
+	yVel = -7;
 }
 
 if (keyboard_check_pressed(ord("S")))

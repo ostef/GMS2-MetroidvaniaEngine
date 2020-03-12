@@ -1,4 +1,4 @@
-/// @func log_level_name(level)
+/// @func log_level_get_name(level)
 /// @desc Get the name of the log level
 /// @arg {LogLevel} level
 var level = argument0;

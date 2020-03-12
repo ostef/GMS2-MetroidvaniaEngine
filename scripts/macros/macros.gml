@@ -1,4 +1,7 @@
 /// @desc Contains all the macros
+// Debug logging
+#macro LOG_MESSAGE_TIME_ON_SCREEN 75
+
 // State machine
 #macro ON_STATE_ENTER 0
 #macro ON_STATE_UPDATE 1

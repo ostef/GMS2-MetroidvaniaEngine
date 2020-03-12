@@ -1,4 +1,6 @@
 /// @desc Initialize variables
+singleton_check();
+
 width = 320;
 height = 180;
 windowScale = 3;

@@ -1,4 +1,6 @@
 /// @desc Initialize variables
+singleton_check();
+
 enum LogLevel
 {
 	Trace = 0,
@@ -10,4 +12,4 @@ enum LogLevel
 
 bDebugDrawing = true;
 debugRects = ds_list_create();
-
+logMessages = ds_list_create();

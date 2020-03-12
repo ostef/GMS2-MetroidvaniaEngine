@@ -1,4 +1,8 @@
 /// @desc Execute current state
+// Update previous velocity
+xVelPrevious = xVel;
+yVelPrevious = yVel;
+
 state_machine_execute();
 
 #region Force set variables
@@ -36,7 +40,3 @@ yVelRemainder -= yVel;
 handle_tile_collisions();
 check_for_ground();
 handle_slopes();
-
-// Update previous velocity
-xVelPrevious = xVel;
-yVelPrevious = yVel;

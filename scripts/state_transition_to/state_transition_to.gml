@@ -11,7 +11,7 @@ if (!is_undefined(stateEntry))
 	nextStateEntry = stateEntry;
 	bTransitioning = true;
 	
-	log_trace("STATE_MACHINE: Transitioning to state " + nextStateName);
+	log_info("STATE_MACHINE: Transitioning to state " + nextStateName);
 	
 	return true;
 }

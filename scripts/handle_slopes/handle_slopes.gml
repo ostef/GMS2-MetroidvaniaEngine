@@ -21,7 +21,6 @@ for (var j = cellCloseSlope; j <= cellFarSlope; j++)
 	for (var i = cellMinX; i <= cellMaxX; i++)
 	{
 		var tileId = collision_get_tile_at(i, j);
-		
 		// Get the tile rectangle coordinates
 		var tileX1 = i * tileWidth;
 		var tileY1 = j * tileHeight;
@@ -40,7 +39,7 @@ for (var j = cellCloseSlope; j <= cellFarSlope; j++)
 			xRel >= tileWidth && xRel < tileWidth + mask_get_xoffset();		// If / slope
 			
 		var bOnSlopeBottom = bLeftSlope ?
-			xRel > tileWidth && xRel <= tileWidth + mask_get_xoffset() :		// If \ slope
+			xRel > tileWidth && xRel <= tileWidth + mask_get_xoffset() :	// If \ slope
 			xRel >= -(mask_get_width () - mask_get_xoffset()) && xRel < 0;	// If / slope
 		
 		// Make sure we're on slope
@@ -48,22 +47,22 @@ for (var j = cellCloseSlope; j <= cellFarSlope; j++)
 		if (yRel < 0 || yRel > tileHeight) { continue; }
 		
 		// Get the slope positions
-		var slope_min = slope_tile_get_min(tileId);
-		var slope_max = slope_tile_get_max(tileId);
+		var slopeMin = slope_tile_get_min(tileId);
+		var slopeMax = slope_tile_get_max(tileId);
 		var newYRel = 0;
 		
 		// Calculate the new y position relative to the tile
 		if (bOnSlopeTop)
 		{
-			newYRel = min(slope_min, slope_max);
+			newYRel = min(slopeMin, slopeMax);
 		}
 		else if (bOnSlopeBottom)
 		{
-			newYRel = max(slope_min, slope_max);
+			newYRel = max(slopeMin, slopeMax);
 		}
 		else
 		{
-			newYRel = lerp(slope_min, slope_max, xRel / tileWidth);
+			newYRel = lerp(slopeMin, slopeMax, xRel / tileWidth);
 			// Consider we're on slope only if not on slope top or bottom
 			bOnSlope = true;
 		}

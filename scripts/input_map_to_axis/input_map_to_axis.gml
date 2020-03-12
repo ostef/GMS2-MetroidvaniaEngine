@@ -13,7 +13,7 @@ var entry = o_input_system.axisMap[? axisName];
 if (!is_undefined(entry))
 {
 	ds_list_add(entry, [inputType, input, bPositive]);
-	log_trace("INPUT: Added mapping to " + axisName + " axis");
+	log_info("INPUT: Added mapping to " + axisName + " axis");
 }
 else
 {
