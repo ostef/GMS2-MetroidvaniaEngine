@@ -40,3 +40,6 @@ yVelRemainder -= yVel;
 handle_tile_collisions();
 check_for_ground();
 handle_slopes();
+
+debug_draw_arrow(x, y, x + xVel * 10, y, 2, c_red);
+debug_draw_arrow(x, y, x, y + yVel * 10, 2, c_green);

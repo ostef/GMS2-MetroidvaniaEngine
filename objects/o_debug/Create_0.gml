@@ -10,7 +10,15 @@ enum LogLevel
 	Fatal = 4
 }
 
+enum ShapeType
+{
+	Rectangle = 0,
+	Circle = 1,
+	Line = 2,
+	Arrow = 3
+}
+
 bDebugDrawing = true;
-debugRects = ds_list_create();
+drawCommands = ds_list_create();
 bShowLogOutput = true;
 logMessages = ds_list_create();

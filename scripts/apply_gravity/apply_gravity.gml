@@ -4,3 +4,7 @@ if (!bGrounded)
 {
 	yVel += grav;
 }
+else if (!bWasGrounded)
+{
+	yVel = 0;
+}

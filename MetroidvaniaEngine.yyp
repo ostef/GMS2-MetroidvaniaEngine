@@ -399,6 +399,14 @@
             }
         },
         {
+            "Key": "5930106c-c442-4941-9e6e-b0b00bb1deec",
+            "Value": {
+                "id": "de2ebb9c-bfaf-4516-83c2-fd33ca60df0d",
+                "resourcePath": "scripts\\debug_draw_line\\debug_draw_line.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "5b848f35-4bb1-4f4a-ba1b-73cfd061ed19",
             "Value": {
                 "id": "9d7d2a1d-b8f0-4241-bd13-9cfa06433a69",
@@ -555,6 +563,14 @@
             "Value": {
                 "id": "1faae76a-c254-4eb9-9296-5deb7a4351fc",
                 "resourcePath": "scripts\\camera_add_target\\camera_add_target.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "a40cf8ec-4b92-4f19-9104-d63f38c06dba",
+            "Value": {
+                "id": "4b68b95c-76b1-4661-9bfe-da65e79676c0",
+                "resourcePath": "scripts\\debug_draw_arrow\\debug_draw_arrow.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -815,6 +831,14 @@
             }
         },
         {
+            "Key": "f5e191a9-7870-4348-b087-5e95ed90444c",
+            "Value": {
+                "id": "ef18226a-c4ff-4d04-8853-40650efc2c67",
+                "resourcePath": "scripts\\debug_draw_circle\\debug_draw_circle.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "f62718d7-87c2-473e-b687-535452700924",
             "Value": {
                 "id": "9dca4dae-3c15-4024-8948-8d5396793bc7",
@@ -912,6 +936,9 @@
         "0d172a4a-ee9c-4160-9941-fb4743fb8701",
         "cdf7316b-44c8-4cc8-8f5c-a0caccbb7474",
         "3380d040-b02a-473a-bb52-e70820026ba2",
+        "f5e191a9-7870-4348-b087-5e95ed90444c",
+        "5930106c-c442-4941-9e6e-b0b00bb1deec",
+        "a40cf8ec-4b92-4f19-9104-d63f38c06dba",
         "0376aef4-b7c3-4553-9be7-899d3504d646",
         "9cf23ed4-fb4a-44a5-a353-7f18cbda652e",
         "4973faa2-3135-4608-9a3a-5ed7fc865e39",
