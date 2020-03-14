@@ -1,13 +1,21 @@
 /// @desc Initialize variables
 singleton_check();
 
+// Display
 width = 320;
 height = 180;
 windowScale = 4;
-camera = camera_create_view(x, y, width, height, 0, self, -1, -1, width / 2, height / 2);
-
+// Shake
+translationalShake = 0;
+rotationalShake = 0;
+xOffset = 0;
+yOffset = 0;
+rotation = 0;
+// Following
 targets = ds_list_create();
-followSmoothing = 5.0;
+followSmoothing = .1;
+
+camera = camera_create_view(x, y, width, height, 0, noone, -1, -1, width / 2, height / 2);
 
 // Camera state machine init
 state_machine_init();

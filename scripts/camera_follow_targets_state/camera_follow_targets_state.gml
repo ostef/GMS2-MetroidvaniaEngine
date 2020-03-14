@@ -5,6 +5,6 @@ var targetY = avgPosition[1];
 
 if (followSmoothing != 0.0)
 {
-	x = lerp(x, floor(targetX), 1.0 / abs(followSmoothing));
-	y = lerp(y, floor(targetY), 1.0 / abs(followSmoothing));
+	x = asymptotic_average(x, floor(targetX), followSmoothing);
+	y = asymptotic_average(y, floor(targetY), followSmoothing);
 }
