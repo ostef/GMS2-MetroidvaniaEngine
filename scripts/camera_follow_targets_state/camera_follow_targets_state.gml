@@ -1,5 +1,5 @@
 /// @func camera_follow_targets()
-var avgPosition = get_average_pos(targets);
+var avgPosition = get_weighted_average_pos(targets);
 var targetX = avgPosition[0];
 var targetY = avgPosition[1];
 

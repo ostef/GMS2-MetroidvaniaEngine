@@ -3,4 +3,4 @@
 var target = argument0;
 
 camera_clear_targets();
-camera_add_target(target);
+camera_add_target(target, 1.0);

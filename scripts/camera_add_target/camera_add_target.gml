@@ -1,13 +1,7 @@
-/// @func camera_add_target(target)
-/// @arg target
+/// @func camera_add_target(target, weight)
+/// @arg {int} target
+/// @arg {real} weight
 var target = argument0;
+var weight = argument1;
 
-// Add a target to the list
-if (!ds_list_find_index(o_camera.targets, target))
-{
-	ds_list_add(o_camera.targets, target);
-}
-else
-{
-	log_error("CAMERA: Camera target already registered");
-}
+ds_list_add(o_camera.targets, [target, weight]);

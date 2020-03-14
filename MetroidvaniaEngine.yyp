@@ -719,6 +719,14 @@
             }
         },
         {
+            "Key": "b7de2251-86cc-45f6-850b-eab146b1e1e9",
+            "Value": {
+                "id": "3d919855-6d9a-4e34-abe0-1f58b8e7692b",
+                "resourcePath": "scripts\\get_weighted_average_pos\\get_weighted_average_pos.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "bdfeca79-55e1-4e6f-808d-df00c603ef54",
             "Value": {
                 "id": "50cbacb5-4e89-4915-9469-2724fb973205",
@@ -1059,6 +1067,7 @@
         "7d41718e-13e6-4322-8547-03603c66b386",
         "de1aebf3-75cc-48ad-a799-7f92fcc41f5c",
         "0376aef4-b7c3-4553-9be7-899d3504d646",
+        "b7de2251-86cc-45f6-850b-eab146b1e1e9",
         "9cf23ed4-fb4a-44a5-a353-7f18cbda652e"
     ],
     "tutorial": ""
