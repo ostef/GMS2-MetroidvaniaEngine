@@ -7,7 +7,8 @@
         "3380d040-b02a-473a-bb52-e70820026ba2",
         "f5e191a9-7870-4348-b087-5e95ed90444c",
         "5930106c-c442-4941-9e6e-b0b00bb1deec",
-        "a40cf8ec-4b92-4f19-9104-d63f38c06dba"
+        "a40cf8ec-4b92-4f19-9104-d63f38c06dba",
+        "569672f7-31c5-4c28-be26-033388d827e1"
     ],
     "filterType": "GMScript",
     "folderName": "Debug Drawing",

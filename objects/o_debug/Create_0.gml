@@ -10,15 +10,18 @@ enum LogLevel
 	Fatal = 4
 }
 
-enum ShapeType
+enum DebugDrawType
 {
 	Rectangle = 0,
 	Circle = 1,
 	Line = 2,
-	Arrow = 3
+	Arrow = 3,
+	Text = 4
 }
 
+// Debug drawing
 bDebugDrawing = true;
 drawCommands = ds_list_create();
+// Debug logging
 bShowLogOutput = true;
-instanceLogMap = ds_map_create();
+instanceLogMap = ds_map_create();	// Key is the instance id, value is the log message list

@@ -1,5 +1,11 @@
 /// @func handle_tile_collisions()
 /// @desc Handle collision with tiles
+// Reset collision flags
+bCollisionRight = false;
+bCollisionLeft = false;
+bCollisionBottom = false;
+bCollisionTop = false;
+
 // Horizontal
 {
 	var xDir = xVel >= 0 ? 1 : -1;
@@ -61,6 +67,9 @@
 	
 		if (bCollided) { break; }
 	}
+	
+	bCollisionRight = bCollided && xDir == 1;
+	bCollisionLeft = bCollided && xDir == -1;
 }
 
 // Apply x movement
@@ -124,6 +133,9 @@ x = clamp(x, mask_get_xoffset(), room_width - mask_get_width() + mask_get_xoffse
 	
 		if (bCollided) { break; }
 	}
+	
+	bCollisionBottom = bCollided && yDir == 1;
+	bCollisionTop = bCollided && yDir == -1;
 }
 
 // Apply y movement

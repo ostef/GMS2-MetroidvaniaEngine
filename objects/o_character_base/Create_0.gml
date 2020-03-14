@@ -1,15 +1,20 @@
 /// @desc Initialize variables
+// Movement
 xVelPrevious = 0.0;
 yVelPrevious = 0.0;
 xVel = 0.0;
 yVel = 0.0;
 xVelRemainder = 0.0;
 yVelRemainder = 0.0;
-
-state_machine_init();
-
 grav = .4;
 
+// Collisions
+bCollisionRight = false;
+bCollisionLeft = false;
+bCollisionBottom = false;
+bCollisionTop = false;
+
+// Grounding and slopes
 bWasGrounded = false;
 bGrounded = false;
 bWasStandingOnPlatform = false;
@@ -18,7 +23,10 @@ bWasOnSlope = false;
 bOnSlope = false;
 bFallOffPlatform = false;
 
+// Graphics
 bFacingLeft = false;
 xScale = 1
 yScale = 1;
 rotation = 0.0;
+
+state_machine_init();

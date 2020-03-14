@@ -13,4 +13,4 @@ var y2 = argument3;
 var size = argument4;
 var color = argument5;
 
-ds_list_add(o_debug.drawCommands, [ShapeType.Arrow, x1, y1, x2, y2, size, color]);
+ds_list_add(o_debug.drawCommands, [DebugDrawType.Arrow, x1, y1, x2, y2, size, color]);

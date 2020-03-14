@@ -7,7 +7,7 @@ var level = argument[0];
 var message = argument[1];
 var instanceId = argument_count > 2 ? argument[2] : LOG_GLOBAL;
 var display = "[" + log_level_get_name(level) + "](" + time_get_timestamp() + ") " + message;
-// Get the log messages list corresponding to the instanceId
+var maxLogMessages = instanceId == LOG_GLOBAL ? LOG_GLOBAL_MAX_MESSAGES : LOG_INSTANCE_MAX_MESSAGES;
 var logMessages = o_debug.instanceLogMap[? instanceId];
 
 // Create the entry if it does not exist
@@ -19,6 +19,11 @@ if (is_undefined(logMessages))
 
 // Add the an entry to the log messages
 ds_list_add(logMessages, [level, display]);
+
+if (ds_list_size(logMessages) > maxLogMessages)
+{
+	ds_list_delete(logMessages, 0);
+}
  
 // Show a debug message if global logging
 if (instanceId == LOG_GLOBAL)

@@ -5,7 +5,7 @@ yVelPrevious = yVel;
 
 state_machine_execute();
 
-#region Force set variables
+#region Force set scale and angle
 if (image_xscale != 1)
 {
 	image_xscale = 1;

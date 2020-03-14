@@ -13,4 +13,4 @@ var y2 = argument3;
 var color = argument4;
 var bFilled = argument5;
 
-ds_list_add(o_debug.drawCommands, [ShapeType.Rectangle, x1, y1, x2, y2, color, bFilled]);
+ds_list_add(o_debug.drawCommands, [DebugDrawType.Rectangle, x1, y1, x2, y2, color, bFilled]);

@@ -11,4 +11,4 @@ var radius = argument2;
 var color = argument3;
 var bFilled = argument4;
 
-ds_list_add(o_debug.drawCommands, [ShapeType.Circle, xx, yy, radius, color, bFilled]);
+ds_list_add(o_debug.drawCommands, [DebugDrawType.Circle, xx, yy, radius, color, bFilled]);
