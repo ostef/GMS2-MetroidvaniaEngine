@@ -10,11 +10,11 @@ if (bDebugDrawing)
 		switch (shapeType)
 		{
 			case ShapeType.Rectangle:
-				draw_rectangle_color(data[1], data[2], data[3], data[4], data[5], data[5], data[5], data[5], data[6]);
+				draw_rectangle_color(data[1], data[2], data[3], data[4], data[5], data[5], data[5], data[5], !data[6]);
 				break;
 				
 			case ShapeType.Circle:
-				draw_circle_color(data[1], data[2], data[3], data[4], data[4], data[5]);
+				draw_circle_color(data[1], data[2], data[3], data[4], data[4], !data[5]);
 				break;
 				
 			case ShapeType.Line:

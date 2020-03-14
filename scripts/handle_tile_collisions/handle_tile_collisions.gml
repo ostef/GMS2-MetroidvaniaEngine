@@ -46,7 +46,7 @@
 			// If the tile is a slope
 			if (bSlopeTile)
 			{
-				var bOnVerticalSide = bLeftSlopeTile ? x2 < tileX1 : x1 > tileX2;
+				var bOnVerticalSide = xDir == 1 ? bLeftSlopeTile : !bLeftSlopeTile;
 				var sideTileX = clamp(bLeftSlopeTile ? i - 1 : i + 1, 0, o_collisions.tilemapWidth - 1);
 				var bSideTileFree = collision_get_tile_at(sideTileX, j) == TILE_VOID || collision_get_tile_at(sideTileX, j) == TILE_PLATFORM;
 				

@@ -2,7 +2,7 @@
 /// @desc Cancel the transition to the next state
 if (bTransitioning)
 {
-	log_info("STATE_MACHINE: Cancelling state transition to " + nextStateName);
+	instance_log_info("STATE_MACHINE: Cancelling state transition to " + nextStateName);
 
 	bTransitioning = false;
 	nextStateName = "";

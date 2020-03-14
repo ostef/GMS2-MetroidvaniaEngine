@@ -11,11 +11,11 @@ if (!is_undefined(stateEntry))
 	nextStateEntry = stateEntry;
 	bTransitioning = true;
 	
-	log_info("STATE_MACHINE: Transitioning to state " + nextStateName);
+	instance_log_info("STATE_MACHINE: Transitioning to state " + nextStateName);
 	
 	return true;
 }
 
-log_error("STATE_MACHINE: Tried transitioning to a non-existing state (" + stateName + "). Make sure you typed the state name correctly and the state has properly been added");
+instance_log_error("STATE_MACHINE: Tried transitioning to a non-existing state (" + stateName + "). Make sure you typed the state name correctly and the state has properly been added");
 
 return false;

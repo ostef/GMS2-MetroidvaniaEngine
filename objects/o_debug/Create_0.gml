@@ -21,4 +21,4 @@ enum ShapeType
 bDebugDrawing = true;
 drawCommands = ds_list_create();
 bShowLogOutput = true;
-logMessages = ds_list_create();
+instanceLogMap = ds_map_create();

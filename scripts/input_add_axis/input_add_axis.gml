@@ -8,7 +8,6 @@ var entry = o_input_system.axisMap[? axisName];
 if (is_undefined(entry))
 {
 	entry = ds_list_create();
-	// Create the entry in the axes map
-	o_input_system.axisMap[? axisName] = entry;
+	ds_map_add_list(o_input_system.axisMap, axisName, entry);
 	log_info("INPUT: Added axis " + axisName);
 }

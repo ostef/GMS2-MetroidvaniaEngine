@@ -4,7 +4,6 @@ var stateName = ds_stack_pop(stateHistory);
 
 if (!is_undefined(stateName))
 {
-	
 	return state_transition_to(stateName);
 }
 

@@ -7,5 +7,5 @@ var message = argument1;
 
 if (!assertion)
 {
-	log_fatal (" \n********** ASSERTION FAILED **********\n \n" + message + "\n \n*************************************");
+	log_fatal(" \n********** ASSERTION FAILED **********\n \n" + message + "\n \n*************************************");
 }

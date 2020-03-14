@@ -1,14 +1,14 @@
-/// @func debug_draw_circle(x, y, color, bFilled)
+/// @func debug_draw_circle(x, y, radius, color, bFilled)
 /// @desc Draw a debug circle on the screen
 /// @arg {real} x
 /// @arg {real} y
-/// @arg {real} x2
-/// @arg {real} y2
+/// @arg {real} radius
 /// @arg {int} color
 /// @arg {bool} bFilled
 var xx = argument0;
 var yy = argument1;
-var color = argument2;
-var bFilled = argument3;
+var radius = argument2;
+var color = argument3;
+var bFilled = argument4;
 
-ds_list_add(o_debug.drawCommands, [ShapeType.Circle, xx, yy, color, bFilled]);
+ds_list_add(o_debug.drawCommands, [ShapeType.Circle, xx, yy, radius, color, bFilled]);

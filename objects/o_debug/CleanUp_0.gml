@@ -1,3 +1,3 @@
 /// @desc Cleanup
-ds_list_destroy(logMessages);
+ds_map_destroy(instanceLogMap);
 ds_list_destroy(drawCommands);

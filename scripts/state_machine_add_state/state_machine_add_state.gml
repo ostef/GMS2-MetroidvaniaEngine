@@ -13,10 +13,11 @@ var onExit = argument3;
 if (onUpdate != noone)
 {
 	stateMap[? stateName] = [onEnter, onUpdate, onExit];
+	instance_log_info("STATE MACHINE: Created state " + stateName);
 	
 	return true;
 }
 
-log_error("STATE_MACHINE: State " + stateName + " creation failed: onUpdate script is 'noone'");
+instance_log_error("STATE_MACHINE: State " + stateName + " creation failed: onUpdate script is 'noone'");
 
 return false;
