@@ -8,14 +8,17 @@ windowScale = 4;
 // Shake
 translationalShake = 0;
 rotationalShake = 0;
+shakeLerpAmount = .1;
 xOffset = 0;
 yOffset = 0;
 rotation = 0;
 // Following
 targets = ds_list_create();
 followSmoothing = .1;
-
+// Camera
 camera = camera_create_view(x, y, width, height, 0, noone, -1, -1, width / 2, height / 2);
+
+camera_set_limits(-infinity, -infinity, infinity, infinity);
 
 // Camera state machine init
 state_machine_init();
