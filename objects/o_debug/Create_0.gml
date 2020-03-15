@@ -22,7 +22,6 @@ enum DebugDrawType
 // Debug drawing
 bDebugDrawing = true;
 drawCommands = ds_list_create();
-guiDrawCommands = ds_list_create();
 // Debug logging
 bShowLogOutput = true;
 instanceLogMap = ds_map_create();	// Key is the instance id, value is the log message list

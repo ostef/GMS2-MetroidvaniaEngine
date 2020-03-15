@@ -17,7 +17,7 @@
         "7d41718e-13e6-4322-8547-03603c66b386"
     ],
     "filterType": "GMScript",
-    "folderName": "Input",
+    "folderName": "Input System",
     "isDefaultView": false,
     "localisedFolderName": ""
 }

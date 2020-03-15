@@ -29,4 +29,7 @@ xScale = 1
 yScale = 1;
 rotation = 0.0;
 
+// Events
+onGroundHitEvent = ds_list_create();
+
 state_machine_init();

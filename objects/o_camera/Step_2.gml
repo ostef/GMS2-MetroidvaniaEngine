@@ -1,5 +1,6 @@
 /// @desc Execute movement state and update shake
 state_machine_execute();
+state_machine_handle_transition();
 
 // Apply shake
 xOffset = translationalShake * random_range(-1, 1);

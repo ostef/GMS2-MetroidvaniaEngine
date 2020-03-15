@@ -6,11 +6,12 @@ bCollisionLeft = false;
 bCollisionBottom = false;
 bCollisionTop = false;
 
-// Horizontal
+var tileWidth = o_collisions.tileWidth;
+var tileHeight = o_collisions.tileHeight;
+
+#region Horizontal
 {
 	var xDir = xVel >= 0 ? 1 : -1;
-	var tileWidth = o_collisions.tileWidth;
-	var tileHeight = o_collisions.tileHeight;
 	var x1 = xDir == 1 ? bbox_right : bbox_left + xVel;
 	var y1 = bbox_top;
 	var y2 = bbox_bottom;
@@ -67,16 +68,14 @@ bCollisionTop = false;
 	
 		if (bCollided) { break; }
 	}
-	
-	bCollisionRight = bCollided && xDir == 1;
-	bCollisionLeft = bCollided && xDir == -1;
 }
+#endregion
 
 // Apply x movement
 x += xVel;
 x = clamp(x, mask_get_xoffset(), room_width - mask_get_width() + mask_get_xoffset());
 
-// Vertical
+#region Vertical
 {
 	var yDir = yVel >= 0 ? 1 : -1;
 	var x1 = bbox_left;
@@ -133,10 +132,8 @@ x = clamp(x, mask_get_xoffset(), room_width - mask_get_width() + mask_get_xoffse
 	
 		if (bCollided) { break; }
 	}
-	
-	bCollisionBottom = bCollided && yDir == 1;
-	bCollisionTop = bCollided && yDir == -1;
 }
+#endregion
 
 // Apply y movement
 y += yVel;
