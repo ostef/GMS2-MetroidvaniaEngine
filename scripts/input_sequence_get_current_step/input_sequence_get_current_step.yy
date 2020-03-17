@@ -1,8 +1,8 @@
 {
-    "id": "31952d18-4cbe-4090-9a49-7f86b0e964ea",
+    "id": "451e6434-a54e-4ac9-8b87-c34f4fbb06c9",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "hang_on_ledge",
+    "name": "input_sequence_get_current_step",
     "IsCompatibility": false,
     "IsDnD": false
 }

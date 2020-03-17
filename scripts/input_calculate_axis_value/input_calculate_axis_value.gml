@@ -17,7 +17,14 @@ if (!is_undefined(entry))
 		var dir = bPositive ? 1 : -1;
 		
 		// Update input value based on input type
-		axisValue += dir * input_button_check(inputType, input);
+		if (inputType == InputType.GamepadAxis)
+		{
+			axisValue += gamepad_is_connected(0) * dir * gamepad_axis_value(0, input);
+		}
+		else
+		{
+			axisValue += dir * input_button_check(inputType, input);
+		}
 	}
 }
 else

@@ -4,11 +4,12 @@
 var axisName = argument0;
 var value = o_input_system.axisValues[? axisName];
 
-if (!is_undefined(value))
+// Sanity check
+if (is_undefined(value))
 {
-	return value;
+	log_error("INPUT: Axis " + axisName + " does not exist!");
+
+	return 0.0;
 }
 
-log_error("INPUT: Axis " + axisName + " does not exist!");
-
-return 0.0;
+return value;

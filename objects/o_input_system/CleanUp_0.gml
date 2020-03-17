@@ -9,3 +9,7 @@ ds_map_destroy(previousAxisValues);
 // Action values
 ds_map_destroy(actionValues);
 ds_map_destroy(previousActionValues);
+
+// Sequences
+ds_map_destroy(sequenceMap);
+ds_map_destroy(sequenceValues)

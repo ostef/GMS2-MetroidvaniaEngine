@@ -2,7 +2,7 @@
 /// @desc Apply gravity on character
 if (!bGrounded)
 {
-	yVel += grav;
+	yVel += grav * time_get_timescale();
 }
 else if (!bWasGrounded)
 {

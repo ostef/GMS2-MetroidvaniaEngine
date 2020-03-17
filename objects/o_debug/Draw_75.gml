@@ -1,6 +1,6 @@
 /// @desc Display log output
 var charHeight = string_height(" ");
-draw_text(10, 10, "FPS: " + string(1000000 / time_get_delta()));
+draw_text(10, 10, "FPS: " + string(1000000 / delta_time));
 
 // Draw the logging messages
 if (bShowLogOutput)

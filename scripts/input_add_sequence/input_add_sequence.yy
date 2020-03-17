@@ -1,8 +1,8 @@
 {
-    "id": "4973faa2-3135-4608-9a3a-5ed7fc865e39",
+    "id": "a0cfb044-4ee5-4b02-a9b1-21c0fb956662",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "time_get_delta",
+    "name": "input_add_sequence",
     "IsCompatibility": false,
     "IsDnD": false
 }
