@@ -23,3 +23,30 @@ if (keyboard_check_pressed(ord("S")))
 {
 	fall_off_platform();
 }
+
+// Animate
+if (bGrounded)
+{
+	if (xAxis == 0)
+	{
+		set_animation(s_player_idle, 0, 1);
+	}
+	else
+	{
+		set_animation(s_player_run, 0, 1);
+	}
+}
+else
+{
+	set_animation(s_player_jump, yVel < 0 ? 0 : 1, 0);
+	
+	if (yVel > 0)
+	{
+		image_speed = 1;
+	}
+	
+	if (animation_end(s_player_jump))
+	{
+		image_speed = 0;
+	}
+}
