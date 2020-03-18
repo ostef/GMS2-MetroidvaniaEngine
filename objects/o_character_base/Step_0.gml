@@ -5,6 +5,9 @@ yVelPrevious = yVel;
 
 state_machine_execute();
 
+// Update image_speed
+image_speed = animationSpeed * time_get_timescale();
+
 #region Force set scale and angle
 if (image_xscale != 1)
 {

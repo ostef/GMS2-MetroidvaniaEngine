@@ -810,7 +810,7 @@
             "Key": "b111bed9-1ba5-4477-b8be-910362e7c73c",
             "Value": {
                 "id": "d92e0b46-d6c4-408a-8634-3b50c5a3aa54",
-                "resourcePath": "scripts\\set_animation\\set_animation.yy",
+                "resourcePath": "scripts\\character_set_animation\\character_set_animation.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -1170,6 +1170,7 @@
         "f62718d7-87c2-473e-b687-535452700924",
         "ad78e412-03cc-4b47-a961-306582e3ecbf",
         "389ac1b3-5492-424e-b8e9-1038d9e41fcf",
+        "b111bed9-1ba5-4477-b8be-910362e7c73c",
         "4fa341da-23a4-49db-9021-167f769a3839",
         "a3a8d735-09d3-4ef5-8d31-21ab908c2750",
         "982943d7-1908-4efc-8304-e1fc286e85e3",
@@ -1236,7 +1237,6 @@
         "0fd45925-dc28-4d23-9866-8f6d42d23eb3",
         "5434e328-17f7-4c06-959e-989bd71d5f36",
         "7d41718e-13e6-4322-8547-03603c66b386",
-        "b111bed9-1ba5-4477-b8be-910362e7c73c",
         "89dd7b05-c396-4a3d-a500-48c996b0220e",
         "fbf48315-942d-4311-a810-cbfa21ba3ffd",
         "de1aebf3-75cc-48ad-a799-7f92fcc41f5c",

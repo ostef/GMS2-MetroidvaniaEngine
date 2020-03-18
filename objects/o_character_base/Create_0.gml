@@ -28,5 +28,6 @@ bFacingLeft = false;
 xScale = 1
 yScale = 1;
 rotation = 0.0;
+animationSpeed = 1;
 
 state_machine_init();
