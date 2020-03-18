@@ -671,6 +671,14 @@
             }
         },
         {
+            "Key": "8f64d98a-1f8d-4c02-9c88-96569d0f5841",
+            "Value": {
+                "id": "704ddb08-eda8-4273-acbe-7672ef4affb4",
+                "resourcePath": "scripts\\time_get_datestamp\\time_get_datestamp.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "982943d7-1908-4efc-8304-e1fc286e85e3",
             "Value": {
                 "id": "52b0ae81-5511-4688-879b-f91672e14a93",
@@ -1193,6 +1201,7 @@
         "24bb7576-38a0-4ea8-b87c-e333af14a1ea",
         "f999bd96-650b-4651-a8f4-d4e81f10fe85",
         "e54a906d-6832-4d9a-977b-bce3ade09373",
+        "8f64d98a-1f8d-4c02-9c88-96569d0f5841",
         "51c6b59e-d1f7-4deb-8608-77854d92b231",
         "fb3834e7-4dac-4576-91a4-b166d00cc1f5",
         "2c786017-92db-47f2-8b46-974c210c9fc5",

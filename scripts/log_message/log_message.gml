@@ -28,7 +28,11 @@ if (ds_list_size(logMessages) > maxLogMessages)
 // Show a debug message if global logging
 if (instanceId == LOG_GLOBAL)
 {
+	// Show a message in the debugger
 	show_debug_message(display);
+	// Write a line to the output log file
+	file_text_write_string(o_debug.logOutputFile, display + "\n");
+	
 	o_debug.alarm[0] = LOG_MESSAGE_TIME_ON_SCREEN - LOG_MESSAGE_FADE_TIME;
 }
 
