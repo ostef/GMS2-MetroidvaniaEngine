@@ -15,7 +15,7 @@ apply_gravity();
 // Jumping
 if (bJump && bGrounded)
 {
-	yVel = -jumpForce * time_get_timescale();
+	yVel = -calculate_jump_force(jumpHeight, grav);
 }
 
 // Fall off platform

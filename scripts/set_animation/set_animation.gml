@@ -10,5 +10,5 @@ if (sprite_index != spriteIndex)
 {
 	sprite_index = spriteIndex;
 	image_index = imageIndex;
-	image_speed = imageSpeed;
+	image_speed = imageSpeed * time_get_timescale();
 }

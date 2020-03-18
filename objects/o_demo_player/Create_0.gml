@@ -2,7 +2,7 @@
 event_inherited();
 
 // Jumping
-jumpForce = 7;
+jumpHeight = 32;
 
 // Set the camera target
 camera_set_target(self);

@@ -335,10 +335,18 @@
             }
         },
         {
+            "Key": "389ac1b3-5492-424e-b8e9-1038d9e41fcf",
+            "Value": {
+                "id": "5fc11c3c-53f9-4e14-a200-74a01df5860c",
+                "resourcePath": "scripts\\calculate_jump_force\\calculate_jump_force.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "3adc1bac-8088-4576-bf21-c87db6e7fe8e",
             "Value": {
                 "id": "cfe31720-0d15-4c7a-8be3-344068f71b00",
-                "resourcePath": "objects\\o_player\\o_player.yy",
+                "resourcePath": "objects\\o_demo_player\\o_demo_player.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -572,6 +580,14 @@
                 "id": "12ffa36b-547d-4473-898b-202f693b567f",
                 "resourcePath": "sprites\\s_player_idle\\s_player_idle.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "71bf1ef3-7390-4cb1-b461-6fc2c80a31f2",
+            "Value": {
+                "id": "91c465dd-be9d-4b64-8f71-a1f7a8f8ca66",
+                "resourcePath": "views\\71bf1ef3-7390-4cb1-b461-6fc2c80a31f2.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -1153,6 +1169,7 @@
         "5877d95e-79aa-4111-a9f3-ade7d97e9147",
         "f62718d7-87c2-473e-b687-535452700924",
         "ad78e412-03cc-4b47-a961-306582e3ecbf",
+        "389ac1b3-5492-424e-b8e9-1038d9e41fcf",
         "4fa341da-23a4-49db-9021-167f769a3839",
         "a3a8d735-09d3-4ef5-8d31-21ab908c2750",
         "982943d7-1908-4efc-8304-e1fc286e85e3",
