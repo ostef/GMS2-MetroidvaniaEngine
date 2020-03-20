@@ -2,12 +2,13 @@
 event_inherited();
 
 // Jumping
-jumpHeight = 32;
+jumpHeight = 48;
 
 // Set the camera target
 camera_set_target(self);
 // States
 state_machine_add_state("Move", noone, player_move_state, noone);
+state_machine_add_state("Swim To Surface", noone, player_swim_surface_state, noone);
 state_transition_to("Move");
 
 #region Input

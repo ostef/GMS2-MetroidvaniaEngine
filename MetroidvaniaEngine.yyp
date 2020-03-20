@@ -415,6 +415,14 @@
             }
         },
         {
+            "Key": "49bbb0ef-77ed-456e-b6a0-77f1aeb72a0d",
+            "Value": {
+                "id": "019f8929-0ff0-4aa6-ad56-823e2c0202f5",
+                "resourcePath": "objects\\o_water_area\\o_water_area.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "4dd7cef2-1160-4578-bd6c-9f6b030252fd",
             "Value": {
                 "id": "4dca43f3-dff9-4ff7-9502-fe4864896957",
@@ -535,6 +543,14 @@
             }
         },
         {
+            "Key": "5e269ac3-df52-4f1b-893d-30f1819a8c35",
+            "Value": {
+                "id": "6ce83bc5-62cb-445c-85be-0667bb63fcf4",
+                "resourcePath": "views\\5e269ac3-df52-4f1b-893d-30f1819a8c35.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "5f603a75-408f-46ee-9fa0-81b1b500ff2b",
             "Value": {
                 "id": "6270bbc6-9b3e-472c-b789-0c6e3a85c432",
@@ -575,19 +591,19 @@
             }
         },
         {
+            "Key": "6a38f808-0af9-4434-a11f-935b40e8a7da",
+            "Value": {
+                "id": "cd749cbd-f98e-4d8a-a66f-ee0566559112",
+                "resourcePath": "scripts\\character_set_animation_speed\\character_set_animation_speed.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "6db8de7f-8167-4c96-8afc-e14db2825a61",
             "Value": {
                 "id": "12ffa36b-547d-4473-898b-202f693b567f",
                 "resourcePath": "sprites\\s_player_idle\\s_player_idle.yy",
                 "resourceType": "GMSprite"
-            }
-        },
-        {
-            "Key": "71bf1ef3-7390-4cb1-b461-6fc2c80a31f2",
-            "Value": {
-                "id": "91c465dd-be9d-4b64-8f71-a1f7a8f8ca66",
-                "resourcePath": "views\\71bf1ef3-7390-4cb1-b461-6fc2c80a31f2.yy",
-                "resourceType": "GMFolder"
             }
         },
         {
@@ -628,6 +644,14 @@
                 "id": "8aaffd1e-9f52-4a29-83af-ce93f189e6e7",
                 "resourcePath": "scripts\\input_button_check_released\\input_button_check_released.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "7d639e8c-f3e4-4c0a-a4da-d8eeaac29e71",
+            "Value": {
+                "id": "ffccaff1-ddf3-4066-9658-6117d1cf6fec",
+                "resourcePath": "views\\7d639e8c-f3e4-4c0a-a4da-d8eeaac29e71.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -699,6 +723,14 @@
             "Value": {
                 "id": "52b0ae81-5511-4688-879b-f91672e14a93",
                 "resourcePath": "scripts\\camera_remove_target\\camera_remove_target.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "9a4e5942-8172-466f-95c8-bc6c8c591f92",
+            "Value": {
+                "id": "54475e7b-bf20-4e27-88f7-2234a2060fb2",
+                "resourcePath": "scripts\\player_swim_surface_state\\player_swim_surface_state.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -876,6 +908,14 @@
                 "id": "51b914a4-7604-4f1d-a633-177d3d9fd087",
                 "resourcePath": "scripts\\collision_tile_is_slope\\collision_tile_is_slope.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "c6614482-d95c-4af4-ae60-e0b83367c041",
+            "Value": {
+                "id": "6fa4b1ae-b9b3-44da-9c13-fd92009f545d",
+                "resourcePath": "sprites\\s_water_area\\s_water_area.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -1164,6 +1204,7 @@
         "0ebe14c9-180d-43e6-a945-1444ce639435",
         "db99330d-1710-4353-9115-1c47ae952678",
         "e2b7a5fd-49ac-4247-892a-a24b66c5b331",
+        "9a4e5942-8172-466f-95c8-bc6c8c591f92",
         "e2e33a1c-5d33-40c1-a0ea-61f4d76b86de",
         "f86a040c-f068-42e4-9442-d7080d81548f",
         "5877d95e-79aa-4111-a9f3-ade7d97e9147",
@@ -1171,6 +1212,7 @@
         "ad78e412-03cc-4b47-a961-306582e3ecbf",
         "389ac1b3-5492-424e-b8e9-1038d9e41fcf",
         "b111bed9-1ba5-4477-b8be-910362e7c73c",
+        "6a38f808-0af9-4434-a11f-935b40e8a7da",
         "4fa341da-23a4-49db-9021-167f769a3839",
         "a3a8d735-09d3-4ef5-8d31-21ab908c2750",
         "982943d7-1908-4efc-8304-e1fc286e85e3",

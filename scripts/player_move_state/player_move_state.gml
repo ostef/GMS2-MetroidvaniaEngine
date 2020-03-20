@@ -24,6 +24,12 @@ if (keyboard_check_pressed(ord("S")))
 	fall_off_platform();
 }
 
+// Check for water
+if (place_meeting(x, y, o_water_area))
+{
+	state_transition_to ("Swim To Surface");
+}
+
 // Animate
 if (bGrounded)
 {
@@ -38,15 +44,15 @@ if (bGrounded)
 }
 else
 {
-	character_set_animation(s_player_jump, yVel < 0 ? 0 : 1, 0);
+	character_set_animation(s_player_jump, yVel < 0 ? 0 : sprite_get_number(s_player_jump) - 1, 0);
 	
 	if (yVel > 0)
 	{
-		animationSpeed = 1;
+		character_set_animation_speed(1);
 	}
 	
 	if (animation_end(s_player_jump))
 	{
-		animationSpeed = 0;
+		character_set_animation_speed(0);
 	}
 }
