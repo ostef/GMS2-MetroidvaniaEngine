@@ -9,6 +9,13 @@ var onEnter = argument1;
 var onUpdate = argument2;
 var onExit = argument3;
 
+if (ds_map_exists(stateMap, stateName))
+{
+	instance_log_error("STATE MACHINE: State " + stateName + " already exists!");
+	
+	return false;
+}
+
 // We only need the on update script to be valid
 if (onUpdate != noone)
 {
@@ -18,6 +25,6 @@ if (onUpdate != noone)
 	return true;
 }
 
-instance_log_error("STATE_MACHINE: State " + stateName + " creation failed: onUpdate script is 'noone'");
+instance_log_error("STATE MACHINE: State " + stateName + " creation failed: onUpdate script is 'noone'");
 
 return false;

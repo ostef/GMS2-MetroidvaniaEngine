@@ -61,3 +61,13 @@ input_sequence_add_step("Combo1", "Light Attack");
 input_sequence_add_step("Combo1", "Light Attack");
 input_sequence_add_step("Combo1", "Heavy Attack");
 #endregion
+
+#region Animation
+animation_add("Idle", s_player_idle, AnimationLoopMode.Loop, 1);
+animation_add("Run", s_player_run, AnimationLoopMode.Loop, 1);
+animation_add("Stop", s_player_stop, AnimationLoopMode.Stop, 1);
+animation_add("Jump", s_player_jump, AnimationLoopMode.Stop, 1);
+animation_add("Jump Forward", s_player_jump_forward, AnimationLoopMode.Stop, 1);
+animation_add("Duck", s_player_duck, AnimationLoopMode.Stop, 1);
+animation_add("Stand Up", s_player_duck, AnimationLoopMode.Stop, -1);
+#endregion

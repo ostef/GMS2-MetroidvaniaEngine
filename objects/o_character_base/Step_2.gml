@@ -1,5 +1,6 @@
 /// @desc Handle state transition
 state_machine_handle_transition();
+animation_system_update();
 
 // Draw debug infos
 debug_draw_text(x, y, "state: " + currentStateName, c_white, fa_center, fa_top);

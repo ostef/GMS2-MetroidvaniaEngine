@@ -327,6 +327,14 @@
             }
         },
         {
+            "Key": "33666143-141e-444f-91a8-69885d03ba41",
+            "Value": {
+                "id": "c5762585-b092-4292-8505-0e5e9170f9cf",
+                "resourcePath": "scripts\\animation_set\\animation_set.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "3380d040-b02a-473a-bb52-e70820026ba2",
             "Value": {
                 "id": "23eec2b3-4e2b-4100-994b-4bb5f17bf99c",
@@ -607,22 +615,6 @@
             }
         },
         {
-            "Key": "6a38f808-0af9-4434-a11f-935b40e8a7da",
-            "Value": {
-                "id": "cd749cbd-f98e-4d8a-a66f-ee0566559112",
-                "resourcePath": "scripts\\character_set_animation_speed\\character_set_animation_speed.yy",
-                "resourceType": "GMScript"
-            }
-        },
-        {
-            "Key": "6b822645-26ff-4d6e-b777-b220668c00e9",
-            "Value": {
-                "id": "63067bfa-c2cf-4c4d-8cbd-adeca1680421",
-                "resourcePath": "sprites\\s_player_stand_up\\s_player_stand_up.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
             "Key": "6db8de7f-8167-4c96-8afc-e14db2825a61",
             "Value": {
                 "id": "12ffa36b-547d-4473-898b-202f693b567f",
@@ -655,6 +647,14 @@
             }
         },
         {
+            "Key": "74105a26-92a2-4424-905f-ba2cbced5865",
+            "Value": {
+                "id": "d8b4a1d3-3a30-408f-8ffe-a28a74368f00",
+                "resourcePath": "scripts\\animation_system_update\\animation_system_update.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "7629cf70-0b9b-476b-9d1b-2e18930e93ab",
             "Value": {
                 "id": "ad5d8401-c791-40bf-92aa-bf9063eac4d4",
@@ -668,6 +668,14 @@
                 "id": "b2413898-8e31-4729-8927-c69d09f7e295",
                 "resourcePath": "objects\\o_character_base\\o_character_base.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "79344cfd-8f23-442c-aed0-37003d24944f",
+            "Value": {
+                "id": "c0b406c3-1a7c-4db2-87a5-a0cfecccd1a7",
+                "resourcePath": "scripts\\animation_system_cleanup\\animation_system_cleanup.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -903,14 +911,6 @@
             }
         },
         {
-            "Key": "b111bed9-1ba5-4477-b8be-910362e7c73c",
-            "Value": {
-                "id": "d92e0b46-d6c4-408a-8634-3b50c5a3aa54",
-                "resourcePath": "scripts\\character_set_animation\\character_set_animation.yy",
-                "resourceType": "GMScript"
-            }
-        },
-        {
             "Key": "b1960805-4887-44ca-95e6-85e6b2ad3dc7",
             "Value": {
                 "id": "e8bd2377-3f3c-4c63-9501-9834ccafac5f",
@@ -956,6 +956,14 @@
                 "id": "43716485-44a7-455d-9fbb-98d596be4a09",
                 "resourcePath": "views\\c194ff3b-cb06-4779-bae1-c25460a7f79e.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "c1f593fa-72b3-400e-9b14-bdfd62869e7b",
+            "Value": {
+                "id": "b15b5e76-510e-43d8-8cd6-b660c8ffe9ca",
+                "resourcePath": "scripts\\animation_system_init\\animation_system_init.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -1183,18 +1191,18 @@
             }
         },
         {
-            "Key": "f6142fec-1c8b-4029-b874-d0b5a387627c",
-            "Value": {
-                "id": "6c85fd75-c898-4189-a854-a74e626ec0d9",
-                "resourcePath": "objects\\o_animated_test\\o_animated_test.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "f62718d7-87c2-473e-b687-535452700924",
             "Value": {
                 "id": "9dca4dae-3c15-4024-8948-8d5396793bc7",
                 "resourcePath": "scripts\\apply_gravity\\apply_gravity.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "f6d5d79c-d76b-4888-bcdc-91278da78b44",
+            "Value": {
+                "id": "b9039468-5be5-4bdd-87d4-c62754d37c2f",
+                "resourcePath": "scripts\\animation_add\\animation_add.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -1285,8 +1293,6 @@
         "f62718d7-87c2-473e-b687-535452700924",
         "ad78e412-03cc-4b47-a961-306582e3ecbf",
         "389ac1b3-5492-424e-b8e9-1038d9e41fcf",
-        "b111bed9-1ba5-4477-b8be-910362e7c73c",
-        "6a38f808-0af9-4434-a11f-935b40e8a7da",
         "4fa341da-23a4-49db-9021-167f769a3839",
         "a3a8d735-09d3-4ef5-8d31-21ab908c2750",
         "982943d7-1908-4efc-8304-e1fc286e85e3",
@@ -1353,6 +1359,11 @@
         "0fd45925-dc28-4d23-9866-8f6d42d23eb3",
         "5434e328-17f7-4c06-959e-989bd71d5f36",
         "7d41718e-13e6-4322-8547-03603c66b386",
+        "c1f593fa-72b3-400e-9b14-bdfd62869e7b",
+        "74105a26-92a2-4424-905f-ba2cbced5865",
+        "79344cfd-8f23-442c-aed0-37003d24944f",
+        "f6d5d79c-d76b-4888-bcdc-91278da78b44",
+        "33666143-141e-444f-91a8-69885d03ba41",
         "89dd7b05-c396-4a3d-a500-48c996b0220e",
         "fbf48315-942d-4311-a810-cbfa21ba3ffd",
         "de1aebf3-75cc-48ad-a799-7f92fcc41f5c",

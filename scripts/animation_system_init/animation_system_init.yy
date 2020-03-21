@@ -1,8 +1,8 @@
 {
-    "id": "6a38f808-0af9-4434-a11f-935b40e8a7da",
+    "id": "c1f593fa-72b3-400e-9b14-bdfd62869e7b",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "character_set_animation_speed",
+    "name": "animation_system_init",
     "IsCompatibility": false,
     "IsDnD": false
 }

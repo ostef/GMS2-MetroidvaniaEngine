@@ -11,11 +11,6 @@
 #macro ON_STATE_UPDATE 1
 #macro ON_STATE_EXIT 2
 
-// Animation system
-#macro ON_ANIMATION_END 0
-#macro ON_ANIMATION_LOOP 1
-#macro ON_ANIMATION_PING_PONG 1
-
 // Collisions
 #macro TILE_VOID 0
 #macro TILE_SOLID 1

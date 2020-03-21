@@ -1,21 +1,21 @@
-/// @func enums()
+/// @desc Contains all the enums
 // Debugging
 enum LogLevel
 {
-	Trace = 0,
-	Info = 1,
-	Warning = 2,
-	Error = 3,
-	Fatal = 4
+	Trace,
+	Info,
+	Warning,
+	Error,
+	Fatal
 }
 
 enum DebugDrawType
 {
-	Rectangle = 0,
-	Circle = 1,
-	Line = 2,
-	Arrow = 3,
-	Text = 4
+	Rectangle,
+	Circle,
+	Line,
+	Arrow,
+	Text
 }
 
 // Input system

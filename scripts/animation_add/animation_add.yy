@@ -1,8 +1,8 @@
 {
-    "id": "b111bed9-1ba5-4477-b8be-910362e7c73c",
+    "id": "f6d5d79c-d76b-4888-bcdc-91278da78b44",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "character_set_animation",
+    "name": "animation_add",
     "IsCompatibility": false,
     "IsDnD": false
 }
