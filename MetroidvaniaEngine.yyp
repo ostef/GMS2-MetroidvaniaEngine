@@ -959,6 +959,14 @@
             }
         },
         {
+            "Key": "bfe6ad68-5445-4ed4-bc1d-a3a557da0042",
+            "Value": {
+                "id": "15ca29a3-e7a6-4bb7-a521-66c4ed214191",
+                "resourcePath": "scripts\\animation_exists\\animation_exists.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "c0b316c8-53c1-4287-8802-3cd2514f0d8e",
             "Value": {
                 "id": "1931bb52-6060-4c9f-991f-e9fdcba0d6d8",
@@ -1397,6 +1405,7 @@
         "c1f593fa-72b3-400e-9b14-bdfd62869e7b",
         "74105a26-92a2-4424-905f-ba2cbced5865",
         "79344cfd-8f23-442c-aed0-37003d24944f",
+        "bfe6ad68-5445-4ed4-bc1d-a3a557da0042",
         "f6d5d79c-d76b-4888-bcdc-91278da78b44",
         "33666143-141e-444f-91a8-69885d03ba41",
         "c3667098-eb23-44b0-9cef-6878e2b09716",

@@ -6,7 +6,7 @@ image_speed = 0;
 bAnimationEnded = false;
 
 // Sanity check
-if (animationData == undefined)
+if (animationIndex == noone)
 {
 	return;
 }

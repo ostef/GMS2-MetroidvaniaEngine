@@ -1,6 +1,6 @@
 /// @func animation_system_init()
 /// @desc Initialize the animation system for an object
-animationMap = ds_map_create();		// Key is the animation name, value is [animation data]
+animationList = ds_list_create();		// Key is the animation name, value is [animation data]
 /* Animation data:
  * [0] => sprite_index
  * [1] => animation loop mode
@@ -8,8 +8,7 @@ animationMap = ds_map_create();		// Key is the animation name, value is [animati
  * [3] => [frame events]
  */
 
-animationData = undefined;
-animationName = "";
+animationIndex = noone;
 animationSprite = noone;
 animationLoopMode = 0;
 animationSpeed = 0;

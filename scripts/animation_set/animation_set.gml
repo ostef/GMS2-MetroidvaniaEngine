@@ -1,20 +1,20 @@
-/// @func animation_set(animationName)
+/// @func animation_set(animIndex)
 /// @desc Set the current animation
-/// @arg {string} animationName
-var name = argument0;
+/// @arg {int} animIndex
+var animIndex = argument0;
 
 // Sanity check
-if (!ds_map_exists(animationMap, name))
+if (!animation_exists(animIndex))
 {
-	instance_log_error("ANIMATION: Animation " + name + " does not exist");
+	instance_log_error("ANIMATION: Animation with index " + string(animIndex) + " does not exist");
 
 	return;
 }
 
-if (animationName != name)
+if (animIndex != animationIndex)
 {
-	animationData = animationMap[? name];
-	animationName = name;
+	var animationData = animationList[| animIndex]
+	animationIndex = animIndex;
 	animationSprite = animationData[0];
 	sprite_index = animationSprite;
 	animationLoopMode = animationData[1]

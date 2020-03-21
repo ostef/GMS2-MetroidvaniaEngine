@@ -66,13 +66,13 @@ state_transition_to(groundedState);
 #endregion
 
 #region Animation
-animation_add("Idle", s_player_idle, AnimationLoopMode.Loop, 1);
-animation_add("Run", s_player_run, AnimationLoopMode.Loop, 1);
-animation_add("Stop", s_player_stop, AnimationLoopMode.Stop, 1);
-animation_add("Jump", s_player_jump, AnimationLoopMode.Stop, 1);
-animation_add("Jump Forward", s_player_jump_forward, AnimationLoopMode.PingPong, 1);
-animation_add("Duck", s_player_duck, AnimationLoopMode.Stop, 1);
-animation_add("Stand Up", s_player_duck, AnimationLoopMode.Stop, -1);
+idleAnim = animation_add(s_player_idle, AnimationLoopMode.Loop, 1);
+runAnim = animation_add(s_player_run, AnimationLoopMode.Loop, 1);
+stopAnim = animation_add(s_player_stop, AnimationLoopMode.Stop, 1);
+jumpAnim = animation_add(s_player_jump, AnimationLoopMode.Stop, 1);
+jumpForwardAnim = animation_add(s_player_jump_forward, AnimationLoopMode.PingPong, 1);
+duckAnim = animation_add(s_player_duck, AnimationLoopMode.Stop, 1);
+standUpAnmi = animation_add(s_player_duck, AnimationLoopMode.Stop, -1);
 
-animation_set("Jump Forward");
+animation_set(jumpForwardAnim);
 #endregion

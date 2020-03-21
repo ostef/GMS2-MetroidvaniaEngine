@@ -11,6 +11,12 @@
 #macro ON_STATE_UPDATE 1
 #macro ON_STATE_EXIT 2
 
+// Animation system
+#macro ANIM_SPRITE_INDEX 0
+#macro ANIM_LOOP_MODE 1
+#macro ANIM_SPEED 2
+#macro ANIM_FRAME_EVENTS 3
+
 // Collisions
 #macro TILE_VOID 0
 #macro TILE_SOLID 1
