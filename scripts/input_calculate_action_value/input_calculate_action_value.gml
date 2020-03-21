@@ -34,6 +34,7 @@ if (!is_undefined(entry))
 				break;
 				
 			case ActionType.Released:
+
 				if (input_button_check_released(inputType, input))
 				{
 					actionValue = true;
@@ -47,7 +48,7 @@ if (!is_undefined(entry))
 }
 else
 {
-	log_error("INPUT: Axis " + axisName + " does not exist!");
+	log_error("INPUT: Axis " + actionName + " does not exist!");
 }
 
 return actionValue;

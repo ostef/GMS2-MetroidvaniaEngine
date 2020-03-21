@@ -8,12 +8,6 @@ xVelRemainder = 0.0;
 yVelRemainder = 0.0;
 grav = .4;
 
-// Collisions
-bCollisionRight = false;
-bCollisionLeft = false;
-bCollisionBottom = false;
-bCollisionTop = false;
-
 // Grounding and slopes
 bWasGrounded = false;
 bGrounded = false;

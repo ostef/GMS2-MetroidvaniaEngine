@@ -1,24 +1,6 @@
 /// @desc Initialize variables
 singleton_check();
 
-enum LogLevel
-{
-	Trace = 0,
-	Info = 1,
-	Warning = 2,
-	Error = 3,
-	Fatal = 4
-}
-
-enum DebugDrawType
-{
-	Rectangle = 0,
-	Circle = 1,
-	Line = 2,
-	Arrow = 3,
-	Text = 4
-}
-
 // Debug drawing
 bDebugDrawing = false;
 drawCommands = ds_list_create();

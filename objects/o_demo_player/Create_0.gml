@@ -2,12 +2,14 @@
 event_inherited();
 
 // Jumping
-jumpHeight = 48;
+jumpHeight = 16;
+maxJumpHeight = 64;
 
 // Set the camera target
 camera_set_target(self);
 // States
 state_machine_add_state("Move", noone, player_move_state, noone);
+state_machine_add_state("Duck", noone, player_duck_state, noone);
 state_machine_add_state("Swim To Surface", noone, player_swim_surface_state, noone);
 state_transition_to("Move");
 
@@ -24,6 +26,23 @@ input_map_to_axis("Move", InputType.GamepadAxis, gp_axislh, true);
 input_add_action("Jump");
 input_map_to_action("Jump", ActionType.Pressed, InputType.Keyboard, ord("W"));
 input_map_to_action("Jump", ActionType.Pressed, InputType.GamepadButton, gp_face1);
+
+// Jump Released
+input_add_action("Jump Release");
+input_map_to_action("Jump Release", ActionType.Released, InputType.Keyboard, ord("W"));
+input_map_to_action("Jump Release", ActionType.Released, InputType.GamepadButton, gp_face1);
+
+// Ducking
+input_add_action("Duck");
+input_map_to_action("Duck", ActionType.Pressed, InputType.Keyboard, ord("S"));
+input_map_to_action("Duck", ActionType.Pressed, InputType.GamepadButton, gp_padd);
+input_map_to_action("Duck", ActionType.Pressed, InputType.GamepadAxis, gp_axislv);
+
+// Stand up
+input_add_action("Stand Up");
+input_map_to_action("Stand Up", ActionType.Released, InputType.Keyboard, ord("S"));
+input_map_to_action("Stand Up", ActionType.Released, InputType.GamepadButton, gp_padd);
+input_map_to_action("Stand Up", ActionType.Released, InputType.GamepadAxis, gp_axislv);
 
 // Attacks
 input_add_action("Light Attack");
