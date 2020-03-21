@@ -9,7 +9,7 @@ if (bTransitioning)
 	}
 	
 	// Add the current state to the history
-	if (currentStateName != "")
+	if (currentStateIndex != noone)
 	{
 		ds_stack_push(stateHistory, currentStateName);
 	}

@@ -20,6 +20,7 @@ if (animationName != name)
 	animationLoopMode = animationData[1]
 	animationSpeed = animationData[2];
 	animationFrameEvents = animationData[3];
-	animationFrame = 0;
+	animationFrame = animationSpeed > 0 ? 0 : image_number - 1;
 	image_index = animationFrame;
+	animationFrameCount = image_number;
 }

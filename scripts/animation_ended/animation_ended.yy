@@ -1,8 +1,8 @@
 {
-    "id": "89dd7b05-c396-4a3d-a500-48c996b0220e",
+    "id": "c3667098-eb23-44b0-9cef-6878e2b09716",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "animation_hit_frame",
+    "name": "animation_ended",
     "IsCompatibility": false,
     "IsDnD": false
 }

@@ -1,8 +1,8 @@
 {
-    "id": "9a4e5942-8172-466f-95c8-bc6c8c591f92",
+    "id": "fbf48315-942d-4311-a810-cbfa21ba3ffd",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "player_swim_surface_state",
+    "name": "builtin_animation_end",
     "IsCompatibility": false,
     "IsDnD": false
 }

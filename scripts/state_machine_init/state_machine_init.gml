@@ -1,12 +1,10 @@
 /// @func state_machine_init()
 /// @desc Initialize all variables for state machine
-stateMap = ds_map_create();
+stateList = ds_list_create();
 stateHistory = ds_stack_create();
 
 currentStateSteps = 0;
-currentStateEntry = noone;
-currentStateName = "";
+currentStateIndex = noone;
+nextStateIndex = noone;
 
 bTransitioning = false;
-nextStateEntry = noone;
-nextStateName = "";

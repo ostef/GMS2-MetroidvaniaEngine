@@ -2,9 +2,8 @@
 /// @desc Cancel the transition to the next state
 if (bTransitioning)
 {
-	instance_log_info("STATE_MACHINE: Cancelling state transition to " + nextStateName);
+	instance_log_info("STATE_MACHINE: Cancelling state transition to " + string(nextStateIndex));
 
 	bTransitioning = false;
-	nextStateName = "";
-	nextStateEntry = undefined;
+	nextStateIndex = noone;
 }

@@ -1,4 +1,4 @@
-/// @func animation_hit_frame(spriteIndex, frameIndex)
+/// @func builtin_animation_hit_frame(spriteIndex, frameIndex)
 /// @arg {int} spriteIndex
 /// @arg {int} frameIndex
 var spriteIndex = argument0;

@@ -8,7 +8,7 @@
         "fbf48315-942d-4311-a810-cbfa21ba3ffd"
     ],
     "filterType": "GMScript",
-    "folderName": "Animation",
+    "folderName": "Animation (built-in)",
     "isDefaultView": false,
     "localisedFolderName": ""
 }

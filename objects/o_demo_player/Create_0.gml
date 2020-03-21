@@ -7,11 +7,6 @@ maxJumpHeight = 64;
 
 // Set the camera target
 camera_set_target(self);
-// States
-state_machine_add_state("Move", noone, player_move_state, noone);
-state_machine_add_state("Duck", noone, player_duck_state, noone);
-state_machine_add_state("Swim To Surface", noone, player_swim_surface_state, noone);
-state_transition_to("Move");
 
 #region Input
 // Move
@@ -28,9 +23,9 @@ input_map_to_action("Jump", ActionType.Pressed, InputType.Keyboard, ord("W"));
 input_map_to_action("Jump", ActionType.Pressed, InputType.GamepadButton, gp_face1);
 
 // Jump Released
-input_add_action("Jump Release");
-input_map_to_action("Jump Release", ActionType.Released, InputType.Keyboard, ord("W"));
-input_map_to_action("Jump Release", ActionType.Released, InputType.GamepadButton, gp_face1);
+input_add_action("Stop Jumping");
+input_map_to_action("Stop Jumping", ActionType.Released, InputType.Keyboard, ord("W"));
+input_map_to_action("Stop Jumping", ActionType.Released, InputType.GamepadButton, gp_face1);
 
 // Ducking
 input_add_action("Duck");
@@ -62,12 +57,22 @@ input_sequence_add_step("Combo1", "Light Attack");
 input_sequence_add_step("Combo1", "Heavy Attack");
 #endregion
 
+#region States
+groundedState = state_machine_add_state(noone, player_grounded_state, noone);
+airborneState = state_machine_add_state(noone, player_airborne_state, noone);
+duckedState = state_machine_add_state(noone, player_duck_state, noone);
+
+state_transition_to(groundedState);
+#endregion
+
 #region Animation
 animation_add("Idle", s_player_idle, AnimationLoopMode.Loop, 1);
 animation_add("Run", s_player_run, AnimationLoopMode.Loop, 1);
 animation_add("Stop", s_player_stop, AnimationLoopMode.Stop, 1);
 animation_add("Jump", s_player_jump, AnimationLoopMode.Stop, 1);
-animation_add("Jump Forward", s_player_jump_forward, AnimationLoopMode.Stop, 1);
+animation_add("Jump Forward", s_player_jump_forward, AnimationLoopMode.PingPong, 1);
 animation_add("Duck", s_player_duck, AnimationLoopMode.Stop, 1);
 animation_add("Stand Up", s_player_duck, AnimationLoopMode.Stop, -1);
+
+animation_set("Jump Forward");
 #endregion

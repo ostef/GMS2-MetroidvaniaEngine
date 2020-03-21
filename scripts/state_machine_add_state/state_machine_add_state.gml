@@ -1,30 +1,21 @@
-/// @func state_machine_add_state(stateName, onEnter, onUpdate, onExit)
-/// @desc Register a state into the state machine
-/// @arg {string} stateName
+/// @func state_machine_add_state(onEnter, onUpdate, onExit)
+/// @desc Register a state into the state machine. Returns the state index
 /// @arg {script} onEnter
 /// @arg {script} onUpdate
 /// @arg {script} onExit
-var stateName = argument0;
-var onEnter = argument1;
-var onUpdate = argument2;
-var onExit = argument3;
+var onEnter = argument0;
+var onUpdate = argument1;
+var onExit = argument2;
 
-if (ds_map_exists(stateMap, stateName))
-{
-	instance_log_error("STATE MACHINE: State " + stateName + " already exists!");
-	
-	return false;
-}
-
-// We only need the on update script to be valid
+// We only need the on update script for the state to be valid
 if (onUpdate != noone)
 {
-	stateMap[? stateName] = [onEnter, onUpdate, onExit];
-	instance_log_info("STATE MACHINE: Created state " + stateName);
+	ds_list_add(stateList, [onEnter, onUpdate, onExit]);
+	instance_log_info("STATE MACHINE: Created state [" + script_get_name(onEnter) + ", " + script_get_name(onUpdate) + ", " + script_get_name(onExit) + "]");
 	
-	return true;
+	return ds_list_size(stateList) - 1;
 }
 
-instance_log_error("STATE MACHINE: State " + stateName + " creation failed: onUpdate script is 'noone'");
+instance_log_error("STATE MACHINE: State creation failed: onUpdate script is 'noone'");
 
-return false;
+return noone;

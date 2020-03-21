@@ -15,6 +15,8 @@ animationLoopMode = 0;
 animationSpeed = 0;
 animationFrameEvents = undefined;
 animationFrame = 0;
+animationFrameCount = 0;
+bAnimationEnded = false;
 
 // Reset the built-in animation variables
 image_speed = 0;
