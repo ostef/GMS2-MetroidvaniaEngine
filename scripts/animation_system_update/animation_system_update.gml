@@ -4,9 +4,10 @@
 image_speed = 0;
 // Reset flags
 bAnimationEnded = false;
+bAnimationSequenceEnded = false;
 
 // Sanity check
-if (animationIndex == noone)
+if (!animation_exists(animationIndex))
 {
 	return;
 }
@@ -16,33 +17,56 @@ var previousFrame = floor(animationFrame);
 var actualSpeed = sprite_get_speed(animationSprite) / game_get_speed(gamespeed_fps) * animationSpeed * time_get_timescale();
 animationFrame += actualSpeed;
 
-// Handle animation looping
-if (floor(animationFrame) > animationFrameCount - 1 || animationFrame < 0)
+#region Handle animation ending
+if (floor(animationFrame) > animationFrameCount - 1 || floor(animationFrame) < 0)
 {
-	switch (animationLoopMode)
+	if (animationSequenceIndex == noone)
 	{
-		case AnimationLoopMode.Stop:
-			animationFrame = animationSpeed < 0 ? 0 : animationFrameCount - 1;
-			animationSpeed = 0;
+		// When not in sequence
+		switch (animationLoopMode)
+		{
+			case AnimationLoopMode.Stop:
+				animationFrame = animationSpeed < 0 ? 0 : animationFrameCount - 1;
+				animationSpeed = 0;
 			
-			break;
+				break;
 			
-		case AnimationLoopMode.Loop:
-			animationFrame = animationSpeed > 0 ? 0 : animationFrameCount - 1;
+			case AnimationLoopMode.Loop:
+				animationFrame = animationSpeed > 0 ? 0 : animationFrameCount - 1;
 			
-			break;
+				break;
 			
-		case AnimationLoopMode.PingPong:
-			animationFrame = animationSpeed < 0 ? clamp(1, 0, animationFrameCount) : animationFrameCount - 1;
-			animationSpeed = -animationSpeed;
+			case AnimationLoopMode.PingPong:
+				animationFrame = animationSpeed < 0 ? clamp(1, 0, animationFrameCount) : animationFrameCount - 1;
+				animationSpeed = -animationSpeed;
 			
-			break;
+				break;
+		}
+	}
+	else
+	{
+		// When in sequence
+		var sequenceData = animationSequenceList[| animationSequenceIndex];
+		animationSequenceStep++;
+		animationFrame = 0;
+		
+		// If the sequence has ended
+		if (animationSequenceStep > array_length_1d(sequenceData) - 1)
+		{
+			animation_sequence_stop();
+			bAnimationSequenceEnded = true;
+		}
+		else
+		{
+			animation_set(sequenceData[animationSequenceStep]);
+		}
 	}
 	
 	bAnimationEnded = true;
 }
+#endregion
 
-// Handle frame events
+#region Handle frame events
 if (floor(animationFrame) != previousFrame)
 {
 	// Call the event scripts
@@ -55,7 +79,7 @@ if (floor(animationFrame) != previousFrame)
 		script_execute(script);
 	}
 }
-
+#endregion
 
 // Update the sprite_index and image_index
 sprite_index = animationSprite;

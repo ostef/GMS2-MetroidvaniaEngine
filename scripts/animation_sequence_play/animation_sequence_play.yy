@@ -1,8 +1,8 @@
 {
-    "id": "a655c9fd-ee2a-44f4-b207-28ec2606d75c",
+    "id": "6b31b441-806d-44ba-91aa-801306054213",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "animation_set",
+    "name": "animation_sequence_play",
     "IsCompatibility": false,
     "IsDnD": false
 }
