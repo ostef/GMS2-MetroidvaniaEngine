@@ -14,6 +14,8 @@ yOffset = 0;
 rotation = 0;
 // Following
 targets = ds_list_create();
+followXOffset = 0;
+followYOffset = -5;
 followSmoothing = .1;
 // Camera
 camera = camera_create_view(x, y, width, height, 0, noone, -1, -1, width / 2, height / 2);

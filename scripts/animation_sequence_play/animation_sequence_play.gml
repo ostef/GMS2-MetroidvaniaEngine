@@ -13,19 +13,24 @@ if (!animation_sequence_exists(animSequenceIndex))
 
 if (animSequenceIndex != animationSequenceIndex)
 {
-	animationSequenceIndex = animSequenceIndex;
-	animationSequenceStep = 0;
-	
 	var sequenceData = animationSequenceList[| animSequenceIndex];
-	var animIndex = sequenceData[0];
-	var animationData = animationList[| animIndex];
-	animationIndex = animIndex;
-	animationSprite = animationData[0];
-	sprite_index = animationSprite;
-	animationLoopMode = animationData[1]
-	animationSpeed = animationData[2];
-	animationFrameEvents = animationData[3];
-	animationFrame = animationSpeed > 0 ? 0 : image_number - 1;
-	image_index = animationFrame;
-	animationFrameCount = image_number;
+	
+	// Only play the sequence if the last animation in the sequence is not playing
+	if (sequenceData[array_length_1d(sequenceData) - 1] != animationIndex)
+	{
+		animationSequenceIndex = animSequenceIndex;
+		animationSequenceStep = 0;
+		
+		var animIndex = sequenceData[0];
+		var animationData = animationList[| animIndex];
+		animationIndex = animIndex;
+		animationSprite = animationData[0];
+		sprite_index = animationSprite;
+		animationLoopMode = animationData[1]
+		animationSpeed = animationData[2];
+		animationFrameEvents = animationData[3];
+		animationFrame = animationSpeed > 0 ? 0 : image_number - 1;
+		image_index = animationFrame;
+		animationFrameCount = image_number;
+	}
 }

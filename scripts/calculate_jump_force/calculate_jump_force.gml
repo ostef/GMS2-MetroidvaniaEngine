@@ -5,4 +5,4 @@
 var jumpHeight = argument0;
 var grav = argument1;
 
-return sqrt(2 * grav * jumpHeight);
+return sqrt(2 * grav * jumpHeight * time_get_timescale());

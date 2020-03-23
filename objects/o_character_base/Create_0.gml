@@ -6,7 +6,7 @@ xVel = 0.0;
 yVel = 0.0;
 xVelRemainder = 0.0;
 yVelRemainder = 0.0;
-grav = .4;
+grav = .3;
 
 // Grounding and slopes
 bWasGrounded = false;

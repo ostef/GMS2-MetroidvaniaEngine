@@ -5,6 +5,6 @@ var targetY = avgPosition[1];
 
 if (followSmoothing != 0.0)
 {
-	x = asymptotic_average(x, floor(targetX), followSmoothing);
-	y = asymptotic_average(y, floor(targetY), followSmoothing);
+	x = asymptotic_average(x, floor(targetX), followSmoothing) + followXOffset;
+	y = asymptotic_average(y, floor(targetY), followSmoothing) + followYOffset;
 }

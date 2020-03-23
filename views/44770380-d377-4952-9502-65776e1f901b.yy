@@ -14,7 +14,7 @@
         "8c9acb99-0dfc-4d0c-be49-791a40d6b194"
     ],
     "filterType": "GMSprite",
-    "folderName": "Player",
+    "folderName": "Demo Player",
     "isDefaultView": false,
     "localisedFolderName": ""
 }

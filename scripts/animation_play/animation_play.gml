@@ -1,7 +1,9 @@
-/// @func animation_play(animIndex)
+/// @func animation_play(animIndex, frame)
 /// @desc Set the current animation
 /// @arg {int} animIndex
-var animIndex = argument0;
+/// @arg {int} (optional)frame
+var animIndex = argument[0];
+var frame = argument_count > 1 ? argument[1] : 0;
 
 // Sanity check
 if (!animation_exists(animIndex))
@@ -20,7 +22,16 @@ if (animIndex != animationIndex)
 	animationLoopMode = animationData[1]
 	animationSpeed = animationData[2];
 	animationFrameEvents = animationData[3];
-	animationFrame = animationSpeed > 0 ? 0 : image_number - 1;
+	
+	if (argument_count > 1)
+	{
+		animationFrame = frame;
+	}
+	else
+	{
+		animationFrame = animationSpeed > 0 ? 0 : image_number - 1;
+	}
+	
 	image_index = animationFrame;
 	animationFrameCount = image_number;
 	
