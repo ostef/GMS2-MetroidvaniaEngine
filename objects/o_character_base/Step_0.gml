@@ -38,8 +38,12 @@ yVel = floor(yVelRemainder);
 yVelRemainder -= yVel;
 
 handle_tile_collisions();
-check_for_ground();
-handle_slopes();
+character_check_for_ground();
+character_handle_slopes();
 
-debug_draw_arrow(x, y, x + xVel * 10, y, 3, c_red);
-debug_draw_arrow(x, y, x, y + yVel * 10, 3, c_green);
+// X-axis
+debug_draw_arrow(x, y, x + xVel * 10, y, 3, c_red, 1);
+// Y-axis
+debug_draw_arrow(x, y, x, y + yVel * 10, 3, c_green, 1);
+// Final velocity vector
+debug_draw_arrow(x, y, x + xVel * 10, y + yVel * 10, 3, c_purple, 1);

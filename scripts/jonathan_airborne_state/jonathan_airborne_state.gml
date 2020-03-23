@@ -3,7 +3,7 @@ var moveAxis = sign(input_get_axis_value("Move"));
 
 xVel = moveSpeed * moveAxis * time_get_timescale();
 
-apply_gravity();
+character_apply_gravity();
 
 // Stop jumping
 if (input_get_action_value("Stop Jumping"))

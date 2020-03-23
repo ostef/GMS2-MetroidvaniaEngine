@@ -13,7 +13,7 @@ camera_set_target(self);
 #region States
 groundedState = state_machine_add_state(noone, jonathan_grounded_state, noone);
 airborneState = state_machine_add_state(noone, jonathan_airborne_state, jonathan_on_landed);
-duckedState = state_machine_add_state(noone, jonathan_ducked_state, noone);
+duckedState = state_machine_add_state(jonathan_on_duck, jonathan_ducked_state, jonathan_on_stand_up);
 groundedAttackState = state_machine_add_state(noone, jonathan_grounded_attack_state, noone);
 
 state_transition_to(groundedState);

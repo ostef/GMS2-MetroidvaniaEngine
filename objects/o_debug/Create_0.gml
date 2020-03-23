@@ -2,7 +2,7 @@
 singleton_check();
 
 // Debug drawing
-bDebugDrawing = false;
+bDebugDrawing = true;
 drawCommands = ds_list_create();
 // Debug logging
 bShowLogOutput = false;

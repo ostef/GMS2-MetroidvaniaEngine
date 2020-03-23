@@ -1,6 +1,5 @@
 xVel = 0;
-
-apply_gravity();
+character_apply_gravity();
 
 animation_play(whipAttackAnim);
 
