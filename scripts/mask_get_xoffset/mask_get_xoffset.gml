@@ -1,2 +1,2 @@
 /// @func mask_get_xoffset()
-return sprite_get_xoffset(mask_index);
+return x - bbox_left;
