@@ -37,7 +37,7 @@ yVelRemainder += yVel;
 yVel = floor(yVelRemainder);
 yVelRemainder -= yVel;
 
-handle_tile_collisions();
+character_handle_tile_collisions();
 character_check_for_ground();
 character_handle_slopes();
 

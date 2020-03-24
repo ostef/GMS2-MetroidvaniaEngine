@@ -1,8 +1,8 @@
 {
-    "id": "130a28ea-e389-4d98-a091-dc996e05d4f5",
+    "id": "5ad46c3e-62e8-4dd2-9eed-105d6b2aa48f",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "character_check_for_ground",
+    "name": "collision_tile_in_rectangle",
     "IsCompatibility": false,
     "IsDnD": false
 }

@@ -1,8 +1,8 @@
 {
-    "id": "130a28ea-e389-4d98-a091-dc996e05d4f5",
+    "id": "1413fff0-fb7e-4700-a685-21f3c4933e53",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "character_check_for_ground",
+    "name": "point",
     "IsCompatibility": false,
     "IsDnD": false
 }

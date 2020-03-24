@@ -1,11 +1,5 @@
 /// @func handle_tile_collisions()
 /// @desc Handle collision with tiles
-// Reset collision flags
-bCollisionRight = false;
-bCollisionLeft = false;
-bCollisionBottom = false;
-bCollisionTop = false;
-
 var tileWidth = o_collisions.tileWidth;
 var tileHeight = o_collisions.tileHeight;
 
