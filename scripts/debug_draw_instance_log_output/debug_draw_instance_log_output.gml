@@ -1,0 +1,30 @@
+/// @func debug_draw_instance_log_output(x,y, instanceId, size, color, alpha)
+/// @desc Draw the log output of a specific instance
+/// @arg {real} x
+/// @arg {real} y
+/// @arg {int} instanceId
+/// @arg {real} size
+/// @arg {int} color
+/// @arg {real} alpha
+var xx = argument0;
+var yy = argument1;
+var instanceId = argument2;
+var size = argument3;
+var color = argument4;
+var alpha = argument5;
+var logOutputList = o_debug.instanceLogMap[? instanceId];
+
+// Sanity check
+if (is_undefined(logOutputList))
+{
+	return;
+}
+
+var logOutput = "";
+for (var i = 0; i < ds_list_size(logOutputList); i++)
+{
+	var current = logOutputList[| i];
+	logOutput += current[1] + "\n";
+}
+
+debug_draw_text(xx, yy, logOutput, size, color, alpha, fa_center, fa_bottom);

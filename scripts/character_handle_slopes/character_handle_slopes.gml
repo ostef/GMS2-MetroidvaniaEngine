@@ -21,12 +21,12 @@ for (var j = cellCloseSlope; j <= cellFarSlope; j++)
 	for (var i = cellMinX; i <= cellMaxX; i++)
 	{
 		var tileId = collision_get_tile_at(i, j);
+		// Only check for slopes
+		if (!collision_tile_is_slope(tileId)) { continue; }
+		
 		// Get the tile rectangle coordinates
 		var tileX1 = i * tileWidth;
 		var tileY1 = j * tileHeight;
-		
-		// Only check for slopes
-		if (!collision_tile_is_slope(tileId)) { continue; }
 		var bLeftSlope = collision_tile_is_left_slope(tileId);
 		
 		// Calculate the relative position
@@ -62,7 +62,7 @@ for (var j = cellCloseSlope; j <= cellFarSlope; j++)
 		}
 		else
 		{
-			newYRel = lerp(slopeMin, slopeMax, xRel / tileWidth);
+			newYRel = round(lerp(slopeMin, slopeMax, xRel / tileWidth));
 			// Consider we're on slope only if not on slope top or bottom
 			bOnSlope = true;
 		}
@@ -72,6 +72,9 @@ for (var j = cellCloseSlope; j <= cellFarSlope; j++)
 		// We're grounded
 		bGrounded = true;
 		
-		if (!bOnSlopeTop && !bOnSlopeBottom) { break; }
+		if (!bOnSlopeTop && !bOnSlopeBottom)
+		{
+			return;
+		}
 	}
 }

@@ -6,20 +6,17 @@
 var xx = argument0;
 var yy = argument1;
 var tileId = argument2;
-var xOriginal = x;
-var yOriginal = y;
-// Move the object to the desired position
-x = xx;
-y = yy;
+var xMovement = xx - x;
+var yMovement = yy - y;
 
 var tileX = NaN;
 var tileY = NaN;
 var tileWidth = o_collisions.tileWidth;
 var tileHeight = o_collisions.tileHeight;
-var cellStartX = floor(bbox_left / tileWidth);
-var cellEndX = floor(bbox_right / tileWidth);
-var cellStartY = floor(bbox_top / tileHeight);
-var cellEndY = floor(bbox_bottom / tileHeight);
+var cellStartX = floor((bbox_left + xMovement) / tileWidth);
+var cellEndX = floor((bbox_right + xMovement) / tileWidth);
+var cellStartY = floor((bbox_top + yMovement) / tileHeight);
+var cellEndY = floor((bbox_bottom + yMovement) / tileHeight);
 // Don't go out of bounds!
 cellStartX = clamp(cellStartX, 0, o_collisions.tilemapWidth - 1);
 cellEndX = clamp(cellEndX, 0, o_collisions.tilemapWidth - 1);
@@ -40,7 +37,7 @@ for (var i = cellStartX; i <= cellEndX; i++)
 		var tileY2 = tileY1 + tileHeight;
 		
 		// If a collision occured, set the flag and break
-		if (rectangle_in_rectangle(bbox_left, bbox_top, bbox_right, bbox_bottom, tileX1, tileY1, tileX2, tileY2))
+		if (rectangle_in_rectangle(bbox_left + xMovement, bbox_top + yMovement, bbox_right + xMovement, bbox_bottom + yMovement, tileX1, tileY1, tileX2, tileY2))
 		{
 			tileX = tileX1;
 			tileY = tileY1;
@@ -52,9 +49,5 @@ for (var i = cellStartX; i <= cellEndX; i++)
 	
 	if (bCollided) { break; }
 }
-
-// Reset the x and y position
-x = xOriginal;
-y = yOriginal;
 
 return point(tileX, tileY);

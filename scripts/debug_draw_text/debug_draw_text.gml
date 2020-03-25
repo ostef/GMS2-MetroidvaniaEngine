@@ -1,18 +1,20 @@
-/// @func debug_draw_text(x, y, text, color, alpha, halign, valign)
+/// @func debug_draw_text(x, y, text, size, color, alpha, halign, valign)
 /// @desc Draw some text at a specific location in the room
 /// @arg {real} x
 /// @arg {real} y
 /// @arg {string} text
+/// @arg {real} size
 /// @arg {int} color
 /// @arg {real} alpha
 /// @arg {int} halign
 /// @arg {int} valign
 var xx = argument0;
 var yy = argument1;
-var text = argument2;
-var color = argument3;
-var alpha = argument4;
-var halign = argument5;
-var valign = argument6;
+var text = argument2
+var size = argument3;
+var color = argument4;
+var alpha = argument5;
+var halign = argument6;
+var valign = argument7;
 
-ds_list_add(o_debug.drawCommands, [DebugDrawType.Text, xx, yy, text, color, alpha, halign, valign]);
+ds_list_add(o_debug.drawCommands, [DebugDrawType.Text, xx, yy, text, size, color, alpha, halign, valign]);

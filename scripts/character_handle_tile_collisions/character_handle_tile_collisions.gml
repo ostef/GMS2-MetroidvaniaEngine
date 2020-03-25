@@ -3,13 +3,18 @@
 var tileWidth = o_collisions.tileWidth;
 var tileHeight = o_collisions.tileHeight;
 
+// Round up the position, just in case
+// Having a non integer position makes the alogorithm freak out, even with integer velocities: non-integer + integer = non-integer
+x = round(x);
+y = round(y);
+
 #region Horizontal
 {
 	var xDir = xVel >= 0 ? 1 : -1;
 	var x1 = xDir == 1 ? bbox_right : bbox_left + xVel;
 	var y1 = bbox_top;
-	var y2 = bbox_bottom;
 	var x2 = xDir == 1 ? bbox_right + xVel : bbox_left;
+	var y2 = bbox_bottom;
 	var cellCloseX = floor(xDir == 1 ? bbox_right / tileWidth : bbox_left / tileWidth);
 	var cellFarX = floor(xDir == 1 ? (bbox_right + xVel) / tileWidth : (bbox_left + xVel) / tileWidth);
 	var cellMinY = floor(bbox_top / tileHeight);
@@ -55,7 +60,8 @@ var tileHeight = o_collisions.tileHeight;
 			}
 		
 			// Update x velocity
-			xVel = xDir == 1 ? tileX1 - x1 - 1 : tileX2 - x2;
+			x += xDir == 1 ? tileX1 - x1 - 1 : tileX2 - x2;
+			xVel = 0;
 		
 			break;
 		}
@@ -74,8 +80,8 @@ x = clamp(x, mask_get_xoffset(), room_width - mask_get_width() + mask_get_xoffse
 	var yDir = yVel >= 0 ? 1 : -1;
 	var x1 = bbox_left;
 	var y1 = yDir == 1 ? bbox_bottom : bbox_top + yVel;
-	var y2 = yDir == 1 ? bbox_bottom + yVel : bbox_top;
 	var x2 = bbox_right;
+	var y2 = yDir == 1 ? bbox_bottom + yVel : bbox_top;
 	var cellMinX = floor(bbox_left / tileWidth);
 	var cellMaxX = floor(bbox_right / tileWidth);
 	var cellCloseY =  floor(yDir == 1 ? bbox_bottom / tileHeight : bbox_top / tileHeight);
@@ -87,7 +93,7 @@ x = clamp(x, mask_get_xoffset(), room_width - mask_get_width() + mask_get_xoffse
 	cellFarY = clamp(cellFarY, 0, o_collisions.tilemapHeight - 1);
 	
 	var bCollided = false;
-
+	
 	for (var j = cellCloseY; j != cellFarY + yDir; j += yDir)
 	{
 		for (var i = cellMinX; i < cellMaxX + 1; i++)
@@ -98,7 +104,7 @@ x = clamp(x, mask_get_xoffset(), room_width - mask_get_width() + mask_get_xoffse
 			if (bOnSlope && j == cellCloseY) { continue; }
 			var tileId = collision_get_tile_at(i, j);
 			// Only collide with solid tiles
-			if (tileId == 0) { continue; }
+			if (tileId == TILE_VOID) { continue; }
 			// Get the tile rectangle coordinates
 			var tileX1 = i * tileWidth;
 			var tileY1 = j * tileHeight;
@@ -119,7 +125,8 @@ x = clamp(x, mask_get_xoffset(), room_width - mask_get_width() + mask_get_xoffse
 			}
 		
 			// Update y velocity
-			yVel = yDir == 1 ? tileY1 - y1 - 1 : tileY2 - y2;
+			y += yDir == 1 ? tileY1 - y1 - 1 : tileY2 - y2;
+			yVel = 0;
 		
 			break;
 		}

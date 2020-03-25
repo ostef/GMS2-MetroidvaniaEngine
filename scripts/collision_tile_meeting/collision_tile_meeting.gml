@@ -6,16 +6,7 @@
 var xx = argument0;
 var yy = argument1;
 var tileId = argument2;
-var xOriginal = x;
-var yOriginal = y;
-// Move the object to the desired position
-x = xx;
-y = yy;
+var xMovement = xx - x;
+var yMovement = yy - y;
 
-var bCollided = collision_rectangle_in_tile(bbox_left, bbox_top, bbox_right, bbox_bottom, tileId);
-
-// Reset the x and y position
-x = xOriginal;
-y = yOriginal;
-
-return bCollided;
+return collision_tile_in_rectangle(bbox_left + xMovement, bbox_top + yMovement , bbox_right + xMovement, bbox_bottom + yMovement, tileId);

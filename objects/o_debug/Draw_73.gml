@@ -39,7 +39,7 @@ if (bDebugDrawing)
 				var color = data[DEBUG_TEXT_COLOR];
 				draw_set_halign(data[DEBUG_TEXT_HALIGN]);
 				draw_set_valign(data[DEBUG_TEXT_VALIGN]);
-				draw_text_transformed_color(data[DEBUG_TEXT_X], data[DEBUG_TEXT_Y], data[DEBUG_TEXT_DATA], .3, .3, 0, color, color,color, color, data[DEBUG_TEXT_ALPHA]);
+				draw_text_transformed_color(data[DEBUG_TEXT_X], data[DEBUG_TEXT_Y], data[DEBUG_TEXT_DATA], data[DEBUG_TEXT_SIZE], data[DEBUG_TEXT_SIZE], 0, color, color,color, color, data[DEBUG_TEXT_ALPHA]);
 				draw_set_valign(fa_left);
 				draw_set_halign(fa_top);
 				break;

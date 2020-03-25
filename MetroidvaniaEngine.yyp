@@ -231,6 +231,14 @@
             }
         },
         {
+            "Key": "196b60a4-2004-4eb8-a2ff-2640434eeb6b",
+            "Value": {
+                "id": "cf12a3ed-8285-4b64-b9b5-aaf30dbdd122",
+                "resourcePath": "scripts\\debug_draw_instance_log_output\\debug_draw_instance_log_output.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "1a55fe83-c993-44d3-b550-5a9c05d329ba",
             "Value": {
                 "id": "dc699520-1b43-41dc-9062-912459a24a09",
@@ -559,14 +567,6 @@
             }
         },
         {
-            "Key": "49bbb0ef-77ed-456e-b6a0-77f1aeb72a0d",
-            "Value": {
-                "id": "019f8929-0ff0-4aa6-ad56-823e2c0202f5",
-                "resourcePath": "objects\\o_water_area\\o_water_area.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "4dd7cef2-1160-4578-bd6c-9f6b030252fd",
             "Value": {
                 "id": "4dca43f3-dff9-4ff7-9502-fe4864896957",
@@ -735,14 +735,6 @@
             }
         },
         {
-            "Key": "5e269ac3-df52-4f1b-893d-30f1819a8c35",
-            "Value": {
-                "id": "6ce83bc5-62cb-445c-85be-0667bb63fcf4",
-                "resourcePath": "views\\5e269ac3-df52-4f1b-893d-30f1819a8c35.yy",
-                "resourceType": "GMFolder"
-            }
-        },
-        {
             "Key": "5f603a75-408f-46ee-9fa0-81b1b500ff2b",
             "Value": {
                 "id": "6270bbc6-9b3e-472c-b789-0c6e3a85c432",
@@ -908,14 +900,6 @@
                 "id": "8aaffd1e-9f52-4a29-83af-ce93f189e6e7",
                 "resourcePath": "scripts\\input_button_check_released\\input_button_check_released.yy",
                 "resourceType": "GMScript"
-            }
-        },
-        {
-            "Key": "7d639e8c-f3e4-4c0a-a4da-d8eeaac29e71",
-            "Value": {
-                "id": "ffccaff1-ddf3-4066-9658-6117d1cf6fec",
-                "resourcePath": "views\\7d639e8c-f3e4-4c0a-a4da-d8eeaac29e71.yy",
-                "resourceType": "GMFolder"
             }
         },
         {
@@ -1255,6 +1239,14 @@
             }
         },
         {
+            "Key": "c16064df-fa32-4086-b555-1314e9813e41",
+            "Value": {
+                "id": "1a4fb555-ef00-4ea3-a872-6469a5856e3a",
+                "resourcePath": "views\\c16064df-fa32-4086-b555-1314e9813e41.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "c194ff3b-cb06-4779-bae1-c25460a7f79e",
             "Value": {
                 "id": "43716485-44a7-455d-9fbb-98d596be4a09",
@@ -1292,14 +1284,6 @@
                 "id": "25f92e3c-55b7-4bbf-a3a3-089f3136a61b",
                 "resourcePath": "scripts\\animation_ended\\animation_ended.yy",
                 "resourceType": "GMScript"
-            }
-        },
-        {
-            "Key": "c6614482-d95c-4af4-ae60-e0b83367c041",
-            "Value": {
-                "id": "6fa4b1ae-b9b3-44da-9c13-fd92009f545d",
-                "resourcePath": "sprites\\s_water_area\\s_water_area.yy",
-                "resourceType": "GMSprite"
             }
         },
         {
@@ -1452,6 +1436,14 @@
                 "id": "6ad813d3-f65d-4deb-85c4-9e64389fb44f",
                 "resourcePath": "sprites\\s_jonathan_whip_attack\\s_jonathan_whip_attack.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "e2395c32-9a62-4a38-b4c7-772398da26bf",
+            "Value": {
+                "id": "37a89779-cc40-428d-9b4f-b1ddb1e0c73e",
+                "resourcePath": "scripts\\string_wrap_width\\string_wrap_width.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -1687,6 +1679,7 @@
         "5930106c-c442-4941-9e6e-b0b00bb1deec",
         "a40cf8ec-4b92-4f19-9104-d63f38c06dba",
         "569672f7-31c5-4c28-be26-033388d827e1",
+        "196b60a4-2004-4eb8-a2ff-2640434eeb6b",
         "cdf7316b-44c8-4cc8-8f5c-a0caccbb7474",
         "630ee359-22da-4c90-9f2c-89e558c7db27",
         "32b81825-f252-4f1a-ba65-cc3a8d826253",
@@ -1731,6 +1724,7 @@
         "79344cfd-8f23-442c-aed0-37003d24944f",
         "89dd7b05-c396-4a3d-a500-48c996b0220e",
         "fbf48315-942d-4311-a810-cbfa21ba3ffd",
+        "e2395c32-9a62-4a38-b4c7-772398da26bf",
         "de1aebf3-75cc-48ad-a799-7f92fcc41f5c",
         "0376aef4-b7c3-4553-9be7-899d3504d646",
         "b7de2251-86cc-45f6-850b-eab146b1e1e9",

@@ -23,7 +23,6 @@ cellEndX = clamp(cellEndX, 0, o_collisions.tilemapWidth - 1);
 cellStartY = clamp(cellStartY, 0, o_collisions.tilemapHeight - 1);
 cellEndY = clamp(cellEndY, 0, o_collisions.tilemapHeight - 1);
 
-var bCollided = false;
 for (var i = cellStartX; i <= cellEndX; i++)
 {
 	for (var j = cellStartY; j <= cellEndY; j++)
@@ -39,13 +38,9 @@ for (var i = cellStartX; i <= cellEndX; i++)
 		// If a collision occured, set the flag and break
 		if (rectangle_in_rectangle(x1, y1, x2, y2, tileX1, tileY1, tileX2, tileY2))
 		{
-			bCollided = true;
-			
-			break;
+			return true;
 		}
 	}
-	
-	if (bCollided) { break; }
 }
 
-return bCollided;
+return false;
