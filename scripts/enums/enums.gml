@@ -40,3 +40,25 @@ enum AnimationLoopMode
 	Loop,
 	PingPong
 }
+
+// Collision tiles
+enum CollisionTile
+{
+	Void,
+	Solid,
+	Platform,
+	RSlope,
+	LSlope,
+	RSlopeSmallStart,
+	RSlopeSmallEnd,
+	LSlopeSmallEnd,
+	LSlopeSmallStart,
+	RSlopeVerySmallStart,
+	RSlopeVerySmallMiddle1,
+	RSlopeVerySmallMiddle2,
+	RSlopeVerySmallEnd,
+	LSlopeVerySmallEnd,
+	LSlopeVerySmallMiddle2,
+	LSlopeVerySmallMiddle1,
+	LSlopeVerySmallStart
+}

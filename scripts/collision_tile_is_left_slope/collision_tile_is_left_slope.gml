@@ -1,5 +1,8 @@
-/// @func collision_tile_is_left_slope(tileId)
-/// @arg {int} tileId
-var tileId = argument0;
+/// @func collision_tile_is_left_slope(tile)
+/// @arg {CollisionTile} tile
+var tile = argument0;
 
-return tileId == TILE_LSLOPE || tileId == TILE_LSLOPE_SMALL_START || tileId == TILE_LSLOPE_SMALL_END;
+return tile == CollisionTile.LSlope ||
+	   tile == CollisionTile.LSlopeSmallStart || tile == CollisionTile.LSlopeSmallEnd ||
+	   tile == CollisionTile.LSlopeVerySmallStart || tile == CollisionTile.LSlopeVerySmallMiddle1 ||
+	   tile == CollisionTile.LSlopeVerySmallMiddle2 || tile == CollisionTile.LSlopeVerySmallEnd;

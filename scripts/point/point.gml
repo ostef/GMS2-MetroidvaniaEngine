@@ -2,8 +2,8 @@
 /// @desc Create a point object
 /// @arg {int} x
 /// @arg {int} y
-var xx = argument0;
-var yy = argument1;
+var xx = floor(argument0);
+var yy = floor(argument1);
 
 enum Point
 {

@@ -39,7 +39,7 @@ y = round(y);
 			var bSlopeTile = collision_tile_is_slope(tileId);
 			var bLeftSlopeTile = collision_tile_is_left_slope(tileId);
 			// Only collide with solid tiles
-			if (tileId == TILE_VOID || tileId == TILE_PLATFORM) { continue; }
+			if (tileId == CollisionTile.Void || tileId == CollisionTile.Platform) { continue; }
 			// Get the tile rectangle coordinates
 			var tileX1 = i * tileWidth;
 			var tileY1 = j * tileHeight;
@@ -54,7 +54,7 @@ y = round(y);
 			{
 				var bOnVerticalSide = xDir == 1 ? bLeftSlopeTile : !bLeftSlopeTile;
 				var sideTileX = clamp(bLeftSlopeTile ? i - 1 : i + 1, 0, o_collisions.tilemapWidth - 1);
-				var bSideTileFree = collision_get_tile_at(sideTileX, j) == TILE_VOID || collision_get_tile_at(sideTileX, j) == TILE_PLATFORM;
+				var bSideTileFree = collision_get_tile_at(sideTileX, j) == CollisionTile.Void || collision_get_tile_at(sideTileX, j) == CollisionTile.Platform;
 				
 				if (!bOnVerticalSide || !bSideTileFree) { continue; }
 			}
@@ -104,28 +104,50 @@ x = clamp(x, mask_get_xoffset(), room_width - mask_get_width() + mask_get_xoffse
 			if (bOnSlope && j == cellCloseY) { continue; }
 			var tileId = collision_get_tile_at(i, j);
 			// Only collide with solid tiles
-			if (tileId == TILE_VOID) { continue; }
+			if (tileId == CollisionTile.Void) { continue; }
 			// Get the tile rectangle coordinates
 			var tileX1 = i * tileWidth;
 			var tileY1 = j * tileHeight;
 			var tileX2 = tileX1 + tileWidth;
 			var tileY2 = tileY1 + tileHeight;
-			// Collide with the bottom of the slope
-			if (collision_tile_is_slope(tileId) && (yDir == 1 || bbox_top < tileY2)) { continue; }
+			
+			// Collide only with the bottom of the slope
+			if (collision_tile_is_slope(tileId) && (yDir == 1 || bbox_top < tileY2))
+			{
+				continue;
+			}
 			
 			bCollided = rectangle_in_rectangle(x1, y1, x2, y2, tileX1, tileY1, tileX2, tileY2);
 			if (!bCollided) { continue; }
 		
-			// Handle platforms
-			if (tileId == TILE_PLATFORM)
+			// Collide with platforms
+			if (tileId == CollisionTile.Platform && (bFallOffPlatform || yDir == -1 || y1 > tileY1 - 1))
 			{
-				if (bFallOffPlatform) { continue; }
-				if (yDir == -1) { continue; }
-				if (y1 > tileY1 - 1) { continue; }
+				log_trace("Ignored platform collision:");
+				log_trace("    Fall off platform: " + string(bFallOffPlatform));
+				log_trace("    YDir: " + string(yDir));
+				log_trace("    Y1, TileY1 - 1: " + string(y1) + ", " + string(tileY1 - 1));
+				
+				continue;
 			}
 		
 			// Update y velocity
-			y += yDir == 1 ? tileY1 - y1 - 1 : tileY2 - y2;
+			var distance = yDir == 1 ? tileY1 - y1 - 1 : tileY2 - y2;
+			
+			if (sign(distance) != yDir)
+			{
+				log_trace("Uh oh, the character seems to have gone through a collision tile vertically. Useful data:");
+				log_trace("    Previous position: (" + string(xprevious) + "; " + string(yprevious) + ")");
+				log_trace("    Position: (" + string(x) + "; " + string(y) + ")");
+				log_trace("    Bbox bottom: " + string(bbox_bottom));
+				log_trace("    Previous velocity: (" + string(xVelPrevious) + "; " + string(yVelPrevious) + ")");
+				log_trace("    Velocity: (" + string(xVel) + "; " + string(yVel) + ")");
+				log_trace("    Tile id: " + string(tileId));
+				log_trace("    Tile position: (" + string(tileX1) + "; " + string(tileY1) + ")");
+				log_trace("    Penetration distance: " + string(distance));
+			}
+			
+			y += distance;
 			yVel = 0;
 		
 			break;
@@ -133,6 +155,9 @@ x = clamp(x, mask_get_xoffset(), room_width - mask_get_width() + mask_get_xoffse
 	
 		if (bCollided) { break; }
 	}
+	
+	log_trace("X: " + string(cellMinX) + " - " + string(cellMaxX));
+	log_trace("Y: " + (yDir == 1 ? string(cellCloseY) + " - " + string(cellFarY) : string(cellFarY) + " - " + string(cellCloseY)));
 }
 #endregion
 

@@ -1,7 +1,7 @@
 /// @func collision_get_tile_at(column, row)
 /// @desc Get the collision tile id at a position
-/// @arg column
-/// @arg row
+/// @arg {int} column
+/// @arg {int} row
 var column = argument0;
 var row = argument1;
 

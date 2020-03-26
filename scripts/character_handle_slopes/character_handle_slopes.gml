@@ -71,6 +71,7 @@ for (var j = cellCloseSlope; j <= cellFarSlope; j++)
 		y = newYRel + tileY1;
 		// We're grounded
 		bGrounded = true;
+		bStandingOnPlatform = false;
 		
 		if (!bOnSlopeTop && !bOnSlopeBottom)
 		{

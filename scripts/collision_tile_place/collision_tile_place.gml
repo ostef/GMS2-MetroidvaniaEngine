@@ -1,11 +1,11 @@
-/// @func collision_tile_place(x, y, tileId)
+/// @func collision_tile_place(x, y, tile)
 /// @desc Similar to instance_place, but with collision tiles. Keep in mind this script will use the bbox infos and won't use precise or shaped collision masks! The behaviour is undefined if used outside the room bounds
 /// @arg {real} x
 /// @arg {real} y
-/// @arg {int} tileId
+/// @arg {CollisionTile} tile
 var xx = argument0;
 var yy = argument1;
-var tileId = argument2;
+var tile = argument2;
 var xMovement = xx - x;
 var yMovement = yy - y;
 
@@ -28,7 +28,7 @@ for (var i = cellStartX; i <= cellEndX; i++)
 {
 	for (var j = cellStartY; j <= cellEndY; j++)
 	{
-		if (collision_get_tile_at(i, j) != tileId) { continue; }
+		if (collision_get_tile_at(i, j) != tile) { continue; }
 		
 		// Get the tile rectangle coordinates
 		var tileX1 = i * tileWidth;
