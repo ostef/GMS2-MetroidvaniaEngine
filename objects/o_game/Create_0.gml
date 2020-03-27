@@ -1,7 +1,8 @@
 /// @desc Initialize variables
 singleton_check();
 
+// Time
 timescale = 1;
 
 // Level management
-levelMap = ds_map_create();
+screenList = ds_list_create();

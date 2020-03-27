@@ -4,7 +4,7 @@ event_inherited();
 // Movement
 moveSpeed = 2;
 // Jumping
-jumpHeight = 16;
+jumpHeight = 8;
 maxJumpHeight = 72;
 
 // Set the camera target

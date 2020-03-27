@@ -123,31 +123,11 @@ x = clamp(x, mask_get_xoffset(), room_width - mask_get_width() + mask_get_xoffse
 			// Collide with platforms
 			if (tileId == CollisionTile.Platform && (bFallOffPlatform || yDir == -1 || y1 > tileY1 - 1))
 			{
-				log_trace("Ignored platform collision:");
-				log_trace("    Fall off platform: " + string(bFallOffPlatform));
-				log_trace("    YDir: " + string(yDir));
-				log_trace("    Y1, TileY1 - 1: " + string(y1) + ", " + string(tileY1 - 1));
-				
 				continue;
 			}
 		
 			// Update y velocity
-			var distance = yDir == 1 ? tileY1 - y1 - 1 : tileY2 - y2;
-			
-			if (sign(distance) != yDir)
-			{
-				log_trace("Uh oh, the character seems to have gone through a collision tile vertically. Useful data:");
-				log_trace("    Previous position: (" + string(xprevious) + "; " + string(yprevious) + ")");
-				log_trace("    Position: (" + string(x) + "; " + string(y) + ")");
-				log_trace("    Bbox bottom: " + string(bbox_bottom));
-				log_trace("    Previous velocity: (" + string(xVelPrevious) + "; " + string(yVelPrevious) + ")");
-				log_trace("    Velocity: (" + string(xVel) + "; " + string(yVel) + ")");
-				log_trace("    Tile id: " + string(tileId));
-				log_trace("    Tile position: (" + string(tileX1) + "; " + string(tileY1) + ")");
-				log_trace("    Penetration distance: " + string(distance));
-			}
-			
-			y += distance;
+			y += yDir == 1 ? tileY1 - y1 - 1 : tileY2 - y2;
 			yVel = 0;
 		
 			break;
@@ -155,9 +135,6 @@ x = clamp(x, mask_get_xoffset(), room_width - mask_get_width() + mask_get_xoffse
 	
 		if (bCollided) { break; }
 	}
-	
-	log_trace("X: " + string(cellMinX) + " - " + string(cellMaxX));
-	log_trace("Y: " + (yDir == 1 ? string(cellCloseY) + " - " + string(cellFarY) : string(cellFarY) + " - " + string(cellCloseY)));
 }
 #endregion
 

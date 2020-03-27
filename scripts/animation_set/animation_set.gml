@@ -5,11 +5,11 @@ var animIndex = argument0;
 
 var animationData = animationList[| animIndex]
 animationIndex = animIndex;
-animationSprite = animationData[0];
+animationSprite = animationData[Animation.SpriteIndex];
 sprite_index = animationSprite;
-animationLoopMode = animationData[1]
-animationSpeed = animationData[2];
-animationFrameEvents = animationData[3];
+animationLoopMode = animationData[Animation.LoopMode]
+animationSpeed = animationData[Animation.Speed];
+animationFrameEvents = animationData[Animation.FrameEvents];
 animationFrame = animationSpeed > 0 ? 0 : image_number - 1;
 image_index = animationFrame;
 animationFrameCount = image_number;

@@ -1,2 +1,2 @@
 /// @desc Cleanup
-ds_map_destroy(levelMap);
+ds_list_destroy(screenList);

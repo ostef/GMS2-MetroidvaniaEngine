@@ -2,8 +2,8 @@
 singleton_check();
 
 // Display
-width = 320;
-height = 180;
+width = 256;
+height = 207;
 windowScale = 4;
 // Shake
 translationalShake = 0;

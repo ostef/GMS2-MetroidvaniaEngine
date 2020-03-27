@@ -17,11 +17,11 @@ if (animIndex != animationIndex)
 {
 	var animationData = animationList[| animIndex]
 	animationIndex = animIndex;
-	animationSprite = animationData[0];
+	animationSprite = animationData[Animation.SpriteIndex];
 	sprite_index = animationSprite;
-	animationLoopMode = animationData[1]
-	animationSpeed = animationData[2];
-	animationFrameEvents = animationData[3];
+	animationLoopMode = animationData[Animation.LoopMode]
+	animationSpeed = animationData[Animation.Speed];
+	animationFrameEvents = animationData[Animation.FrameEvents];
 	
 	if (argument_count > 1)
 	{

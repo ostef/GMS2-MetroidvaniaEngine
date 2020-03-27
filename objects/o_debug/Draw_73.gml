@@ -9,37 +9,37 @@ if (bDebugDrawing)
 		switch (drawType)
 		{
 			case DebugDrawType.Rectangle:
-				var color = data[DEBUG_RECT_COLOR];
-				draw_set_alpha(data[DEBUG_RECT_ALPHA]);
-				draw_rectangle_color(data[DEBUG_RECT_X1], data[DEBUG_RECT_Y1], data[DEBUG_RECT_X2], data[DEBUG_RECT_Y2], color, color, color, color, !data[DEBUG_RECT_FILLED_FLAG]);
+				var color = data[DrawRect.Color];
+				draw_set_alpha(data[DrawRect.Alpha]);
+				draw_rectangle_color(data[DrawRect.X1], data[DrawRect.Y1], data[DrawRect.X2], data[DrawRect.Y2], color, color, color, color, !data[DrawRect.FilledFlag]);
 				draw_set_alpha(1);
 				break;
 				
 			case DebugDrawType.Circle:
-				draw_set_alpha(data[DEBUG_CIRCLE_ALPHA]);
-				draw_circle_color(data[DEBUG_CIRCLE_X], data[DEBUG_CIRCLE_Y], data[DEBUG_CIRCLE_RADIUS], data[DEBUG_CIRCLE_COLOR], data[DEBUG_CIRCLE_COLOR], !data[DEBUG_CIRCLE_FILLED_FLAG]);
+				draw_set_alpha(data[DrawCircle.Alpha]);
+				draw_circle_color(data[DrawCircle.X], data[DrawCircle.Y], data[DrawCircle.Radius], data[DrawCircle.Color], data[DrawCircle.Color], !data[DrawCircle.FilledFlag]);
 				draw_set_alpha(1);
 				break;
 				
 			case DebugDrawType.Line:
-				draw_set_alpha(data[DEBUG_LINE_ALPHA]);
-				draw_line_color(data[DEBUG_LINE_X1], data[DEBUG_LINE_Y1], data[DEBUG_LINE_X2], data[DEBUG_LINE_Y2], data[DEBUG_LINE_COLOR], data[DEBUG_LINE_COLOR]);
+				draw_set_alpha(data[DrawLine.Alpha]);
+				draw_line_color(data[DrawLine.X1], data[DrawLine.Y1], data[DrawLine.X2], data[DrawLine.Y2], data[DrawLine.Color], data[DrawLine.Color]);
 				draw_set_alpha(1);
 				break;
 				
 			case DebugDrawType.Arrow:
-				draw_set_color(data[DEBUG_ARROW_COLOR]);
-				draw_set_alpha(data[DEBUG_ARROW_ALPHA]);
-				draw_arrow(data[DEBUG_ARROW_X1], data[DEBUG_ARROW_Y1], data[DEBUG_ARROW_X2], data[DEBUG_ARROW_Y2], data[DEBUG_ARROW_SIZE]);
+				draw_set_color(data[DrawArrow.Color]);
+				draw_set_alpha(data[DrawArrow.Alpha]);
+				draw_arrow(data[DrawArrow.X1], data[DrawArrow.Y1], data[DrawArrow.X2], data[DrawArrow.Y2], data[DrawArrow.Size]);
 				draw_set_alpha(1);
 				draw_set_color(c_white);
 				break;
 				
 			case DebugDrawType.Text:
-				var color = data[DEBUG_TEXT_COLOR];
-				draw_set_halign(data[DEBUG_TEXT_HALIGN]);
-				draw_set_valign(data[DEBUG_TEXT_VALIGN]);
-				draw_text_transformed_color(data[DEBUG_TEXT_X], data[DEBUG_TEXT_Y], data[DEBUG_TEXT_DATA], data[DEBUG_TEXT_SIZE], data[DEBUG_TEXT_SIZE], 0, color, color,color, color, data[DEBUG_TEXT_ALPHA]);
+				var color = data[DrawText.Color];
+				draw_set_halign(data[DrawText.HorizontalAlign]);
+				draw_set_valign(data[DrawText.VerticalAlign]);
+				draw_text_transformed_color(data[DrawText.X], data[DrawText.Y], data[DrawText.Text], data[DrawText.Size], data[DrawText.Size], 0, color, color,color, color, data[DrawText.Alpha]);
 				draw_set_valign(fa_left);
 				draw_set_halign(fa_top);
 				break;

@@ -2,7 +2,7 @@
     "id": "0f7748c6-7a21-458e-894e-7811c8fa559d",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "o_camera_bounds",
+    "name": "o_screen_bounds",
     "eventList": [
         
     ],
