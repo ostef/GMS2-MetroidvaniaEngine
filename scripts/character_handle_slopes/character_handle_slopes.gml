@@ -2,19 +2,20 @@
 // Reset the slope flag
 bWasOnSlope = bOnSlope;
 bOnSlope = false;
+slopeAngle = 0;
 // Don't check for slope when going upwards
 if (yVel < 0) { exit; }
 
-var tileWidth = o_collisions.tileWidth;
-var tileHeight = o_collisions.tileHeight;
+var tileWidth = Collisions.tileWidth;
+var tileHeight = Collisions.tileHeight;
 var cellMinX = floor(bbox_left / tileWidth);
 var cellMaxX = floor(bbox_right / tileWidth);
 var cellCloseSlope = floor((bbox_bottom - 1) / tileHeight);
 var cellFarSlope = cellCloseSlope + 1;
-cellMinX = clamp(cellMinX, 0, o_collisions.tilemapWidth - 1);
-cellMaxX = clamp(cellMaxX, 0, o_collisions.tilemapWidth - 1);
-cellCloseSlope = clamp(cellCloseSlope, 0, o_collisions.tilemapHeight - 1);
-cellFarSlope = clamp(cellFarSlope, 0, o_collisions.tilemapHeight - 1);
+cellMinX = clamp(cellMinX, 0, Collisions.tilemapWidth - 1);
+cellMaxX = clamp(cellMaxX, 0, Collisions.tilemapWidth - 1);
+cellCloseSlope = clamp(cellCloseSlope, 0, Collisions.tilemapHeight - 1);
+cellFarSlope = clamp(cellFarSlope, 0, Collisions.tilemapHeight - 1);
 
 for (var j = cellCloseSlope; j <= cellFarSlope; j++)
 {
@@ -63,6 +64,8 @@ for (var j = cellCloseSlope; j <= cellFarSlope; j++)
 		else
 		{
 			newYRel = round(lerp(slopeMin, slopeMax, xRel / tileWidth));
+			// Update slope angle
+			slopeAngle = point_direction(0, max(slopeMin, slopeMax), tileWidth, min(slopeMin, slopeMax));
 			// Consider we're on slope only if not on slope top or bottom
 			bOnSlope = true;
 		}

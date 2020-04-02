@@ -2,7 +2,7 @@
 /// @desc Get the previous value of a given axis
 /// @arg {string} axisName
 var axisName = argument0;
-var value = o_input_system.previousAxisValues[? axisName];
+var value = InputSystem.previousAxisValues[? axisName];
 
 // Sanity check
 if (is_undefined(value))

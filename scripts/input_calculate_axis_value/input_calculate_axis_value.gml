@@ -3,7 +3,7 @@
 /// @arg {string} axisName
 var axisName = argument0;
 var axisValue = 0;
-var entry = o_input_system.axisMap[? axisName];
+var entry = InputSystem.axisMap[? axisName];
 
 if (!is_undefined(entry))
 {

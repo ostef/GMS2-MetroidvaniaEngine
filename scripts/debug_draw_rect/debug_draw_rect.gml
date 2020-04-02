@@ -15,4 +15,16 @@ var color = argument4;
 var alpha = argument5;
 var bFilled = argument6;
 
-ds_list_add(o_debug.drawCommands, [DebugDrawType.Rectangle, x1, y1, x2, y2, color, alpha, bFilled]);
+enum DrawRect
+{
+	X1 = 1,
+	Y1,
+	X2,
+	Y2,
+	Color,
+	Alpha,
+	FilledFlag
+}
+
+
+ds_list_add(Debug.drawCommands, [DebugDrawType.Rectangle, x1, y1, x2, y2, color, alpha, bFilled]);

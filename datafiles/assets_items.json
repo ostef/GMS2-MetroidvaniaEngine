@@ -1,0 +1,19 @@
+{
+    "Alucard Sword" :
+    {
+        "item_type" : 0,
+        "item_sprite" : "s_item_alucard_sword",
+        "item_description" : "Alucard's family heirloom sword; his favorite",
+        "damage" : 10,
+        "critical_chance" : 0.2
+    },
+
+    "Vampire Killer" :
+    {
+        "item_type" : 0,
+        "item_sprite" : "s_item_vampire_killer",
+        "item_description" : "The legendary vampire killer used by the Belmont clan to slay Dracula and his night creatures",
+        "damage" : 12,
+        "critical_chance" : 0.1
+    }
+}

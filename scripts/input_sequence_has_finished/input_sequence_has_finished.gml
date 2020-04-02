@@ -2,7 +2,7 @@
 /// @desc Get the state of the input sequence
 /// @arg {string} sequenceName
 var sequenceName = argument0;
-var stepList = o_input_system.sequenceMap[? sequenceName];
+var stepList = InputSystem.sequenceMap[? sequenceName];
 
 // Sanity check
 if (is_undefined(stepList))
@@ -12,7 +12,7 @@ if (is_undefined(stepList))
 	return false;
 }
 
-var value = o_input_system.sequenceValues[? sequenceName];
+var value = InputSystem.sequenceValues[? sequenceName];
 var stepCount = ds_list_size(stepList);
 
 return value[0] == stepCount;

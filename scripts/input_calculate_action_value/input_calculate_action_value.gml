@@ -3,7 +3,7 @@
 /// @arg {string} actionName
 var actionName = argument0;
 var actionValue = false;
-var entry = o_input_system.actionMap[? actionName];
+var entry = InputSystem.actionMap[? actionName];
 
 if (!is_undefined(entry))
 {

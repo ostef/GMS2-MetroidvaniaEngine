@@ -8,18 +8,18 @@ bStandingOnPlatform = false;
 // Don't check for ground when going upwards
 if (yVel < 0) { exit; }
 
-var tileWidth = o_collisions.tileWidth;
-var tileHeight = o_collisions.tileHeight;
+var tileWidth = Collisions.tileWidth;
+var tileHeight = Collisions.tileHeight;
 var cellMinX = floor(bbox_left / tileWidth);
 var cellMaxX = floor(bbox_right / tileWidth);
 var cellY = ceil((bbox_bottom) / tileHeight);
-cellMinX = clamp(cellMinX, 0, o_collisions.tilemapWidth - 1);
-cellMaxX = clamp(cellMaxX, 0, o_collisions.tilemapWidth - 1);
-cellY = clamp(cellY, 0, o_collisions.tilemapHeight - 1);
+cellMinX = clamp(cellMinX, 0, Collisions.tilemapWidth - 1);
+cellMaxX = clamp(cellMaxX, 0, Collisions.tilemapWidth - 1);
+cellY = clamp(cellY, 0, Collisions.tilemapHeight - 1);
 
 for (var i = cellMinX; i < cellMaxX + 1; i++)
 {
-	var tileId = o_collisions.tiles[i, cellY];
+	var tileId = Collisions.tiles[i, cellY];
 	var tileY = cellY * tileHeight;
 	// Check if tile is solid or platform
 	if (tileId != CollisionTile.Solid && tileId != CollisionTile.Platform) { continue; }

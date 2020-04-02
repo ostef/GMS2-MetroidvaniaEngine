@@ -4,11 +4,11 @@
 var sequenceName = argument0;
 
 // Sanity check
-if (!ds_map_exists(o_input_system.sequenceValues, sequenceName))
+if (!ds_map_exists(InputSystem.sequenceValues, sequenceName))
 {
 	log_error("INPUT: Input sequence " + sequenceName + " does not exist");
 
 	return;
 }
 
-o_input_system.sequenceValues[? sequenceName] = [0, 0.0];
+InputSystem.sequenceValues[? sequenceName] = [0, 0.0];

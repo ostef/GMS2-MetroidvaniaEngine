@@ -8,13 +8,13 @@ var message = argument[1];
 var instanceId = argument_count > 2 ? argument[2] : LOG_GLOBAL;
 var display = "[" + log_level_get_name(level) + "](" + time_get_timestamp() + ") " + message;
 var maxLogMessages = instanceId == LOG_GLOBAL ? LOG_GLOBAL_MAX_MESSAGES : LOG_INSTANCE_MAX_MESSAGES;
-var logMessages = o_debug.instanceLogMap[? instanceId];
+var logMessages = Debug.instanceLogMap[? instanceId];
 
 // Create the entry if it does not exist
 if (is_undefined(logMessages))
 {
 	logMessages = ds_list_create();
-	ds_map_add_list(o_debug.instanceLogMap, instanceId, logMessages);
+	ds_map_add_list(Debug.instanceLogMap, instanceId, logMessages);
 }
 
 // Add the an entry to the log messages
@@ -31,9 +31,9 @@ if (instanceId == LOG_GLOBAL)
 	// Show a message in the debugger
 	show_debug_message(display);
 	// Write a line to the output log file
-	file_text_write_string(o_debug.logOutputFile, display + "\n");
+	file_text_write_string(Debug.logOutputFile, display + "\n");
 	
-	o_debug.alarm[0] = LOG_MESSAGE_TIME_ON_SCREEN - LOG_MESSAGE_FADE_TIME;
+	Debug.alarm[0] = LOG_MESSAGE_TIME_ON_SCREEN - LOG_MESSAGE_FADE_TIME;
 }
 
 // Crash the game if level is fatal

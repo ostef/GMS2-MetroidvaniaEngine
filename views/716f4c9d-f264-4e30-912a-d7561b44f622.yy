@@ -10,7 +10,8 @@
         "13c3a1eb-66ca-4e64-9904-4a1ef3944be8",
         "2dacdd52-76ca-45bf-a1c6-145248e5b191",
         "ac80f3fd-2915-4341-b0d3-5e37555c6849",
-        "ccbfe938-fa72-4a77-8d4e-690996814e8b"
+        "ccbfe938-fa72-4a77-8d4e-690996814e8b",
+        "ff3dd0c8-5564-4bdb-9e94-053bf369f515"
     ],
     "filterType": "GMSprite",
     "folderName": "Castle Entrance",

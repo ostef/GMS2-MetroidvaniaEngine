@@ -8,7 +8,7 @@ var y1 = argument1;
 var x2 = argument2;
 var y2 = argument3;
 
-with (o_camera)
+with (Camera)
 {
 	limitX1 = x1;
 	limitY1 = y1;

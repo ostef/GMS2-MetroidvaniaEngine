@@ -3,6 +3,7 @@ event_inherited();
 
 // Movement
 moveSpeed = 2;
+
 // Jumping
 jumpHeight = 8;
 maxJumpHeight = 72;
@@ -41,3 +42,9 @@ landSequence = animation_sequence_add(landAnim, idleAnim);
 animation_play(idleAnim);
 #endregion
 
+#region Inventory
+inventory_init();
+inventory_add_item("Alucard Sword");
+inventory_add_item("Vampire Killer");
+inventory_add_item("Vampire Killer");
+#endregion

@@ -2,7 +2,7 @@
 var previousMoveAxis = sign(input_get_previous_axis_value("Move"));
 var moveAxis = sign(input_get_axis_value("Move"));
 
-xVel = moveSpeed * moveAxis * time_get_timescale();
+xVel = cos(degtorad(slopeAngle)) * moveSpeed * moveAxis * time_get_timescale();
 
 character_apply_gravity();
 

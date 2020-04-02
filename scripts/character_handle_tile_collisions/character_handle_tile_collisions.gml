@@ -1,10 +1,10 @@
 /// @func handle_tile_collisions()
 /// @desc Handle collision with tiles
-var tileWidth = o_collisions.tileWidth;
-var tileHeight = o_collisions.tileHeight;
+var tileWidth = Collisions.tileWidth;
+var tileHeight = Collisions.tileHeight;
 
 // Round up the position, just in case
-// Having a non integer position makes the alogorithm freak out, even with integer velocities: non-integer + integer = non-integer
+// Having a non integer position makes the alogorithm freak out, even with integer velocities: non-integer position + integer velocity = non-integer position
 x = round(x);
 y = round(y);
 
@@ -20,10 +20,10 @@ y = round(y);
 	var cellMinY = floor(bbox_top / tileHeight);
 	var cellMaxY = floor(bbox_bottom / tileHeight);
 	// Don't go out of bounds!
-	cellCloseX = clamp(cellCloseX, 0, o_collisions.tilemapWidth - 1);
-	cellFarX = clamp(cellFarX, 0, o_collisions.tilemapWidth - 1);
-	cellMinY = clamp(cellMinY, 0, o_collisions.tilemapHeight - 1);
-	cellMaxY = clamp(cellMaxY, 0, o_collisions.tilemapHeight - 1);
+	cellCloseX = clamp(cellCloseX, 0, Collisions.tilemapWidth - 1);
+	cellFarX = clamp(cellFarX, 0, Collisions.tilemapWidth - 1);
+	cellMinY = clamp(cellMinY, 0, Collisions.tilemapHeight - 1);
+	cellMaxY = clamp(cellMaxY, 0, Collisions.tilemapHeight - 1);
 	
 	var bCollided = false;
 
@@ -53,7 +53,7 @@ y = round(y);
 			if (bSlopeTile)
 			{
 				var bOnVerticalSide = xDir == 1 ? bLeftSlopeTile : !bLeftSlopeTile;
-				var sideTileX = clamp(bLeftSlopeTile ? i - 1 : i + 1, 0, o_collisions.tilemapWidth - 1);
+				var sideTileX = clamp(bLeftSlopeTile ? i - 1 : i + 1, 0, Collisions.tilemapWidth - 1);
 				var bSideTileFree = collision_get_tile_at(sideTileX, j) == CollisionTile.Void || collision_get_tile_at(sideTileX, j) == CollisionTile.Platform;
 				
 				if (!bOnVerticalSide || !bSideTileFree) { continue; }
@@ -73,7 +73,7 @@ y = round(y);
 
 // Apply x movement
 x += xVel;
-x = clamp(x, mask_get_xoffset(), room_width - mask_get_width() + mask_get_xoffset());
+x = clamp(x, positionLimitX1 + mask_get_xoffset(), positionLimitX2 - mask_get_width() + mask_get_xoffset());
 
 #region Vertical
 {
@@ -87,10 +87,10 @@ x = clamp(x, mask_get_xoffset(), room_width - mask_get_width() + mask_get_xoffse
 	var cellCloseY =  floor(yDir == 1 ? bbox_bottom / tileHeight : bbox_top / tileHeight);
 	var cellFarY = floor(yDir == 1 ? (bbox_bottom + yVel) / tileWidth : (bbox_top + yVel) / tileWidth);
 	// Don't go out of bounds!
-	cellMinX = clamp(cellMinX, 0, o_collisions.tilemapWidth - 1);
-	cellMaxX = clamp(cellMaxX, 0, o_collisions.tilemapWidth - 1);
-	cellCloseY = clamp(cellCloseY, 0, o_collisions.tilemapHeight - 1);
-	cellFarY = clamp(cellFarY, 0, o_collisions.tilemapHeight - 1);
+	cellMinX = clamp(cellMinX, 0, Collisions.tilemapWidth - 1);
+	cellMaxX = clamp(cellMaxX, 0, Collisions.tilemapWidth - 1);
+	cellCloseY = clamp(cellCloseY, 0, Collisions.tilemapHeight - 1);
+	cellFarY = clamp(cellFarY, 0, Collisions.tilemapHeight - 1);
 	
 	var bCollided = false;
 	
@@ -140,4 +140,4 @@ x = clamp(x, mask_get_xoffset(), room_width - mask_get_width() + mask_get_xoffse
 
 // Apply y movement
 y += yVel;
-y = clamp(y, mask_get_yoffset(), room_height - mask_get_height() + mask_get_yoffset());
+y = clamp(y, positionLimitY1 + mask_get_yoffset(), positionLimitY2 - mask_get_height() + mask_get_yoffset());

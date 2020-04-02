@@ -13,4 +13,14 @@ var color = argument3;
 var alpha = argument4;
 var bFilled = argument5;
 
-ds_list_add(o_debug.drawCommands, [DebugDrawType.Circle, xx, yy, radius, color, alpha, bFilled]);
+enum DrawCircle
+{
+	X = 1,
+	Y,
+	Radius,
+	Color,
+	Alpha,
+	FilledFlag
+}
+
+ds_list_add(Debug.drawCommands, [DebugDrawType.Circle, xx, yy, radius, color, alpha, bFilled]);

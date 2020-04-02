@@ -2,7 +2,7 @@
 /// @desc Get the value of a given action
 /// @arg {string} actionName
 var actionName = argument0;
-var value = o_input_system.actionValues[? actionName];
+var value = InputSystem.actionValues[? actionName];
 
 // Sanity check
 if (is_undefined(value))

@@ -10,4 +10,4 @@ if (!animation_exists(animIndex))
 
 var data = animationList[| animIndex];
 
-return sprite_get_number(data[0]);
+return sprite_get_number(data[Animation.SpriteIndex]);

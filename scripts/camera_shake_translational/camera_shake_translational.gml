@@ -3,4 +3,4 @@
 /// @arg {real} amplitude
 var amplitude = argument0;
 
-o_camera.translationalShake = amplitude * CAMERA_SHAKE_TRANSLATIONAL_REFERENCE;
+Camera.translationalShake = amplitude * CAMERA_SHAKE_TRANSLATIONAL_REFERENCE;

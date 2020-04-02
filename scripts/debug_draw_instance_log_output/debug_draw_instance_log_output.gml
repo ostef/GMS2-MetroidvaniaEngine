@@ -12,7 +12,7 @@ var instanceId = argument2;
 var size = argument3;
 var color = argument4;
 var alpha = argument5;
-var logOutputList = o_debug.instanceLogMap[? instanceId];
+var logOutputList = Debug.instanceLogMap[? instanceId];
 
 // Sanity check
 if (is_undefined(logOutputList))

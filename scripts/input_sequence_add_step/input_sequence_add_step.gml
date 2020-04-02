@@ -4,7 +4,7 @@
 /// @arg {string} actionName
 var sequenceName = argument0;
 var actionName = argument1;
-var stepList = o_input_system.sequenceMap[? sequenceName];
+var stepList = InputSystem.sequenceMap[? sequenceName];
 
 // Sanity check
 if (is_undefined(stepList))

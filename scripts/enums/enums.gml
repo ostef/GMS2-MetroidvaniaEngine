@@ -1,4 +1,22 @@
 /// @desc Contains all the enums
+// Inventory
+enum ItemType
+{
+	Weapon,
+	Armor,
+	Cape,
+	Helmet,
+	Consumable,
+	QuestItem
+}
+
+enum ItemFlag
+{
+	None = 0,
+	Equippable = 1,
+	Droppable = 1 << 1
+}
+
 // Debugging
 enum LogLevel
 {

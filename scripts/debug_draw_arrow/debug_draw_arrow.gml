@@ -15,4 +15,15 @@ var size = argument4;
 var color = argument5;
 var alpha = argument6;
 
-ds_list_add(o_debug.drawCommands, [DebugDrawType.Arrow, x1, y1, x2, y2, size, color, alpha]);
+enum DrawArrow
+{
+	X1 = 1,
+	Y1,
+	X2,
+	Y2,
+	Size,
+	Color,
+	Alpha
+}
+
+ds_list_add(Debug.drawCommands, [DebugDrawType.Arrow, x1, y1, x2, y2, size, color, alpha]);

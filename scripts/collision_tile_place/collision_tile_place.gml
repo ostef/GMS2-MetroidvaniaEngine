@@ -11,17 +11,17 @@ var yMovement = yy - y;
 
 var tileX = NaN;
 var tileY = NaN;
-var tileWidth = o_collisions.tileWidth;
-var tileHeight = o_collisions.tileHeight;
+var tileWidth = Collisions.tileWidth;
+var tileHeight = Collisions.tileHeight;
 var cellStartX = floor((bbox_left + xMovement) / tileWidth);
 var cellEndX = floor((bbox_right + xMovement) / tileWidth);
 var cellStartY = floor((bbox_top + yMovement) / tileHeight);
 var cellEndY = floor((bbox_bottom + yMovement) / tileHeight);
 // Don't go out of bounds!
-cellStartX = clamp(cellStartX, 0, o_collisions.tilemapWidth - 1);
-cellEndX = clamp(cellEndX, 0, o_collisions.tilemapWidth - 1);
-cellStartY = clamp(cellStartY, 0, o_collisions.tilemapHeight - 1);
-cellEndY = clamp(cellEndY, 0, o_collisions.tilemapHeight - 1);
+cellStartX = clamp(cellStartX, 0, Collisions.tilemapWidth - 1);
+cellEndX = clamp(cellEndX, 0, Collisions.tilemapWidth - 1);
+cellStartY = clamp(cellStartY, 0, Collisions.tilemapHeight - 1);
+cellEndY = clamp(cellEndY, 0, Collisions.tilemapHeight - 1);
 
 var bCollided = false;
 for (var i = cellStartX; i <= cellEndX; i++)

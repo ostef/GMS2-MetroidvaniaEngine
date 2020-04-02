@@ -2,11 +2,11 @@
 /// @desc Add an input action mapping
 /// @arg {string} actionName
 var actionName = argument0;
-var entry = o_input_system.actionMap[? actionName];
+var entry = InputSystem.actionMap[? actionName];
 
 if (is_undefined(entry))
 {
 	entry = ds_list_create();
-	ds_map_add_list(o_input_system.actionMap, actionName, entry);
+	ds_map_add_list(InputSystem.actionMap, actionName, entry);
 	log_info("INPUT: Added action " + actionName);
 }

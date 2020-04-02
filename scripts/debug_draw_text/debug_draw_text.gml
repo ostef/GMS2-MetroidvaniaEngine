@@ -17,4 +17,16 @@ var alpha = argument5;
 var halign = argument6;
 var valign = argument7;
 
-ds_list_add(o_debug.drawCommands, [DebugDrawType.Text, xx, yy, text, size, color, alpha, halign, valign]);
+enum DrawText
+{
+	X = 1,
+	Y,
+	Text,
+	Size,
+	Color,
+	Alpha,
+	HorizontalAlign,
+	VerticalAlign
+}
+
+ds_list_add(Debug.drawCommands, [DebugDrawType.Text, xx, yy, text, size, color, alpha, halign, valign]);

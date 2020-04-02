@@ -4,4 +4,4 @@
 var target = argument0;
 var weight = argument1;
 
-ds_list_add(o_camera.targets, [target, weight]);
+ds_list_add(Camera.targets, [target, weight]);

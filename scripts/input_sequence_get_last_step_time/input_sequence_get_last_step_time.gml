@@ -2,7 +2,7 @@
 /// @desc Get the time since the last step was met in an input sequence
 /// @arg {string} sequenceName
 var sequenceName = argument0;
-var value = o_input_system.sequenceValues[? sequenceName];
+var value = InputSystem.sequenceValues[? sequenceName];
 
 // Sanity check
 if (is_undefined(value))

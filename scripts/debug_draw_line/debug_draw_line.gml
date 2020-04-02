@@ -13,4 +13,14 @@ var y2 = argument3;
 var color = argument4;
 var alpha = argument5;
 
-ds_list_add(o_debug.drawCommands, [DebugDrawType.Line, x1, y1, x2, y2, color, alpha]);
+enum DrawLine
+{
+	X1 = 1,
+	Y1,
+	X2,
+	Y2,
+	Color,
+	Alpha
+}
+
+ds_list_add(Debug.drawCommands, [DebugDrawType.Line, x1, y1, x2, y2, color, alpha]);

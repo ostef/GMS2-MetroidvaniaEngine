@@ -8,6 +8,12 @@ xVelRemainder = 0.0;
 yVelRemainder = 0.0;
 grav = .3;
 
+// Position limits
+positionLimitX1 = -infinity;
+positionLimitY1 = -infinity;
+positionLimitX2 = -infinity;
+positionLimitY2 = -infinity;
+
 // Grounding and slopes
 bWasGrounded = false;
 bGrounded = false;
@@ -15,6 +21,7 @@ bWasStandingOnPlatform = false;
 bStandingOnPlatform = false;
 bWasOnSlope = false;
 bOnSlope = false;
+slopeAngle = 0;
 bFallOffPlatform = false;
 
 // Graphics
