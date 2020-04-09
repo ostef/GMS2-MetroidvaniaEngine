@@ -15,6 +15,11 @@ ds_map_copy(previousActionValues, actionValues);
 	while (!is_undefined(current))
 	{
 		axisValues[? current] = input_calculate_axis_value(current);
+		// Register on value changed events
+		if (axisValues[? current] != previousAxisValues[? current]) { event_register("On " + current + " Axis Changed", [previousAxisValues[? current], axisValues[? current]]); }
+		// Register on value changed events
+		if (axisValues[? current] != 0.0) { event_register("On " + current + " Axis Not Zero", previousAxisValues[? current]); }
+		
 		// Continue iteration
 		current = ds_map_find_next(axisMap, current);
 	}
@@ -26,6 +31,9 @@ ds_map_copy(previousActionValues, actionValues);
 	while (!is_undefined(current))
 	{
 		actionValues[? current] = input_calculate_action_value(current);
+		// Register an event if the action is true
+		if (actionValues[? current]) { event_register("On " + current + " Action", undefined); }
+		
 		// Continue iteration
 		current = ds_map_find_next(actionMap, current);
 	}

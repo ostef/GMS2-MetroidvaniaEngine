@@ -1,8 +1,4 @@
 /// @desc Contains all the macros
-// Script replacement
-#macro builtin_typeof typeof
-#macro typeof custom_typeof
-
 // Debug logging
 #macro LOG_GLOBAL_MAX_MESSAGES 25
 #macro LOG_INSTANCE_MAX_MESSAGES 100

@@ -9,12 +9,13 @@ instance_create_layer(0, 0, mainLayer, InputSystem);
 instance_create_layer(0, 0, mainLayer, Camera);
 instance_create_layer(0, 0, mainLayer, Collisions);
 instance_create_layer(0, 0, mainLayer, Assets);
+instance_create_layer(0, 0, mainLayer, Events);
 
 #region Input
 #region UI
-input_add_action("UI Up");
-input_map_to_action("UI Up", ActionType.Pressed, InputType.Keyboard, ord("W"));
-input_map_to_action("UI Up", ActionType.Pressed, InputType.GamepadButton, gp_padu);
+//input_add_action("UI Up");
+//input_map_to_action("UI Up", ActionType.Pressed, InputType.Keyboard, ord("W"));
+//input_map_to_action("UI Up", ActionType.Pressed, InputType.GamepadButton, gp_padu);
 
 input_add_action("UI Down");
 input_map_to_action("UI Down", ActionType.Pressed, InputType.Keyboard, ord("S"));

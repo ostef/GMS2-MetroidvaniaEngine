@@ -8,9 +8,9 @@ for (var i = 0; i < ds_list_size(animationList); i++)
 	var frameEvents = data[Animation.FrameEvents];
 	
 	// Clear the frame events array
-	for (var i = 0; i < array_length_1d(frameEvents); i++)
+	for (var j = 0; j < array_length_1d(frameEvents); j++)
 	{
-		ds_list_destroy(frameEvents[i]);
+		ds_list_destroy(frameEvents[j]);
 	}
 }
 
