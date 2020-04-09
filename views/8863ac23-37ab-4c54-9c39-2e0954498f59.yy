@@ -9,8 +9,7 @@
         "9e7040d4-f7bd-4eb3-aab3-43f3b8aa9e95",
         "02ba9b06-edea-4bf2-89d9-2d068f937c59",
         "045d04a8-83e2-4b20-bc3b-a906a5693ad5",
-        "36197343-81c5-47c9-9ef6-80d277541296",
-        "f332e020-027e-4250-8e55-7a8d81017cd2"
+        "36197343-81c5-47c9-9ef6-80d277541296"
     ],
     "filterType": "GMScript",
     "folderName": "Jonathan",

@@ -20,7 +20,7 @@ if (input_get_action_value("Stop Jumping"))
 #region State transition
 if (bGrounded)
 {
-	state_transition_to(groundedState);
+	fsm_goto(fsm, groundedState);
 }
 #endregion
 

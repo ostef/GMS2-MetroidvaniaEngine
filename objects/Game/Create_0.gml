@@ -1,8 +1,7 @@
 /// @desc Initialize variables
 singleton_check();
 
+// Player
+playerInstance = noone;
 // Time
 timescale = 1;
-
-// Level management
-screenList = ds_list_create();

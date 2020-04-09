@@ -4,11 +4,30 @@
     "mvc": "1.0",
     "name": "o_pickup_item",
     "eventList": [
-        
+        {
+            "id": "4882eec1-e124-4846-9eb2-9a2d9f91c751",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 0,
+            "m_owner": "60166d71-67be-43ef-a5e7-8ed6081c4dc3"
+        },
+        {
+            "id": "adb321f5-6194-4fb7-a927-6606d2acb988",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 3,
+            "m_owner": "60166d71-67be-43ef-a5e7-8ed6081c4dc3"
+        }
     ],
-    "maskSpriteId": "00000000-0000-0000-0000-000000000000",
+    "maskSpriteId": "6c312a0e-d2ba-4117-946e-d877b4786391",
     "overriddenProperties": null,
-    "parentObjectId": "00000000-0000-0000-0000-000000000000",
+    "parentObjectId": "78320d50-88ba-422d-bc35-a6e5fddd28d7",
     "persistent": false,
     "physicsAngularDamping": 0.1,
     "physicsDensity": 0.5,
@@ -33,7 +52,7 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "\"Default Item\"",
+            "value": "\"Alucard Sword\"",
             "varName": "itemName",
             "varType": 2
         }

@@ -9,26 +9,20 @@ character_apply_gravity();
 // Falling
 if (!bGrounded)
 {
-	state_transition_to(airborneState);
+	fsm_goto(fsm, airborneState);
 }
 
 // Jumping
 if (input_get_action_value("Jump") && bGrounded)
 {
 	yVel = -calculate_jump_force(maxJumpHeight, grav);
-	state_transition_to(airborneState);
+	fsm_goto(fsm, airborneState);
 }
 
 // Ducking
 if (input_get_action_value("Duck"))
 {
-	state_transition_to(duckedState);
-}
-
-// Attacking
-if (input_get_action_value("Light Attack"))
-{
-	state_transition_to(groundedAttackState);
+	fsm_goto(fsm, duckedState);
 }
 #endregion
 

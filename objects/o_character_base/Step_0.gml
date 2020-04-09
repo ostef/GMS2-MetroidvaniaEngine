@@ -1,10 +1,4 @@
 /// @desc Execute current state
-// Update previous velocity
-xVelPrevious = xVel;
-yVelPrevious = yVel;
-
-state_machine_execute();
-
 #region Force set scale and angle
 if (image_xscale != 1)
 {

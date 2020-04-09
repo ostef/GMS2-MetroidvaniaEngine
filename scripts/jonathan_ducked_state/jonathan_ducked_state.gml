@@ -15,7 +15,7 @@ if (duckAction)
 }
 else
 {
-	state_transition_to(groundedState);
+	fsm_goto(fsm, groundedState);
 	animation_play(idleAnim);
 }
 
@@ -30,5 +30,5 @@ if (input_get_action_value("Jump"))
 		yVel = -calculate_jump_force(maxJumpHeight, grav);
 	}
 	
-	state_transition_to(airborneState);
+	fsm_goto(fsm, airborneState);
 }

@@ -1,6 +1,13 @@
 /// @desc Initialize variables
 event_inherited();
 
+fsm = fsm_create();
+animation_system_init();
+inventory_init();
+
+// Set the game player instance
+Game.playerInstance = self;
+
 // Movement
 moveSpeed = 2;
 
@@ -12,12 +19,11 @@ maxJumpHeight = 72;
 camera_set_target(self);
 
 #region States
-groundedState = state_machine_add_state(noone, jonathan_grounded_state, noone);
-airborneState = state_machine_add_state(noone, jonathan_airborne_state, jonathan_on_landed);
-duckedState = state_machine_add_state(jonathan_on_duck, jonathan_ducked_state, jonathan_on_stand_up);
-groundedAttackState = state_machine_add_state(noone, jonathan_grounded_attack_state, noone);
+groundedState = fsm_add_state(fsm, noone, jonathan_grounded_state, noone);
+airborneState = fsm_add_state(fsm, noone, jonathan_airborne_state, jonathan_on_landed);
+duckedState = fsm_add_state(fsm, jonathan_on_duck, jonathan_ducked_state, jonathan_on_stand_up);
 
-state_transition_to(groundedState);
+fsm_goto(fsm, groundedState);
 #endregion
 
 #region Animation
@@ -43,7 +49,6 @@ animation_play(idleAnim);
 #endregion
 
 #region Inventory
-inventory_init();
 inventory_add_item("Alucard Sword");
 inventory_add_item("Vampire Killer");
 inventory_add_item("Vampire Killer");

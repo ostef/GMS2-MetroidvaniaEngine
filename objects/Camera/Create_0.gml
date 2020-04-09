@@ -22,11 +22,6 @@ camera = camera_create_view(x, y, width, height, 0, noone, -1, -1, width / 2, he
 
 camera_set_limits(-infinity, -infinity, infinity, infinity);
 
-// Camera state machine init
-state_machine_init();
-followTargetsState = state_machine_add_state(noone, camera_follow_targets_state, noone);
-state_transition_to(followTargetsState);
-
 // Set up views in all rooms
 for (var i = 0; i < room_last + 1; i++)
 {

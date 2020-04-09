@@ -11,6 +11,39 @@ instance_create_layer(0, 0, mainLayer, Collisions);
 instance_create_layer(0, 0, mainLayer, Assets);
 
 #region Input
+#region UI
+input_add_action("UI Up");
+input_map_to_action("UI Up", ActionType.Pressed, InputType.Keyboard, ord("W"));
+input_map_to_action("UI Up", ActionType.Pressed, InputType.GamepadButton, gp_padu);
+
+input_add_action("UI Down");
+input_map_to_action("UI Down", ActionType.Pressed, InputType.Keyboard, ord("S"));
+input_map_to_action("UI Down", ActionType.Pressed, InputType.GamepadButton, gp_padd);
+
+input_add_action("UI Left");
+input_map_to_action("UI Left", ActionType.Pressed, InputType.Keyboard, ord("A"));
+input_map_to_action("UI Left", ActionType.Pressed, InputType.GamepadButton, gp_padl);
+
+input_add_action("UI Right");
+input_map_to_action("UI Right", ActionType.Pressed, InputType.Keyboard, ord("D"));
+input_map_to_action("UI Right", ActionType.Pressed, InputType.GamepadButton, gp_padr);
+
+input_add_action("UI Submit");
+input_map_to_action("UI Submit", ActionType.Pressed, InputType.Keyboard, ord("E"));
+input_map_to_action("UI Submit", ActionType.Pressed, InputType.Keyboard, vk_enter);
+input_map_to_action("UI Submit", ActionType.Pressed, InputType.GamepadButton, gp_face1);
+
+input_add_action("UI Cancel");
+input_map_to_action("UI Cancel", ActionType.Pressed, InputType.Keyboard, ord("Q"));
+input_map_to_action("UI Cancel", ActionType.Pressed, InputType.Keyboard, vk_backspace);
+input_map_to_action("UI Cancel", ActionType.Pressed, InputType.GamepadButton, gp_face2);
+#endregion
+
+// Pause
+input_add_action("Pause");
+input_map_to_action("Pause", ActionType.Pressed, InputType.Keyboard, ord("I"));
+input_map_to_action("Pause", ActionType.Pressed, InputType.GamepadButton, gp_start);
+
 // Move
 input_add_axis("Move");
 input_map_to_axis("Move", InputType.Keyboard, ord("D"), true);
@@ -34,13 +67,4 @@ input_add_action("Duck");
 input_map_to_action("Duck", ActionType.Normal, InputType.Keyboard, ord("S"));
 input_map_to_action("Duck", ActionType.Normal, InputType.GamepadButton, gp_padd);
 input_map_to_action("Duck", ActionType.Normal, InputType.GamepadAxis, gp_axislv);
-
-// Attacks
-input_add_action("Light Attack");
-input_map_to_action("Light Attack", ActionType.Pressed, InputType.Keyboard, vk_lcontrol);
-input_map_to_action("Light Attack", ActionType.Pressed, InputType.GamepadButton, gp_face3);
-
-input_add_action("Heavy Attack");
-input_map_to_action("Heavy Attack", ActionType.Pressed, InputType.Keyboard, vk_space);
-input_map_to_action("Heavy Attack", ActionType.Pressed, InputType.GamepadButton, gp_face4);
 #endregion
