@@ -2,7 +2,7 @@ var moveAxis = sign(input_get_axis_value("Move"));
 var duckAction = input_get_action_value("Duck");
 
 xVel = 0;
-character_apply_gravity();
+movable_apply_gravity();
 
 if (moveAxis != 0)
 {
@@ -23,7 +23,7 @@ if (input_get_action_value("Jump"))
 {
 	if (bStandingOnPlatform)
 	{
-		character_fall_off_platform();
+		movable_fall_off_platform();
 	}
 	else
 	{

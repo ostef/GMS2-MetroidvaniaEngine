@@ -1,8 +1,8 @@
 {
-    "id": "5877d95e-79aa-4111-a9f3-ade7d97e9147",
+    "id": "ad78e412-03cc-4b47-a961-306582e3ecbf",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "character_handle_slopes",
+    "name": "movable_fall_off_platform",
     "IsCompatibility": false,
     "IsDnD": false
 }

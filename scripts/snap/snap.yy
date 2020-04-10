@@ -1,8 +1,8 @@
 {
-    "id": "ad78e412-03cc-4b47-a961-306582e3ecbf",
+    "id": "6182a59b-c134-405c-b837-5fc9e72536ba",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "character_fall_off_platform",
+    "name": "snap",
     "IsCompatibility": false,
     "IsDnD": false
 }

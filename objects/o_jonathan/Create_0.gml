@@ -1,8 +1,6 @@
 /// @desc Initialize variables
 event_inherited();
 
-fsm = fsm_create();
-animation_system_init();
 inventory_init();
 
 // Set the game player instance
@@ -10,7 +8,6 @@ Game.playerInstance = self;
 
 // Movement
 moveSpeed = 2;
-
 // Jumping
 jumpHeight = 8;
 maxJumpHeight = 72;

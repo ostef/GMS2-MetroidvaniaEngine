@@ -1,4 +1,4 @@
-/// @func character_check_for_ground()
+/// @func movable_check_for_ground()
 // Reset the grounded flags
 bWasGrounded = bGrounded;
 bGrounded = false;
@@ -31,7 +31,6 @@ for (var i = cellMinX; i < cellMaxX + 1; i++)
 		{
 			bGrounded = true;
 			bStandingOnPlatform = true;
-			y = tileY;
 		
 			// Continue so we check if we are also partly on a solid tile
 			continue;
@@ -39,7 +38,6 @@ for (var i = cellMinX; i < cellMaxX + 1; i++)
 	
 		bGrounded = true;
 		bStandingOnPlatform = false;
-		y = tileY;
 	
 		break;
 	}

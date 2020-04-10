@@ -4,7 +4,7 @@ var moveAxis = sign(input_get_axis_value("Move"));
 
 xVel = cos(degtorad(slopeAngle)) * moveSpeed * moveAxis * time_get_timescale();
 
-character_apply_gravity();
+movable_apply_gravity();
 
 // Falling
 if (!bGrounded)

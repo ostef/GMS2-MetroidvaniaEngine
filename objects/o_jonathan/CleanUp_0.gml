@@ -1,4 +1,3 @@
 /// @desc Cleanup
-animation_system_cleanup();
-fsm_destroy(fsm);
+event_inherited();
 inventory_cleanup();

@@ -1,4 +1,4 @@
-/// @func character_handle_slopes()
+/// @func movable_handle_slopes()
 // Reset the slope flag
 bWasOnSlope = bOnSlope;
 bOnSlope = false;

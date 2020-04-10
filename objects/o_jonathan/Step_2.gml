@@ -1,6 +1,4 @@
-/// @desc Update animations
-animation_system_update();
-
+/// @desc Update animations and transition between screens
 event_inherited();
 
 // Screen transition
@@ -12,3 +10,6 @@ if (screenBounds != noone)
 			screenBounds.x + sprite_get_width(s_screen_bounds) * screenBounds.image_xscale,
 			screenBounds.y + sprite_get_height(s_screen_bounds) * screenBounds.image_yscale);
 }
+
+// Draw mask
+debug_draw_rect(bbox_left, bbox_top, bbox_right, bbox_bottom, c_red, .5, true);

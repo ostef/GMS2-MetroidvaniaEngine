@@ -1,4 +1,4 @@
-/// @func handle_tile_collisions()
+/// @func movable_handle_tile_collisions()
 /// @desc Handle collision with tiles
 var tileWidth = Collisions.tileWidth;
 var tileHeight = Collisions.tileHeight;

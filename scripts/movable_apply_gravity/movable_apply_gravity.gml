@@ -1,5 +1,5 @@
-/// @func character_apply_gravity()
-/// @desc Apply gravity on character
+/// @func movable_apply_gravity()
+/// @desc Apply gravity
 if (!bGrounded)
 {
 	yVel += grav * time_get_timescale();
