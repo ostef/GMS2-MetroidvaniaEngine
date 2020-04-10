@@ -7,5 +7,6 @@ drawCommands = ds_list_create();
 // Debug logging
 bShowLogOutput = false;
 instanceLogMap = ds_map_create();	// Key is the instance id, value is the log message list
-logOutputFile = file_text_open_write("log_" + time_get_datestamp() + "_" + string(current_hour) + "h" + string(current_minute) + "m" + string(current_second) + "s.txt");
+instanceLogOutputFileMap = ds_map_create();
+log_file_start_session(LOG_GLOBAL);
 log_info("Game started");

@@ -1,8 +1,8 @@
 {
-    "id": "ca6c68a9-cce6-4228-a3dc-b6ce05f9cf9f",
+    "id": "7efa7ed1-bd61-40cc-b7a6-d517f2e4c2df",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "handle_tile_collisions",
+    "name": "fsm_handle_transition",
     "IsCompatibility": false,
     "IsDnD": false
 }

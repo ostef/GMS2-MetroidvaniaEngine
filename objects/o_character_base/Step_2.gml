@@ -1,7 +1,6 @@
-/// @desc Draw debug infos
+/// @desc Handle state transition and update animations
+fsm_handle_transition(fsm);
 animation_system_update();
-
-event_inherited();
 
 debug_draw_text(x, bbox_bottom, "is grounded: " + string(bGrounded), .3, c_white, 1, fa_center, fa_top);
 debug_draw_text(x, bbox_bottom + 5, "is on platform: " + string(bStandingOnPlatform), .3, c_white, 1, fa_center, fa_top);

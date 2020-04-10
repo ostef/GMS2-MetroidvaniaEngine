@@ -1,4 +1,7 @@
 /// @desc Initialize variables
+// Start an instance logging file session
+log_file_start_session(self);
+
 event_inherited();
 
 inventory_init();

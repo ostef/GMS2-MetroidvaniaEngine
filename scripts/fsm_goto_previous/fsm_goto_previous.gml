@@ -3,7 +3,7 @@
 /// @arg {FSM} stateMachine
 var stateMachine = argument0;
 assert(is_fsm(stateMachine), "Argument is not an FSM!");
-var stateIndex = ds_stack_pop(stateMachine[@ FSM.StateHistory]);
+var stateIndex = ds_stack_pop(stateMachine[FSM.StateHistory]);
 
 if (fsm_state_exists(stateMachine, stateIndex))
 {

@@ -29,7 +29,7 @@ if (input_get_action_value("Duck"))
 #region Animation
 if (moveAxis == 0)
 {
-	if (previousMoveAxis != 0) 
+	if (previousMoveAxis != 0)
 	{
 		animation_sequence_play(stopSequence);
 	}

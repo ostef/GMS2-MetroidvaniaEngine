@@ -6,4 +6,4 @@ var stateMachine = argument0;
 var stateIndex = argument1;
 assert(is_fsm(stateMachine), "Argument is not an FSM!");
 
-return stateIndex >= 0 && stateIndex < ds_list_size(stateMachine[@ FSM.StateList]);
+return stateIndex >= 0 && stateIndex < ds_list_size(stateMachine[FSM.StateList]);

@@ -6,7 +6,7 @@ enum FSM
 	StateHistory,
 	CurrentStateIndex,
 	CurrentStateSteps,
-	PropertyCount
+	NextStateIndex
 }
 
 enum StateEntry
@@ -16,4 +16,4 @@ enum StateEntry
 	OnExit
 }
 
-return [ds_list_create(), ds_stack_create(), noone, noone];
+return [ds_list_create(), ds_stack_create(), noone, noone, noone];

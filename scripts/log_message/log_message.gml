@@ -25,13 +25,20 @@ if (ds_list_size(logMessages) > maxLogMessages)
 	ds_list_delete(logMessages, 0);
 }
  
+// Log to file if started
+var file = Debug.instanceLogOutputFileMap[? instanceId];
+
+if (!is_undefined(file))
+{
+	// Write a line to the output log file
+	file_text_write_string(file, display + "\n");
+}
+ 
 // Show a debug message if global logging
 if (instanceId == LOG_GLOBAL)
 {
 	// Show a message in the debugger
 	show_debug_message(display);
-	// Write a line to the output log file
-	file_text_write_string(Debug.logOutputFile, display + "\n");
 	
 	Debug.alarm[0] = LOG_MESSAGE_TIME_ON_SCREEN - LOG_MESSAGE_FADE_TIME;
 }
