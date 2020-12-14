@@ -2,6 +2,8 @@
 
 This is a metroidvania engine made in Game Maker Studio 2.3. It currently uses Castlevania sprites and tilesets from various titles.
 
+![Alt Text](showcase.gif)
+
 **DISCLAIMER:**
 I have not worked on this project for a long time and it is nowhere near completion. I don't know when I will get the time to get back at it, if ever.
 
