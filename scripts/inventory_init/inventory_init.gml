@@ -1,4 +1,9 @@
 /// @func inventory_init()
 /// @desc Initialize inventory variables
-inventory = ds_map_create();
+function inventory_init() {
+	inventory = ds_map_create();
 
+
+
+
+}

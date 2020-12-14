@@ -1,8 +1,12 @@
 {
-    "id": "28dfecf7-57ba-4994-9e9e-2ed5dc48a761",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "log_trace",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Logging",
+    "path": "folders/Scripts/Debugging/Logging.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "log_trace",
+  "tags": [],
+  "resourceType": "GMScript",
 }

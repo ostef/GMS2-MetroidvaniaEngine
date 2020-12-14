@@ -1,8 +1,12 @@
 {
-    "id": "976b050a-6778-462e-b979-17fce58a326b",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "event",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Event System",
+    "path": "folders/Scripts/Event System.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "event",
+  "tags": [],
+  "resourceType": "GMScript",
 }

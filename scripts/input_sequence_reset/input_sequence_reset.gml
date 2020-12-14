@@ -1,14 +1,19 @@
 /// @func input_sequence_reset(sequenceName)
 /// @desc Reset the input sequence state
 /// @arg {string} sequenceName
-var sequenceName = argument0;
+function input_sequence_reset(argument0) {
+	var sequenceName = argument0;
 
-// Sanity check
-if (!ds_map_exists(InputSystem.sequenceValues, sequenceName))
-{
-	log_error("INPUT: Input sequence " + sequenceName + " does not exist");
+	// Sanity check
+	if (!ds_map_exists(InputSystem.sequenceValues, sequenceName))
+	{
+		log_error("INPUT: Input sequence " + sequenceName + " does not exist");
 
-	return;
+		return;
+	}
+
+	InputSystem.sequenceValues[? sequenceName] = [0, 0.0];
+
+
+
 }
-
-InputSystem.sequenceValues[? sequenceName] = [0, 0.0];

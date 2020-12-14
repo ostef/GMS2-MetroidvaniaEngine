@@ -1,8 +1,12 @@
 {
-    "id": "fb3834e7-4dac-4576-91a4-b166d00cc1f5",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "input_map_to_axis",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Axis",
+    "path": "folders/Scripts/Input System/Axis.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "input_map_to_axis",
+  "tags": [],
+  "resourceType": "GMScript",
 }

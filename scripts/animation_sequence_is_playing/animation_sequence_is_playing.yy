@@ -1,8 +1,12 @@
 {
-    "id": "09eb467f-ec94-4f35-99d0-81017e8244e4",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "animation_sequence_is_playing",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Animation Sequence",
+    "path": "folders/Scripts/Animation System/Animation Sequence.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "animation_sequence_is_playing",
+  "tags": [],
+  "resourceType": "GMScript",
 }

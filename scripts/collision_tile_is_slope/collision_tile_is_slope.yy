@@ -1,8 +1,12 @@
 {
-    "id": "c3214adc-dacd-4d16-8f39-d149e9bd3b6b",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "collision_tile_is_slope",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Collisions",
+    "path": "folders/Scripts/Collisions.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "collision_tile_is_slope",
+  "tags": [],
+  "resourceType": "GMScript",
 }

@@ -1,8 +1,12 @@
 {
-    "id": "11c6d344-8ad7-4b79-9a8c-ef9f7ed55b06",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "inventory_slot",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Inventory",
+    "path": "folders/Scripts/Inventory.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "inventory_slot",
+  "tags": [],
+  "resourceType": "GMScript",
 }

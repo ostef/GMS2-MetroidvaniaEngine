@@ -1,8 +1,12 @@
 {
-    "id": "fcfbbe37-0e03-4dfd-8c61-b18f01be8435",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "is_fsm",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Finite State Machine",
+    "path": "folders/Scripts/Finite State Machine.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "is_fsm",
+  "tags": [],
+  "resourceType": "GMScript",
 }

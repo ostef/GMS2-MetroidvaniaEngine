@@ -1,2 +1,7 @@
 /// @func mask_get_height()
-return bbox_bottom - bbox_top;
+function mask_get_height() {
+	return bbox_bottom - bbox_top;
+
+
+
+}

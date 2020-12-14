@@ -1,8 +1,12 @@
 {
-    "id": "fbf48315-942d-4311-a810-cbfa21ba3ffd",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "builtin_animation_end",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Animation (built-in)",
+    "path": "folders/Scripts/Utility/Animation (built-in).yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "builtin_animation_end",
+  "tags": [],
+  "resourceType": "GMScript",
 }

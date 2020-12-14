@@ -1,8 +1,12 @@
 {
-    "id": "0fd45925-dc28-4d23-9866-8f6d42d23eb3",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "input_button_check",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Input System",
+    "path": "folders/Scripts/Input System.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "input_button_check",
+  "tags": [],
+  "resourceType": "GMScript",
 }

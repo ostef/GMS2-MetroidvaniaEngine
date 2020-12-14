@@ -1,8 +1,12 @@
 {
-    "id": "77305421-8261-4e93-91f5-2917610a334c",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "animation_add_frame_event",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Animation",
+    "path": "folders/Scripts/Animation System/Animation.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "animation_add_frame_event",
+  "tags": [],
+  "resourceType": "GMScript",
 }

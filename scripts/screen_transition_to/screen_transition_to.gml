@@ -1,4 +1,9 @@
 /// @func screen_transition_to(screenId)
 /// @desc Transition to a specified screen
 /// @arg {int} screenId
-var screenId = argument0;
+function screen_transition_to(argument0) {
+	var screenId = argument0;
+
+
+
+}

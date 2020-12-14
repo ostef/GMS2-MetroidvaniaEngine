@@ -1,8 +1,12 @@
 {
-    "id": "fd1dd5b6-39e9-4025-96b6-d1551abfa5e7",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "mask_get_width",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Collisions",
+    "path": "folders/Scripts/Collisions.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "mask_get_width",
+  "tags": [],
+  "resourceType": "GMScript",
 }

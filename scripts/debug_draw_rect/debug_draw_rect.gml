@@ -7,24 +7,29 @@
 /// @arg {int} color
 /// @arg {real} alpha
 /// @arg {bool} bFilled
-var x1 = argument0;
-var y1 = argument1;
-var x2 = argument2;
-var y2 = argument3;
-var color = argument4;
-var alpha = argument5;
-var bFilled = argument6;
+function debug_draw_rect(argument0, argument1, argument2, argument3, argument4, argument5, argument6) {
+	var x1 = argument0;
+	var y1 = argument1;
+	var x2 = argument2;
+	var y2 = argument3;
+	var color = argument4;
+	var alpha = argument5;
+	var bFilled = argument6;
 
-enum DrawRect
-{
-	X1 = 1,
-	Y1,
-	X2,
-	Y2,
-	Color,
-	Alpha,
-	FilledFlag
+	enum DrawRect
+	{
+		X1 = 1,
+		Y1,
+		X2,
+		Y2,
+		Color,
+		Alpha,
+		FilledFlag
+	}
+
+
+	ds_list_add(Debug.drawCommands, [DebugDrawType.Rectangle, x1, y1, x2, y2, color, alpha, bFilled]);
+
+
+
 }
-
-
-ds_list_add(Debug.drawCommands, [DebugDrawType.Rectangle, x1, y1, x2, y2, color, alpha, bFilled]);

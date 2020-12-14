@@ -1,8 +1,12 @@
 {
-    "id": "5930106c-c442-4941-9e6e-b0b00bb1deec",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "debug_draw_line",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Debug Drawing",
+    "path": "folders/Scripts/Debugging/Debug Drawing.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "debug_draw_line",
+  "tags": [],
+  "resourceType": "GMScript",
 }

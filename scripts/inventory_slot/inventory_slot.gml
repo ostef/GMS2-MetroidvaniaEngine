@@ -2,13 +2,18 @@
 /// @desc Create an inventory slot object
 /// @arg {int} itemCount
 /// @arg {ItemFlag} itemFlags
-var itemCount = argument0;
-var itemFlags = argument1;
+function inventory_slot(argument0, argument1) {
+	var itemCount = argument0;
+	var itemFlags = argument1;
 
-enum InventorySlot
-{
-	ItemCount,
-	ItemFlags
+	enum InventorySlot
+	{
+		ItemCount,
+		ItemFlags
+	}
+
+	return [itemCount, itemFlags];
+
+
+
 }
-
-return [itemCount, itemFlags];

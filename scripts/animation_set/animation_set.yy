@@ -1,8 +1,12 @@
 {
-    "id": "a655c9fd-ee2a-44f4-b207-28ec2606d75c",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "animation_set",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Animation",
+    "path": "folders/Scripts/Animation System/Animation.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "animation_set",
+  "tags": [],
+  "resourceType": "GMScript",
 }

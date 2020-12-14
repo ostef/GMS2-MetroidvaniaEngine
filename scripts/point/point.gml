@@ -2,13 +2,18 @@
 /// @desc Create a point object
 /// @arg {int} x
 /// @arg {int} y
-var xx = floor(argument0);
-var yy = floor(argument1);
+function point(argument0, argument1) {
+	var xx = floor(argument0);
+	var yy = floor(argument1);
 
-enum Point
-{
-	X,
-	Y
+	enum Point
+	{
+		X,
+		Y
+	}
+
+	return [xx, yy];
+
+
+
 }
-
-return [xx, yy];

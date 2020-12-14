@@ -2,7 +2,12 @@
 /// @desc Return the value snapped to the nearest multiple of interval
 /// @arg {real} val
 /// @arg {real} interval
-var val = argument0;
-var interval = argument1;
+function snap(argument0, argument1) {
+	var val = argument0;
+	var interval = argument1;
 
-return round(val / interval) * interval;
+	return round(val / interval) * interval;
+
+
+
+}

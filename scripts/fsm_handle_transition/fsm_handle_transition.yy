@@ -1,8 +1,12 @@
 {
-    "id": "7efa7ed1-bd61-40cc-b7a6-d517f2e4c2df",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "fsm_handle_transition",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Finite State Machine",
+    "path": "folders/Scripts/Finite State Machine.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "fsm_handle_transition",
+  "tags": [],
+  "resourceType": "GMScript",
 }

@@ -3,10 +3,15 @@
 /// @arg {real} x
 /// @arg {real} y
 /// @arg {CollisionTile} tile
-var xx = argument0;
-var yy = argument1;
-var tile = argument2;
-var xMovement = xx - x;
-var yMovement = yy - y;
+function collision_tile_meeting(argument0, argument1, argument2) {
+	var xx = argument0;
+	var yy = argument1;
+	var tile = argument2;
+	var xMovement = xx - x;
+	var yMovement = yy - y;
 
-return collision_tile_in_rectangle(bbox_left + xMovement, bbox_top + yMovement , bbox_right + xMovement, bbox_bottom + yMovement, tile);
+	return collision_tile_in_rectangle(bbox_left + xMovement, bbox_top + yMovement , bbox_right + xMovement, bbox_bottom + yMovement, tile);
+
+
+
+}

@@ -1,8 +1,12 @@
 {
-    "id": "e20033c9-7447-442a-bce3-5fc2f12b644a",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "screen_transition_to",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Level",
+    "path": "folders/Scripts/Level.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "screen_transition_to",
+  "tags": [],
+  "resourceType": "GMScript",
 }

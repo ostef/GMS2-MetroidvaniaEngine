@@ -1,8 +1,12 @@
 {
-    "id": "9b167ac0-33cf-4e9b-8ba0-a6d3c79cf8dc",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "jonathan_grounded_state",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Jonathan",
+    "path": "folders/Scripts/Jonathan.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "jonathan_grounded_state",
+  "tags": [],
+  "resourceType": "GMScript",
 }

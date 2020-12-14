@@ -1,2 +1,7 @@
 /// @func time_get_timescale()
-return Game.timescale;
+function time_get_timescale() {
+	return Game.timescale;
+
+
+
+}

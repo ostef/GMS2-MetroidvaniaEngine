@@ -1,8 +1,12 @@
 {
-    "id": "cdf7316b-44c8-4cc8-8f5c-a0caccbb7474",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "assert",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Debugging",
+    "path": "folders/Scripts/Debugging.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "assert",
+  "tags": [],
+  "resourceType": "GMScript",
 }

@@ -1,44 +1,49 @@
+function jonathan_airborne_state() {
 #region Movement
-var moveAxis = sign(input_get_axis_value("Move"));
+	var moveAxis = sign(input_get_axis_value("Move"));
 
-xVel = moveSpeed * moveAxis * time_get_timescale();
+	xVel = moveSpeed * moveAxis * time_get_timescale();
 
-movable_apply_gravity();
+	movable_apply_gravity();
 
-// Stop jumping
-if (input_get_action_value("Stop Jumping"))
-{
-	var jumpForce = calculate_jump_force(jumpHeight, grav);
-	
-	if (yVel < -jumpForce)
+	// Stop jumping
+	if (input_get_action_value("Stop Jumping"))
 	{
-		yVel = -jumpForce;
+		var jumpForce = calculate_jump_force(jumpHeight, grav);
+	
+		if (yVel < -jumpForce)
+		{
+			yVel = -jumpForce;
+		}
 	}
-}
 #endregion
 
 #region State transition
-if (bGrounded)
-{
-	fsm_goto(fsm, groundedState);
-}
+	if (bGrounded)
+	{
+		fsm_goto(fsm, groundedState);
+	}
 #endregion
 
 #region Animation
-if (moveAxis != 0)
-{
-	bFacingLeft = moveAxis < 0;
-}
-
-if (yVel < 0)
-{
-	if (!animation_is_playing(jumpAnim) && !animation_is_playing(jumpForwardAnim))
+	if (moveAxis != 0)
 	{
-		animation_play(moveAxis == 0 ? jumpAnim : jumpForwardAnim);
+		bFacingLeft = moveAxis < 0;
 	}
-}
-else
-{
-	animation_play(fallAnim);
-}
+
+	if (yVel < 0)
+	{
+		if (!animation_is_playing(jumpAnim) && !animation_is_playing(jumpForwardAnim))
+		{
+			animation_play(moveAxis == 0 ? jumpAnim : jumpForwardAnim);
+		}
+	}
+	else
+	{
+		animation_play(fallAnim);
+	}
 #endregion
+
+
+
+}

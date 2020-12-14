@@ -1,6 +1,11 @@
 /// @func instance_log_trace(message)
 /// @desc Log an info message
 /// @arg {string} message
-var message = argument0;
+function instance_log_info(argument0) {
+	var message = argument0;
 
-instance_log_message(LogLevel.Info, message);
+	instance_log_message(LogLevel.Info, message);
+
+
+
+}

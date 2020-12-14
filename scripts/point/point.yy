@@ -1,8 +1,12 @@
 {
-    "id": "1413fff0-fb7e-4700-a685-21f3c4933e53",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "point",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Structs",
+    "path": "folders/Scripts/Structs.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "point",
+  "tags": [],
+  "resourceType": "GMScript",
 }

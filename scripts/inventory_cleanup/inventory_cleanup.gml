@@ -1,2 +1,7 @@
 /// @func inventory_cleanup()
-ds_map_destroy(inventory);
+function inventory_cleanup() {
+	ds_map_destroy(inventory);
+
+
+
+}

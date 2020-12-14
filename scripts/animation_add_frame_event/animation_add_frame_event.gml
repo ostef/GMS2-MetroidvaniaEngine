@@ -2,33 +2,38 @@
 /// @arg {int} animIndex
 /// @arg {int} frameIndex
 /// @arg {script} script
-var animIndex = argument0;
-var frameIndex = argument1;
-var script = argument2;
+function animation_add_frame_event(argument0, argument1, argument2) {
+	var animIndex = argument0;
+	var frameIndex = argument1;
+	var script = argument2;
 
-// Sanity checks
-if (!animation_exists(animIndex))
-{
-	instance_log_error("ANIMATION: Animation with index " + string(animIndex) + " does not exist");
+	// Sanity checks
+	if (!animation_exists(animIndex))
+	{
+		instance_log_error("ANIMATION: Animation with index " + string(animIndex) + " does not exist");
 
-	return;
-}
+		return;
+	}
 
-var anim = animationList[| animIndex];
+	var anim = animationList[| animIndex];
 
-if (frameIndex < 0 || frameIndex >= sprite_get_number(anim[Animation.SpriteIndex]))
-{
-	instance_log_error("ANIMATION: Frame index outside of range");
+	if (frameIndex < 0 || frameIndex >= sprite_get_number(anim[Animation.SpriteIndex]))
+	{
+		instance_log_error("ANIMATION: Frame index outside of range");
 	
-	return;
-}
+		return;
+	}
 
-if (!script_exists(script))
-{
-	instance_log_error("ANIMATION: Script " + string(script) + " does not exist!");
+	if (!script_exists(script))
+	{
+		instance_log_error("ANIMATION: Script " + string(script) + " does not exist!");
 	
-	return;
-}
+		return;
+	}
 
-var frameEvents = anim[Animation.FrameEvents];
-ds_list_add(frameEvents[frameIndex], script);
+	var frameEvents = anim[Animation.FrameEvents];
+	ds_list_add(frameEvents[frameIndex], script);
+
+
+
+}

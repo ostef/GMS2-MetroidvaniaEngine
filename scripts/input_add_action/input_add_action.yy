@@ -1,8 +1,12 @@
 {
-    "id": "222067e8-6112-45e1-a9fb-3207ddf1089f",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "input_add_action",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Action",
+    "path": "folders/Scripts/Input System/Action.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "input_add_action",
+  "tags": [],
+  "resourceType": "GMScript",
 }

@@ -1,8 +1,12 @@
 {
-    "id": "ca1ec6db-1434-4ca4-8985-f22f62e19faa",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "input_get_action_value",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Action",
+    "path": "folders/Scripts/Input System/Action.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "input_get_action_value",
+  "tags": [],
+  "resourceType": "GMScript",
 }

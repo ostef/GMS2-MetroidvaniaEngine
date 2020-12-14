@@ -1,8 +1,12 @@
 {
-    "id": "776cb4b8-f6f7-4393-a852-90b697921aa1",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "input_get_previous_axis_value",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Axis",
+    "path": "folders/Scripts/Input System/Axis.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "input_get_previous_axis_value",
+  "tags": [],
+  "resourceType": "GMScript",
 }

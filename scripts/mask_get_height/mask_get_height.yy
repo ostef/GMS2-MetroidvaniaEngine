@@ -1,8 +1,12 @@
 {
-    "id": "43498fdd-af47-4567-9cbe-6501e5fcfca4",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "mask_get_height",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Collisions",
+    "path": "folders/Scripts/Collisions.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "mask_get_height",
+  "tags": [],
+  "resourceType": "GMScript",
 }

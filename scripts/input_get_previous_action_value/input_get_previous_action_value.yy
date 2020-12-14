@@ -1,8 +1,12 @@
 {
-    "id": "51153824-f998-4277-b972-74a43795fd17",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "input_get_previous_action_value",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Action",
+    "path": "folders/Scripts/Input System/Action.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "input_get_previous_action_value",
+  "tags": [],
+  "resourceType": "GMScript",
 }

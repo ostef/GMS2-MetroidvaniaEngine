@@ -1,8 +1,12 @@
 {
-    "id": "51c6b59e-d1f7-4deb-8608-77854d92b231",
-    "modelName": "GMScript",
-    "mvc": "1.0",
-    "name": "input_add_axis",
-    "IsCompatibility": false,
-    "IsDnD": false
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "Axis",
+    "path": "folders/Scripts/Input System/Axis.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "input_add_axis",
+  "tags": [],
+  "resourceType": "GMScript",
 }

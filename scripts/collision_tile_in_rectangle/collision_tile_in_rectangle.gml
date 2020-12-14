@@ -5,42 +5,47 @@
 /// @arg {real} x2
 /// @arg {real} y2
 /// @arg {CollisionTile} tile
-var x1 = argument0;
-var y1 = argument1;
-var x2 = argument2;
-var y2 = argument3;
-var tile = argument4;
+function collision_tile_in_rectangle(argument0, argument1, argument2, argument3, argument4) {
+	var x1 = argument0;
+	var y1 = argument1;
+	var x2 = argument2;
+	var y2 = argument3;
+	var tile = argument4;
 
-var tileWidth = Collisions.tileWidth;
-var tileHeight = Collisions.tileHeight;
-var cellStartX = floor(x1 / tileWidth);
-var cellEndX = floor(x2 / tileWidth);
-var cellStartY = floor(y1 / tileHeight);
-var cellEndY = floor(y2 / tileHeight);
-// Don't go out of bounds!
-cellStartX = clamp(cellStartX, 0, Collisions.tilemapWidth - 1);
-cellEndX = clamp(cellEndX, 0, Collisions.tilemapWidth - 1);
-cellStartY = clamp(cellStartY, 0, Collisions.tilemapHeight - 1);
-cellEndY = clamp(cellEndY, 0, Collisions.tilemapHeight - 1);
+	var tileWidth = Collisions.tileWidth;
+	var tileHeight = Collisions.tileHeight;
+	var cellStartX = floor(x1 / tileWidth);
+	var cellEndX = floor(x2 / tileWidth);
+	var cellStartY = floor(y1 / tileHeight);
+	var cellEndY = floor(y2 / tileHeight);
+	// Don't go out of bounds!
+	cellStartX = clamp(cellStartX, 0, Collisions.tilemapWidth - 1);
+	cellEndX = clamp(cellEndX, 0, Collisions.tilemapWidth - 1);
+	cellStartY = clamp(cellStartY, 0, Collisions.tilemapHeight - 1);
+	cellEndY = clamp(cellEndY, 0, Collisions.tilemapHeight - 1);
 
-for (var i = cellStartX; i <= cellEndX; i++)
-{
-	for (var j = cellStartY; j <= cellEndY; j++)
+	for (var i = cellStartX; i <= cellEndX; i++)
 	{
-		if (collision_get_tile_at(i, j) != tile) { continue; }
-		
-		// Get the tile rectangle coordinates
-		var tileX1 = i * tileWidth;
-		var tileY1 = j * tileHeight;
-		var tileX2 = tileX1 + tileWidth;
-		var tileY2 = tileY1 + tileHeight;
-		
-		// If a collision occured, set the flag and break
-		if (rectangle_in_rectangle(x1, y1, x2, y2, tileX1, tileY1, tileX2, tileY2))
+		for (var j = cellStartY; j <= cellEndY; j++)
 		{
-			return true;
+			if (collision_get_tile_at(i, j) != tile) { continue; }
+		
+			// Get the tile rectangle coordinates
+			var tileX1 = i * tileWidth;
+			var tileY1 = j * tileHeight;
+			var tileX2 = tileX1 + tileWidth;
+			var tileY2 = tileY1 + tileHeight;
+		
+			// If a collision occured, set the flag and break
+			if (rectangle_in_rectangle(x1, y1, x2, y2, tileX1, tileY1, tileX2, tileY2))
+			{
+				return true;
+			}
 		}
 	}
-}
 
-return false;
+	return false;
+
+
+
+}

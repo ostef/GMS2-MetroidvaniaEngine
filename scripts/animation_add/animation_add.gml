@@ -3,10 +3,15 @@
 /// @arg {int} spriteIndex
 /// @arg {AnimationLoopMode} loopMode
 /// @arg {real} speed
-var spriteIndex = argument0;
-var loopMode = argument1;
-var spd = argument2;
+function animation_add(argument0, argument1, argument2) {
+	var spriteIndex = argument0;
+	var loopMode = argument1;
+	var spd = argument2;
 
-ds_list_add(animationList, animation(spriteIndex, loopMode, spd));
+	ds_list_add(animationList, animation(spriteIndex, loopMode, spd));
 
-return ds_list_size(animationList) - 1;
+	return ds_list_size(animationList) - 1;
+
+
+
+}
